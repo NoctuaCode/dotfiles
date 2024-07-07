@@ -11,10 +11,6 @@ return {
 	webgpu_power_preference = "HighPerformance",
 
 	window_decorations = "RESIZE",
-	inactive_pane_hsb = {
-		saturation = 0.8,
-		brightness = 0.7,
-	},
 	window_padding = {
 		left = 10,
 		right = 10,
@@ -27,7 +23,7 @@ return {
 	enable_tab_bar = false,
 	window_background_opacity = 0.80,
 
-	font_size = 14,
+	font_size = 13,
 	font = wezterm.font({ family = "FantasqueSansM Nerd Font" }),
 	bold_brightens_ansi_colors = false,
 	adjust_window_size_when_changing_font_size = false,
