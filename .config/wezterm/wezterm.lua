@@ -18,10 +18,9 @@ return {
 		bottom = 10,
 	},
 
-	color_scheme = "tokyonight-night",
+	color_scheme = "rose-pine-moon",
 	term = "xterm-256color",
 	enable_tab_bar = false,
-	window_background_opacity = 0.80,
 
 	font_size = 13,
 	font = wezterm.font({ family = "FantasqueSansM Nerd Font" }),
