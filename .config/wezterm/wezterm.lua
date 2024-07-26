@@ -17,12 +17,13 @@ return {
 		top = 10,
 		bottom = 10,
 	},
+	window_close_confirmation = "NeverPrompt",
 
 	color_scheme = "rose-pine-moon",
 	term = "xterm-256color",
 	enable_tab_bar = false,
 
-	font_size = 13,
+	font_size = 15,
 	font = wezterm.font({ family = "FantasqueSansM Nerd Font" }),
 	bold_brightens_ansi_colors = false,
 	adjust_window_size_when_changing_font_size = false,
