@@ -22,15 +22,13 @@ yabai -m config mouse_action1 move
 # set modifier + right-click drag to resize window
 yabai -m config mouse_action2 resize
 
-yabai -m rule --add app="^Zed|Visual Studio Code|Code|Emacs$" space=1
+yabai -m rule --add app="^Zed|Visual Studio Code|Code|Emacs|Terminal|iTerm|Alacritty|WezTerm$" space=1
 
 yabai -m rule --add app="^Arc|Firefox Developer Edition|Safari$" space=2
 
-yabai -m rule --add app="^Terminal|iTerm|Alacritty|WezTerm$" space=3
+yabai -m rule --add app="^TablePlus|DBngin$" space=3
 
-yabai -m rule --add app="^TablePlus|DBngin$" space=4
-
-yabai -m rule --add app="^Httpie$" space=5
+yabai -m rule --add app="^Httpie$" space=4
 
 yabai -m rule --add app="^Obsidian$" space=6
 
