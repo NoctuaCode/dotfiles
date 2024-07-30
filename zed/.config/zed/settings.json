@@ -13,11 +13,12 @@
 
   "theme": {
     "mode": "system",
-    "dark": "Rosé Pine Moon",
+    "dark": "Catppuccin Mocha",
     "light": "Rosé Pine Dawn"
   },
 
   "ui_font_size": 14,
+  "ui_font_family": "Fantasque Sans Mono",
   "buffer_font_size": 14,
   "buffer_font_family": "Fantasque Sans Mono",
   "buffer_font_feature": {
