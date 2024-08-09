@@ -1,0 +1,146 @@
+{
+  "base_keymap": "VSCode",
+  "vim_mode": true,
+
+  "theme": {
+    "mode": "system",
+    "dark": "Catppuccin Mocha",
+    "light": "Rosé Pine Dawn"
+  },
+
+  "ui_font_size": 15,
+  "ui_font_family": "Fantasque Sans Mono",
+  "buffer_font_size": 15,
+  "buffer_font_family": "Fantasque Sans Mono",
+  "buffer_font_feature": {
+    "liga": true
+  },
+
+  "project_panel": {
+    "button": true,
+    "dock": "right",
+    "git_status": true
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "notification_panel": {
+    "dock": "left"
+  },
+  "chat_panel": {
+    "dock": "left"
+  },
+
+  "cursor_blink": false,
+
+  "inlay_hints": {
+    "enabled": true,
+    "show_type_hints": true,
+    "show_parameter_hints": true,
+    "show_other_hints": true,
+    "edit_debounce_ms": 700,
+    "scroll_debounce_ms": 50
+  },
+
+  "journal": {
+    "path": "~/Journal",
+    "hour_format": "hour24"
+  },
+
+  "tab_bar": {
+    "show": false
+  },
+
+  "preview_tabs": {
+    "enabled": false,
+    "enable_preview_from_file_finder": false
+  },
+
+  "scrollbar": {
+    "show": "never"
+  },
+
+  "indent_guides": {
+    "enabled": true,
+    "coloring": "indent_aware"
+  },
+
+  "centered_layout": {
+    "left_padding": 0.2,
+    "right_padding": 0.2
+  },
+
+  "show_whitespaces": "selection",
+
+  "terminal": {
+    "alternate_scroll": "off",
+    "blinking": "off",
+    "copy_on_select": true,
+    "font_family": "MesloLGL Nerd Font",
+    "font_features": {
+      "liga": true
+    },
+    "font_size": 14,
+    "option_as_meta": true,
+    "toolbar": {
+      "title": true
+    },
+    "working_directory": "current_project_directory",
+    "env": {
+      "EDITOR": "zed --wait"
+    }
+  },
+
+  "vim": {
+    "use_system_clipboard": "always",
+    "use_multiline_find": true,
+    "use_smartcase_find": true
+  },
+
+  "relative_line_numbers": true,
+  "vertical_scroll_margin": 10,
+
+  "lsp": {
+    "pyright": {
+      "settings": {
+        "python.analysis": {
+          "diagnosticMode": "workspace",
+          "typeCheckingMode": "strict"
+        },
+        "python": {
+          "pythonPath": "./.venv/bin/python"
+        }
+      }
+    },
+    "tailwindcss-language-server": {
+      "settings": {
+        "classAttributes": ["class", "className", "ngClass", "styles"]
+      }
+    }
+  },
+  "languages": {
+    // Refer https://zed.dev/docs/languages/javascript and https://zed.dev/docs/languages/typescript for more info
+    "TypeScript": {
+      // Refer https://github.com/jellydn/ts-inlay-hints for how to setup for Neovim and VSCode
+      "inlay_hints": {
+        "enabled": true,
+        "show_parameter_hints": false,
+        "show_other_hints": true,
+        "show_type_hints": true
+      }
+    }
+  },
+
+  "file_types": {
+    "Dockerfile": ["Dockerfile", "Dockerfile.*"],
+    "JSON": ["json", "jsonc", "*.code-snippets"]
+  },
+
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  }
+}

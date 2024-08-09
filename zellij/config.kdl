@@ -1,0 +1,155 @@
+keybinds clear-defaults=true {
+    shared {
+        bind "Alt d" { Detach; }
+        bind "Alt q" { Quit; }
+    }
+
+    shared_except "normal" "locked" "search" "scroll" {
+        bind "Enter" "Esc" { SwitchToMode "Normal"; }
+    }
+    shared_among "search" "scroll" {
+        bind "Esc" { ScrollToBottom; SwitchToMode "Normal"; }
+    }
+    shared_except "locked" "pane"   {
+        bind "Alt b" { SwitchToMode "Pane"; }
+    }
+    shared_except "locked" "tab"   {
+        bind "Alt t" { SwitchToMode "Tab"; }
+    }
+    shared_except "locked" "move"   {
+        bind "Alt m" { SwitchToMode "Move"; }
+    }
+    shared_except "locked" "resize" {
+        bind "Alt r" { SwitchToMode "Resize"; }
+    }
+
+    shared_except "locked" {
+        bind "Alt v" { NewPane "Right"; SwitchToMode "Normal"; }
+        bind "Alt s" { NewPane "Down"; SwitchToMode "Normal"; }
+        bind "Alt n" { GoToNextTab; }
+        bind "Alt p" { GoToPreviousTab; }
+        bind "Alt z" { ToggleFocusFullscreen; SwitchToMode "Normal"; } // "Ctrl m" remapped via Karabiner
+        bind "Alt f" { ToggleFloatingPanes; }
+        bind "Alt h" { MoveFocus "Left"; }
+        bind "Alt l" { MoveFocus "Right"; }
+        bind "Alt j" { MoveFocus "Down"; }
+        bind "Alt k" { MoveFocus "Up"; }
+    }
+
+    resize {
+        bind "h" { Resize "Left"; }
+        bind "j" { Resize "Down"; }
+        bind "k" { Resize "Up"; }
+        bind "l" { Resize "Right"; }
+        bind "i" { Resize "Increase"; }
+        bind "d" { Resize "Decrease"; }
+    }
+
+    pane {
+        bind "j" { MovePane "Down"; }
+        bind "k" { MovePane "Up"; }
+        bind "l" { MovePane "Right"; }
+        bind "h" { MovePane "Left"; }
+        bind "x" { CloseFocus; SwitchToMode "Normal"; }
+        bind "m" { ToggleFocusFullscreen; SwitchToMode "Normal"; }
+        bind "r" { SwitchToMode "RenamePane"; PaneNameInput 0;}
+    }
+
+    tab {
+        bind "p" { GoToPreviousTab; }
+        bind "n" { GoToNextTab; }
+        bind "Ctrl n" { NewTab; SwitchToMode "Normal"; }
+        bind "Ctrl r" { SwitchToMode "RenameTab"; TabNameInput 0; }
+        bind "Ctrl x" { CloseTab; SwitchToMode "Normal"; }
+        bind "Tab" { ToggleTab; }
+    }
+
+    scroll {
+        bind "t" { ScrollUp; }
+        bind "h" { ScrollDown; }
+        bind "Up" { HalfPageScrollUp; }
+        bind "Down" { HalfPageScrollDown; }
+    }
+
+    search {
+        bind "Ctrl c" { ScrollToBottom; SwitchToMode "Normal"; }
+        bind "t" { ScrollUp; }
+        bind "h" { ScrollDown; }
+        bind "Up" { HalfPageScrollUp; }
+        bind "Down" { HalfPageScrollDown; }
+        bind "n" { Search "down"; }
+        bind "N" { Search "up"; }
+        bind "c" { SearchToggleOption "CaseSensitivity"; }
+        bind "w" { SearchToggleOption "Wrap"; }
+        bind "o" { SearchToggleOption "WholeWord"; }
+    }
+
+    entersearch {
+        bind "Ctrl c" "Esc" { SwitchToMode "Normal"; }
+        bind "Enter" { SwitchToMode "Search"; SearchToggleOption "CaseSensitivity"; }
+    }
+}
+
+// Choose what to do when zellij receives SIGTERM, SIGINT, SIGQUIT or SIGHUP
+// eg. when terminal window with an active zellij session is closed
+// Options:
+//   - detach (Default)
+//   - quit
+on_force_close "quit"
+
+// Choose the path to the default shell that zellij will use for opening new panes
+// Default: $SHELL
+//
+// default_shell "fish"
+
+// Toggle between having pane frames around the panes
+// Options:
+//   - true (default)
+//   - false
+pane_frames true
+
+// Choose the theme that is specified in the themes section.
+// Default: default
+theme "default"
+
+// Choose the mode that zellij uses when starting up.
+// Default: normal
+default_mode "normal"
+
+// Toggle enabling the mouse mode.
+// On certain configurations, or terminals this could
+// potentially interfere with copying text.
+// Options:
+//   - true (default)
+//   - false
+mouse_mode true
+
+// Configure the scroll back buffer size
+// This is the number of lines zellij stores for each pane in the scroll back
+// buffer. Excess number of lines are discarded in a FIFO fashion.
+// Valid values: positive integers
+// Default value: 10000
+//
+scroll_buffer_size 100000
+
+// Provide a command to execute when copying text. The text will be piped to
+// the stdin of the program to perform the copy. This can be used with
+// terminal emulators which do not support the OSC 52 ANSI control sequence
+// that will be used by default if this option is not set.
+// Examples:
+//
+// copy_command "xclip -selection clipboard" // x11
+// copy_command "wl-copy"                    // wayland
+copy_command "pbcopy"                        // osx
+
+// Choose the destination for copied text
+// Allows using the primary selection buffer (on x11/wayland) instead of the system clipboard.
+// Does not apply when using copy_command.
+// Options:
+//   - system (default)
+//   - primary
+copy_clipboard "system"
+
+// Enable or disable automatic copy (and clear) of selection when releasing mouse
+// Default: true
+copy_on_select true
