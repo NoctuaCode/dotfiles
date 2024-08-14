@@ -13,14 +13,61 @@
         }
       ],
       "from": {
-        "key_code": "grave_accent_and_tilde",
-        "modifiers": {
-          "optional": ["any"]
-        }
+        "key_code": "grave_accent_and_tilde"
       },
       "to": [
         {
           "key_code": "4",
+          "modifiers": ["left_shift"]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "identifiers": [
+            {
+              "vendor_id": 1452
+            }
+          ],
+          "type": "device_if"
+        }
+      ],
+      "from": {
+        "key_code": "grave_accent_and_tilde",
+        "modifiers": {
+          "mandatory": ["left_shift"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "2",
+          "modifiers": ["left_shift"]
+        }
+      ],
+      "type": "basic"
+    },
+    {
+      "conditions": [
+        {
+          "identifiers": [
+            {
+              "vendor_id": 1452
+            }
+          ],
+          "type": "device_if"
+        }
+      ],
+      "from": {
+        "key_code": "grave_accent_and_tilde",
+        "modifiers": {
+          "mandatory": ["right_shift"]
+        }
+      },
+      "to": [
+        {
+          "key_code": "2",
           "modifiers": ["left_shift"]
         }
       ],
@@ -321,7 +368,7 @@
       },
       "to": [
         {
-          "key_code": "5",
+          "key_code": "equal_sign",
           "modifiers": ["left_shift"]
         }
       ],
@@ -391,8 +438,7 @@
       },
       "to": [
         {
-          "key_code": "equal_sign",
-          "modifiers": ["left_shift"]
+          "key_code": "equal_sign"
         }
       ],
       "type": "basic"
@@ -736,61 +782,14 @@
         }
       ],
       "from": {
-        "key_code": "hyphen"
-      },
-      "to": [
-        {
-          "key_code": "equal_sign"
-        }
-      ],
-      "type": "basic"
-    },
-    {
-      "conditions": [
-        {
-          "identifiers": [
-            {
-              "vendor_id": 1452
-            }
-          ],
-          "type": "device_if"
-        }
-      ],
-      "from": {
         "key_code": "hyphen",
         "modifiers": {
-          "mandatory": ["left_shift"]
+          "optional": ["any"]
         }
       },
       "to": [
         {
-          "key_code": "8",
-          "modifiers": ["left_shift"]
-        }
-      ],
-      "type": "basic"
-    },
-    {
-      "conditions": [
-        {
-          "identifiers": [
-            {
-              "vendor_id": 1452
-            }
-          ],
-          "type": "device_if"
-        }
-      ],
-      "from": {
-        "key_code": "hyphen",
-        "modifiers": {
-          "mandatory": ["right_shift"]
-        }
-      },
-      "to": [
-        {
-          "key_code": "8",
-          "modifiers": ["left_shift"]
+          "key_code": "backslash"
         }
       ],
       "type": "basic"
@@ -811,7 +810,7 @@
       },
       "to": [
         {
-          "key_code": "6",
+          "key_code": "5",
           "modifiers": ["left_shift"]
         }
       ],
@@ -836,7 +835,7 @@
       },
       "to": [
         {
-          "key_code": "3",
+          "key_code": "8",
           "modifiers": ["left_shift"]
         }
       ],
@@ -861,7 +860,7 @@
       },
       "to": [
         {
-          "key_code": "3",
+          "key_code": "8",
           "modifiers": ["left_shift"]
         }
       ],
