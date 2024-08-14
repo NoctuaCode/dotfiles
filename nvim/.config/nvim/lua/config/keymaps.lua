@@ -1,10 +1,12 @@
-local keymap = vim.keymap
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
-keymap.set("n", "<M-+>", "<C-a>", { desc = "Increment" })
-keymap.set("n", "<M-->", "<C-x>", { desc = "Decrement" })
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
--- Undo tree
-keymap.set("n", "<leader>cu", ":UndotreeToggle<CR>", { noremap = true, silent = true, desc = "Toggle undotree" })
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
--- TreesJ
-keymap.set("n", "gS", require("treesj").toggle, { noremap = true, silent = true, desc = "TreesJ Toggle" })
+vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+vim.keymap.set('n', '<C-s>', ':wa<cr>', { desc = 'Save all' })
