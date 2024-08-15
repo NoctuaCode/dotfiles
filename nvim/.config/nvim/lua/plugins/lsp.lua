@@ -74,6 +74,7 @@ return {
           },
         },
         phpactor = {},
+        tailwindcss = {},
       }
 
       require('mason').setup()
