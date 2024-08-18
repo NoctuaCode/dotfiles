@@ -8,10 +8,11 @@ return {
       -- Document existing key chains
       require('which-key').add {
         { '<leader>c', group = '[C]ode' },
-        { '<leader>s', group = '[S]earch' },
-        { '<leader>t', group = '[T]oggle' },
         { '<leader>g', group = '[G]it' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
+        { '<leader>s', group = '[S]earch' },
+        { '<leader>t', group = '[T]oggle' },
+        { '<leader>x', group = 'Trouble' },
       }
     end,
   },

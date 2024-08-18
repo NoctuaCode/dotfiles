@@ -27,6 +27,7 @@ return {
         'html',
         'css',
         'scss',
+        'org',
       },
       auto_install = true,
       highlight = {

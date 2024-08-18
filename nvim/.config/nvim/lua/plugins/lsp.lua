@@ -21,7 +21,7 @@ return {
           map('<leader>cD', require('telescope.builtin').lsp_type_definitions, 'Type [D]efinition')
           map('<leader>ss', require('telescope.builtin').lsp_document_symbols, '[S]Search [S]ymbols')
           map('<leader>sS', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[S]earch Workspace [S]ymbols')
-          map('<leader>ca', vim.lsp.buf.rename, '[R]e[n]ame')
+          map('<leader>cr', vim.lsp.buf.rename, '[R]e[n]ame')
           map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
           map('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
 
@@ -75,6 +75,7 @@ return {
         },
         phpactor = {},
         tailwindcss = {},
+        jsonls = {},
       }
 
       require('mason').setup()
