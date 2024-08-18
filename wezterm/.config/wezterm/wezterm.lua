@@ -24,25 +24,25 @@ return {
 	enable_tab_bar = false,
 
 	font_size = 15,
-	font = wezterm.font({ family = "FantasqueSansM Nerd Font" }),
-	bold_brightens_ansi_colors = false,
-	adjust_window_size_when_changing_font_size = false,
+	font = wezterm.font({ family = "BlexMono Nerd Font" }),
+	bold_brightens_ansi_colors = true,
+	adjust_window_size_when_changing_font_size = true,
 
 	font_rules = {
 		{
 			intensity = "Bold",
 			italic = true,
-			font = wezterm.font({ family = "FantasqueSansM Nerd Font", weight = "Bold", style = "Italic" }),
+			font = wezterm.font({ family = "BlexMono Nerd Font", weight = "Bold", style = "Italic" }),
 		},
 		{
 			italic = true,
 			intensity = "Half",
-			font = wezterm.font({ family = "FantasqueSansM Nerd Font", weight = "DemiBold", style = "Italic" }),
+			font = wezterm.font({ family = "BlexMono Nerd Font", weight = "DemiBold", style = "Italic" }),
 		},
 		{
 			italic = true,
 			intensity = "Normal",
-			font = wezterm.font({ family = "FantasqueSansM Nerd Font", style = "Italic" }),
+			font = wezterm.font({ family = "BlexMono Nerd Font", style = "Italic" }),
 		},
 	},
 
