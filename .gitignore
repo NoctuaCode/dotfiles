@@ -6,7 +6,7 @@
 **/.DS_Store
 .config/zed/.tmp*
 .config/zed/embeddings/semantic-index-db.0.mdb
-.config/zed/prompts/prompts-library-db.0.mdb
+.config/zed/prompts
 tmux/.config/tmux/plugins/tmux-continuum/
 tmux/.config/tmux/plugins/tmux-fzf-url/
 tmux/.config/tmux/plugins/tmux-fzf/
@@ -18,3 +18,4 @@ tmux/.config/tmux/plugins/tmux-yank/
 tmux/.config/tmux/plugins/tmux/
 tmux/.config/tmux/plugins/tpm/
 tmux/.config/tmux/plugins/vim-tmux-navigator/
+nvim/.config/nvim/lazy-lock.json
