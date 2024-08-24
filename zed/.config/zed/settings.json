@@ -4,17 +4,14 @@
 
   "theme": {
     "mode": "system",
-    "dark": "Catppuccin Mocha",
+    "dark": "Rosé Pine",
     "light": "Rosé Pine Dawn"
   },
 
-  "ui_font_size": 15,
-  "ui_font_family": "Fantasque Sans Mono",
-  "buffer_font_size": 15,
-  "buffer_font_family": "Fantasque Sans Mono",
-  "buffer_font_feature": {
-    "liga": true
-  },
+  "ui_font_size": 18,
+  "ui_font_family": "BlexMono Nerd Font",
+  "buffer_font_size": 17,
+  "buffer_font_family": "BlexMono Nerd Font",
 
   "project_panel": {
     "button": true,
