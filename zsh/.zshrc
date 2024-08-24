@@ -69,7 +69,7 @@ autoload -Uz compinit && compinit
 zinit cdreplay -q
 
 # Keybindings
-bindkey -e
+bindkey -v
 
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
@@ -106,15 +106,13 @@ alias ll="ls -al"
 alias lt="ls -T --git-ignore"
 alias lta="ls -Ta"
 
-alias install="nix profile install nixpkgs#"
-
 # Brew command
-#alias bu="brew update"
-#alias buu="brew update && brew upgrade"
-#alias bi="brew install"
-#alias bic="brew install --cask"
-#alias bs="brew search"
-#alias br="brew remove"
+alias bu="brew update"
+alias buu="brew update && brew upgrade"
+alias bi="brew install"
+alias bic="brew install --cask"
+alias bs="brew search"
+alias br="brew remove"
 
 alias c="clear"
 alias n="nvim"
@@ -122,12 +120,8 @@ alias n="nvim"
 # Herd injected PHP binary.
 export PATH="/Users/noctuacode/Library/Application Support/Herd/bin/":$PATH
 
-neofetch
-
-
 # Herd injected PHP 8.3 configuration.
 export HERD_PHP_83_INI_SCAN_DIR="/Users/noctuacode/Library/Application Support/Herd/config/php/83/"
-
 
 # Herd injected PHP binary.
 export PATH="/Users/noctuacode/Library/Application Support/Herd/bin/":$PATH
