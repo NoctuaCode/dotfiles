@@ -23,7 +23,7 @@ return {
 	term = "xterm-256color",
 	enable_tab_bar = false,
 
-	font_size = 15,
+	font_size = 18,
 	font = wezterm.font({ family = "BlexMono Nerd Font" }),
 	bold_brightens_ansi_colors = true,
 	adjust_window_size_when_changing_font_size = true,
