@@ -19,11 +19,12 @@ return {
 	},
 	window_close_confirmation = "NeverPrompt",
 
-	color_scheme = "rose-pine-moon",
+	window_background_opacity = 0.6,
+	color_scheme = "tokyonight_night",
 	term = "xterm-256color",
 	enable_tab_bar = false,
 
-	font_size = 18,
+	font_size = 16,
 	font = wezterm.font({ family = "BlexMono Nerd Font" }),
 	bold_brightens_ansi_colors = true,
 	adjust_window_size_when_changing_font_size = true,
