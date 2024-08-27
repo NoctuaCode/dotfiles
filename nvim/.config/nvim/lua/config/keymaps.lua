@@ -1,5 +1,4 @@
 local keymap = vim.keymap
-local opts = { noremap = true, silent = true }
 
 -- Do things without affecting the registers
 keymap.set("n", "x", '"_x')
@@ -8,5 +7,4 @@ keymap.set("n", "x", '"_x')
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
 
-table.insert(opts, { desc = "Toggle Undo Tree" })
-keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<cr>", opts)
+keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<cr>", { noremap = true, silent = true, desc = "Toggle undotree" })
