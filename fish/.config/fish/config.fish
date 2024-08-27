@@ -2,6 +2,19 @@ set fish_greeting = ""
 
 set -gx TERM xterm-256color
 
+set -gx PATH /opt/homebrew/bin $PATH
+set -gx PATH bin $PATH
+set -gx PATH ~/.bin $PATH
+set -gx PATH ~/.local/bin $PATH
+set -gx PATH ~/.config/bin $PATH
+set -gx PATH ~/.cargo/bin $PATH
+
+set -gx PATH node_modules/.bin $PATH
+set -gx PATH .venv/bin $PATH
+
+set -g GOPATH $HOME/go
+set -gx PATH $GOPATH/bin $PATH
+
 set -g theme_color_scheme terminal-dark
 set -g fish_prompt_pwd_dir_length 1
 set -g theme_display_user yes
@@ -25,23 +38,6 @@ alias buu "brew update && brew upgrade"
 command -qv nvim && alias vim nvim
 
 set -gx EDITOR nvim
-
-set -gx PATH bin $PATH
-set -gx PATH ~/.bin $PATH
-set -gx PATH ~/.local/bin $PATH
-set -gx PATH ~/.config/bin $PATH
-set -gx PATH ~/.cargo/bin $PATH
-
-set -gx PATH node_modules/.bin $PATH
-set -gx PATH .venv/bin $PATH
-
-set -g GOPATH $HOME/go
-set -gx PATH $GOPATH/bin $PATH
-
-set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
-if test -f $LOCAL_CONFIG
-    source $LOCAL_CONFIG
-end
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
