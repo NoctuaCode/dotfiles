@@ -7,4 +7,5 @@ keymap.set("n", "x", '"_x')
 keymap.set("n", "+", "<C-a>")
 keymap.set("n", "-", "<C-x>")
 
-keymap.set("n", "<leader>u", "<cmd>UndotreeToggle<cr>", { noremap = true, silent = true, desc = "Toggle undotree" })
+keymap.set("n", "<leader>U", "<cmd>UndotreeToggle<cr>", { noremap = true, silent = true, desc = "Toggle undotree" })
+keymap.set("n", "<leader>S", "<cmd>TSJToggle<cr>", { noremap = true, silent = true, desc = "Toggle split/join" })
