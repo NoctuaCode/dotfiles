@@ -28,7 +28,7 @@ return {
         showtabline = 0,
         swapfile = false,
         backup = false,
-        undodir = os.getenv "HOME" .. ".local/share/nvim/undodir",
+        undodir = os.getenv "HOME" .. "/.local/share/nvim/undodir",
         undofile = true,
         scrolloff = 10,
         guicursor = "",
