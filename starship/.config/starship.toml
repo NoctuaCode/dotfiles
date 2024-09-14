@@ -16,8 +16,8 @@ trim_at = "."
 disabled = true
 
 # Replace the "❯" symbol in the prompt with "➜"
-[character]                            # The name of the module we are configuring is "character"
-format = " "                          # The "format" segment is being set to "➜"
+[character] # The name of the module we are configuring is "character"
+format = " " # The "format" segment is being set to "➜"
 
 # configure directory
 [directory]
@@ -48,7 +48,7 @@ style = "blue bold"
 only_with_files = true
 detect_files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
 detect_folders = []
-disabled = false
+disabled = true
 
 [elixir]
 symbol = " "
