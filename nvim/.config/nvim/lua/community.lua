@@ -1,6 +1,6 @@
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.colorscheme.nightfox-nvim" },
+  { import = "astrocommunity.colorscheme.rose-pine" },
 
   { import = "astrocommunity.completion.tabnine-nvim" },
 
