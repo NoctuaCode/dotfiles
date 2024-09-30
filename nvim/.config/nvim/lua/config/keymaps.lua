@@ -1,23 +1,75 @@
-vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
-vim.keymap.set('n', '<C-c>', '<Esc>')
+local keymap = vim.keymap
+local opts = { noremap = true, silent = true }
+local Util = require("lazyvim.util")
+local set_keymap = vim.api.nvim_set_keymap
 
-vim.keymap.set('n', '<leader>-', '<CMD>Oil<CR>')
+keymap.set("n", "<C-h>", "<Cmd>NvimTmuxNavigateLeft<CR>", { silent = true })
+keymap.set("n", "<C-j>", "<Cmd>NvimTmuxNavigateDown<CR>", { silent = true })
+keymap.set("n", "<C-k>", "<Cmd>NvimTmuxNavigateUp<CR>", { silent = true })
+keymap.set("n", "<C-l>", "<Cmd>NvimTmuxNavigateRight<CR>", { silent = true })
+keymap.set("n", "<C-\\>", "<Cmd>NvimTmuxNavigateLastActive<CR>", { silent = true })
+-- keymap.set("n", "<C-Space>", "<Cmd>NvimTmuxNavigateNavigateNext<CR>", { silent = true })
 
-vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
-vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
+-- Borderless terminal
+vim.keymap.set("n", "<C-/>", function()
+  Util.terminal(nil, { border = "none" })
+end, { desc = "Term with border" })
 
-vim.keymap.set('n', 'J', 'mzJ`z')
-vim.keymap.set('n', '<C-d>', '<C-d>zz')
-vim.keymap.set('n', '<C-u>', '<C-u>zz')
-vim.keymap.set('n', 'n', 'nzzzv')
-vim.keymap.set('n', 'N', 'Nzzzv')
+-- Borderless lazygit
+vim.keymap.set("n", "<leader>gg", function()
+  Util.terminal({ "lazygit" }, { cwd = Util.root(), esc_esc = false, ctrl_hjkl = false, border = "none" })
+end, { desc = "Lazygit (root dir)" })
 
-vim.keymap.set('x', '<leader>p', [["_dP]])
+keymap.del({ "n", "i", "v" }, "<A-j>")
+keymap.del({ "n", "i", "v" }, "<A-k>")
+keymap.del("n", "<C-Left>")
+keymap.del("n", "<C-Down>")
+keymap.del("n", "<C-Up>")
+keymap.del("n", "<C-Right>")
 
-vim.keymap.set('n', 'Q', '<nop>')
+keymap.set("n", "<M-h>", '<Cmd>lua require("tmux").resize_left()<CR>', { silent = true })
+keymap.set("n", "<M-j>", '<Cmd>lua require("tmux").resize_bottom()<CR>', { silent = true })
+keymap.set("n", "<M-k>", '<Cmd>lua require("tmux").resize_top()<CR>', { silent = true })
+keymap.set("n", "<M-l>", '<Cmd>lua require("tmux").resize_right()<CR>', { silent = true })
 
-vim.keymap.set('n', '<C-k>', '<cmd>cnext<CR>zz')
-vim.keymap.set('n', '<C-j>', '<cmd>cprev<CR>zz')
+-- Split windows
+keymap.set("n", "ss", ":vsplit<Return>", opts)
+keymap.set("n", "sv", ":split<Return>", opts)
 
-vim.keymap.set('n', '<leader>k', '<cmd>lnext<CR>zz', { desc = 'Next loclist' })
-vim.keymap.set('n', '<leader>j', '<cmd>lprev<CR>zz', { desc = 'Prev loclist' })
+-- Tabs
+keymap.set("n", "te", ":tabedit", opts)
+keymap.set("n", "<tab>", ":tabnext<Return>", opts)
+keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
+keymap.set("n", "<leader>U", "<Cmd>UndotreeToggle<CR>")
+
+-- package-info keymaps
+set_keymap(
+  "n",
+  "<leader>cpt",
+  "<cmd>lua require('package-info').toggle()<cr>",
+  { silent = true, noremap = true, desc = "Toggle" }
+)
+set_keymap(
+  "n",
+  "<leader>cpd",
+  "<cmd>lua require('package-info').delete()<cr>",
+  { silent = true, noremap = true, desc = "Delete package" }
+)
+set_keymap(
+  "n",
+  "<leader>cpu",
+  "<cmd>lua require('package-info').update()<cr>",
+  { silent = true, noremap = true, desc = "Update package" }
+)
+set_keymap(
+  "n",
+  "<leader>cpi",
+  "<cmd>lua require('package-info').install()<cr>",
+  { silent = true, noremap = true, desc = "Install package" }
+)
+set_keymap(
+  "n",
+  "<leader>cpc",
+  "<cmd>lua require('package-info').change_version()<cr>",
+  { silent = true, noremap = true, desc = "Change package version" }
+)

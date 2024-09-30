@@ -1,16 +1,31 @@
 return {
   {
-    'folke/tokyonight.nvim',
-    priority = 1000, -- Make sure to load this before all the other start plugins.
-    init = function()
-      vim.cmd.hi 'Comment gui=none'
+    "scottmckendry/cyberdream.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = function(_, opts)
+      opts.transparent = true
+      opts.italic_comments = true
+      opts.borderless_telescope = false
     end,
   },
   {
-    'rose-pine/neovim',
-    name = 'rose-pine',
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "cyberdream",
+    },
+  },
+
+  -- modicator (auto color line number based on vim mode)
+  {
+    "mawkler/modicator.nvim",
+    dependencies = "scottmckendry/cyberdream.nvim",
     init = function()
-      vim.cmd.colorscheme 'rose-pine'
+      -- These are required for Modicator to work
+      vim.o.cursorline = false
+      vim.o.number = true
+      vim.o.termguicolors = true
     end,
+    opts = {},
   },
 }
