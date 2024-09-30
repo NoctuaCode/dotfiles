@@ -97,6 +97,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
+eval "$(direnv hook zsh)"
 
 # use colorls instead of ls
 alias ls="eza --icons -F -H --group-directories-first --git"
