@@ -53,12 +53,7 @@
                     ]
                   }
                 },
-                "to": [
-                  {
-                    "key_code": "5",
-                    "modifiers": ["left_shift"]
-                  }
-                ],
+                "to": [{ "key_code": "5", "modifiers": ["left_shift"] }],
                 "type": "basic"
               },
               {
@@ -82,12 +77,7 @@
                     ]
                   }
                 },
-                "to": [
-                  {
-                    "key_code": "1",
-                    "modifiers": ["left_shift"]
-                  }
-                ],
+                "to": [{ "key_code": "1", "modifiers": ["left_shift"] }],
                 "type": "basic"
               },
               {
@@ -136,10 +126,7 @@
                   }
                 },
                 "to": [
-                  {
-                    "key_code": "open_bracket",
-                    "modifiers": ["left_shift"]
-                  }
+                  { "key_code": "open_bracket", "modifiers": ["left_shift"] }
                 ],
                 "type": "basic"
               },
@@ -164,12 +151,7 @@
                     ]
                   }
                 },
-                "to": [
-                  {
-                    "key_code": "9",
-                    "modifiers": ["left_shift"]
-                  }
-                ],
+                "to": [{ "key_code": "9", "modifiers": ["left_shift"] }],
                 "type": "basic"
               },
               {
@@ -194,10 +176,7 @@
                   }
                 },
                 "to": [
-                  {
-                    "key_code": "equal_sign",
-                    "modifiers": ["left_shift"]
-                  }
+                  { "key_code": "equal_sign", "modifiers": ["left_shift"] }
                 ],
                 "type": "basic"
               },
@@ -246,12 +225,7 @@
                     ]
                   }
                 },
-                "to": [
-                  {
-                    "key_code": "0",
-                    "modifiers": ["left_shift"]
-                  }
-                ],
+                "to": [{ "key_code": "0", "modifiers": ["left_shift"] }],
                 "type": "basic"
               },
               {
@@ -276,10 +250,7 @@
                   }
                 },
                 "to": [
-                  {
-                    "key_code": "close_bracket",
-                    "modifiers": ["left_shift"]
-                  }
+                  { "key_code": "close_bracket", "modifiers": ["left_shift"] }
                 ],
                 "type": "basic"
               },
@@ -328,12 +299,7 @@
                     ]
                   }
                 },
-                "to": [
-                  {
-                    "key_code": "7",
-                    "modifiers": ["left_shift"]
-                  }
-                ],
+                "to": [{ "key_code": "7", "modifiers": ["left_shift"] }],
                 "type": "basic"
               },
               {
@@ -357,12 +323,7 @@
                     ]
                   }
                 },
-                "to": [
-                  {
-                    "key_code": "4",
-                    "modifiers": ["left_shift"]
-                  }
-                ],
+                "to": [{ "key_code": "4", "modifiers": ["left_shift"] }],
                 "type": "basic"
               },
               {
@@ -386,12 +347,7 @@
                     ]
                   }
                 },
-                "to": [
-                  {
-                    "key_code": "2",
-                    "modifiers": ["left_shift"]
-                  }
-                ],
+                "to": [{ "key_code": "2", "modifiers": ["left_shift"] }],
                 "type": "basic"
               },
               {
@@ -415,7 +371,7 @@
                     ]
                   }
                 },
-                "to": [{ "key_code": "quote" }],
+                "to": [{ "key_code": "semicolon" }],
                 "type": "basic"
               },
               {
@@ -703,7 +659,7 @@
                     ]
                   }
                 },
-                "to": [{ "key_code": "6", "modifiers": ["left_shift"] }],
+                "to": [{ "key_code": "grave_accent_and_tilde" }],
                 "type": "basic"
               },
               {
@@ -991,9 +947,7 @@
                     ]
                   }
                 },
-                "to": [
-                  { "key_code": "semicolon", "modifiers": ["left_shift"] }
-                ],
+                "to": [{ "key_code": "quote" }],
                 "type": "basic"
               },
               {
@@ -1264,7 +1218,11 @@
                     ]
                   }
                 },
-                "to": [{ "key_code": "1" }],
+                "to": [
+                  {
+                    "key_code": "1"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -1289,7 +1247,11 @@
                     ]
                   }
                 },
-                "to": [{ "key_code": "2" }],
+                "to": [
+                  {
+                    "key_code": "2"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -1314,7 +1276,11 @@
                     ]
                   }
                 },
-                "to": [{ "key_code": "3" }],
+                "to": [
+                  {
+                    "key_code": "3"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -1339,7 +1305,11 @@
                     ]
                   }
                 },
-                "to": [{ "key_code": "4" }],
+                "to": [
+                  {
+                    "key_code": "4"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -1364,7 +1334,11 @@
                     ]
                   }
                 },
-                "to": [{ "key_code": "5" }],
+                "to": [
+                  {
+                    "key_code": "5"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -1389,7 +1363,11 @@
                     ]
                   }
                 },
-                "to": [{ "key_code": "6" }],
+                "to": [
+                  {
+                    "key_code": "6"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -1414,7 +1392,11 @@
                     ]
                   }
                 },
-                "to": [{ "key_code": "7" }],
+                "to": [
+                  {
+                    "key_code": "7"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -1439,7 +1421,11 @@
                     ]
                   }
                 },
-                "to": [{ "key_code": "8" }],
+                "to": [
+                  {
+                    "key_code": "8"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -1464,7 +1450,11 @@
                     ]
                   }
                 },
-                "to": [{ "key_code": "9" }],
+                "to": [
+                  {
+                    "key_code": "9"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -1489,7 +1479,11 @@
                     ]
                   }
                 },
-                "to": [{ "key_code": "0" }],
+                "to": [
+                  {
+                    "key_code": "0"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -1576,7 +1570,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "quote",
+                    "key_code": "semicolon",
                     "modifiers": ["left_shift"]
                   }
                 ],
@@ -1936,7 +1930,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "6",
+                    "key_code": "grave_accent_and_tilde",
                     "modifiers": ["left_shift"]
                   }
                 ],
@@ -2296,7 +2290,8 @@
                 },
                 "to": [
                   {
-                    "key_code": "semicolon"
+                    "key_code": "quote",
+                    "modifiers": ["left_shift"]
                   }
                 ],
                 "type": "basic"
@@ -2623,7 +2618,11 @@
                     ]
                   }
                 },
-                "to": [{ "key_code": "1" }],
+                "to": [
+                  {
+                    "key_code": "1"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -2648,7 +2647,11 @@
                     ]
                   }
                 },
-                "to": [{ "key_code": "2" }],
+                "to": [
+                  {
+                    "key_code": "2"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -2673,7 +2676,11 @@
                     ]
                   }
                 },
-                "to": [{ "key_code": "3" }],
+                "to": [
+                  {
+                    "key_code": "3"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -2698,7 +2705,11 @@
                     ]
                   }
                 },
-                "to": [{ "key_code": "4" }],
+                "to": [
+                  {
+                    "key_code": "4"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -2723,7 +2734,11 @@
                     ]
                   }
                 },
-                "to": [{ "key_code": "5" }],
+                "to": [
+                  {
+                    "key_code": "5"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -2748,7 +2763,11 @@
                     ]
                   }
                 },
-                "to": [{ "key_code": "6" }],
+                "to": [
+                  {
+                    "key_code": "6"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -2773,7 +2792,11 @@
                     ]
                   }
                 },
-                "to": [{ "key_code": "7" }],
+                "to": [
+                  {
+                    "key_code": "7"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -2798,7 +2821,11 @@
                     ]
                   }
                 },
-                "to": [{ "key_code": "8" }],
+                "to": [
+                  {
+                    "key_code": "8"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -2823,7 +2850,11 @@
                     ]
                   }
                 },
-                "to": [{ "key_code": "9" }],
+                "to": [
+                  {
+                    "key_code": "9"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -2848,7 +2879,11 @@
                     ]
                   }
                 },
-                "to": [{ "key_code": "0" }],
+                "to": [
+                  {
+                    "key_code": "0"
+                  }
+                ],
                 "type": "basic"
               },
               {
@@ -2935,7 +2970,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "quote",
+                    "key_code": "semicolon",
                     "modifiers": ["right_shift"]
                   }
                 ],
@@ -3295,7 +3330,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "6",
+                    "key_code": "grave_accent_and_tilde",
                     "modifiers": ["right_shift"]
                   }
                 ],
@@ -3655,7 +3690,8 @@
                 },
                 "to": [
                   {
-                    "key_code": "semicolon"
+                    "key_code": "quote",
+                    "modifiers": ["right_shift"]
                   }
                 ],
                 "type": "basic"
@@ -8355,4 +8391,3 @@
     }
   ]
 }
-
