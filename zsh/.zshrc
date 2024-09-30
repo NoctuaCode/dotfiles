@@ -8,7 +8,7 @@ fi
 export GOPATH=$HOME/go
 
 # Extend PATH
-export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/emacs/bin:$(go env GOPATH)/bin:"/Users/noctuacode/Library/Application Support/Herd/bin/":$PATH
+export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/emacs/bin:$(go env GOPATH)/bin:"/Users/noctuacode/Library/Application Support/Herd/bin/":/opt/homebrew/opt/llvm/bin:$PATH
 
 # CONDA
 # !! Contents within this block are managed by 'conda init' !!
@@ -38,40 +38,16 @@ export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-# Set the directory we want to store zinit and plugins
-ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="headline"
+export XDG_CONFIG_HOME=$HOME/.config
 
-# Download Zinit, if it's not there yet
-[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
-[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+# pnpm
+export PNPM_HOME="$HOME/Library/pnpm"
+export PATH="$PNPM_HOME:$PATH"
+# pnpm end
 
-# Source/Load zinit
-source "${ZINIT_HOME}/zinit.zsh"
-
-# Add in zsh plugins
-zinit light zsh-users/zsh-syntax-highlighting
-zinit light zsh-users/zsh-completions
-zinit light zsh-users/zsh-autosuggestions
-zinit light Aloxaf/fzf-tab
-
-# Add in snippets
-zinit snippet OMZP::git
-zinit snippet OMZP::sudo
-zinit snippet OMZP::brew
-zinit snippet OMZP::command-not-found
-zinit snippet OMZP::laravel
-
-# Load completions
-autoload -Uz compinit && compinit
-
-zinit cdreplay -q
-
-# Keybindings
-bindkey -v
-
-bindkey '^p' history-search-backward
-bindkey '^n' history-search-forward
-bindkey '^[w' kill-region
+source $ZSH/oh-my-zsh.sh
 
 # History
 HISTSIZE=5000
@@ -86,18 +62,13 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-# Completion styling
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
-zstyle ':completion:*' menu no
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # use colorls instead of ls
 alias ls="eza --icons -F -H --group-directories-first --git"
@@ -116,11 +87,31 @@ alias br="brew remove"
 alias c="clear"
 alias n="nvim"
 
-# Herd injected PHP binary.
-export PATH="/Users/noctuacode/Library/Application Support/Herd/bin/":$PATH
+kill_port() {
+    local port="$1"
+    if [ -z "$port" ]; then
+        echo "Usage: kill_process_by_port <port_number>"
+        return 1
+    fi
+    
+    local pid=$(lsof -ti :"$port")
+    if [ -z "$pid" ]; then
+        echo "No process found using port $port"
+        return 1
+    fi
+    
+    echo "Killing process $pid using port $port"
+    kill -9 "$pid"
+    
+    if [ $? -eq 0 ]; then
+        echo "Process successfully terminated"
+    else
+        echo "Failed to terminate process"
+        return 1
+    fi
+}
 
-# Herd injected PHP 8.3 configuration.
-export HERD_PHP_83_INI_SCAN_DIR="/Users/noctuacode/Library/Application Support/Herd/config/php/83/"
-
-# Herd injected PHP binary.
-export PATH="/Users/noctuacode/Library/Application Support/Herd/bin/":$PATH
+# Set a blazingly fast keyboard repeat rate
+defaults write NSGlobalDomain KeyRepeat -int 1
+defaults write NSGlobalDomain InitialKeyRepeat -int 15
+defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
