@@ -1,11 +1,7 @@
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('n', '<C-c>', '<Esc>')
-vim.keymap.set('n', '<leader>w', '<CMD>w<CR>', { desc = 'Save file' })
-vim.keymap.set('n', '<leader>q', '<CMD>q<CR>', { desc = 'Close file' })
-vim.keymap.set('n', '<leader>c', '<CMD>close<CR>', { desc = 'Close buffer' })
-vim.keymap.set('n', '<leader>Q', '<CMD>qa!<CR>', { desc = 'Quit Neovim' })
 
-vim.keymap.set('n', '-', '<CMD>Oil<CR>')
+vim.keymap.set('n', '<leader>-', '<CMD>Oil<CR>')
 
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
