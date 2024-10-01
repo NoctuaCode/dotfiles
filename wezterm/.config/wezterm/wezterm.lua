@@ -24,7 +24,7 @@ return {
 	enable_tab_bar = false,
 	window_background_opacity = 0.8,
 
-	font_size = 20,
+	font_size = 18,
 	font = wezterm.font({ family = "DankMono Nerd Font" }),
 	bold_brightens_ansi_colors = true,
 	adjust_window_size_when_changing_font_size = true,
