@@ -8,10 +8,6 @@ return {
     },
   },
   {
-    "folke/noice.nvim",
-    enabled = false,
-  },
-  {
     "j-hui/fidget.nvim",
     opts = {
       notification = {
@@ -25,7 +21,7 @@ return {
   {
     "rcarriga/nvim-notify",
     opts = {
-      timeout = 500,
+      -- timeout = 500,
       render = "compact",
       max_height = function()
         return math.floor(vim.o.lines * 0.75)

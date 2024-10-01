@@ -8,6 +8,7 @@ opt.undofile = true
 opt.swapfile = false
 opt.backup = false
 opt.undodir = os.getenv("HOME") .. "/.local/nvim/undodir"
+opt.completeopt = "menuone,preview,noinsert,noselect"
 
 global.root_spec = { "cwd" }
 global.omni_sql_no_default_maps = 1
