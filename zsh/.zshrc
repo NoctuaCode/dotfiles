@@ -85,6 +85,9 @@ alias br="brew remove"
 
 alias c="clear"
 alias n="nvim"
+alias cat="bat"
+
+alias install="darwin-rebuild switch --flake ~/.config/nix-darwin"
 
 kill_port() {
     local port="$1"
@@ -114,3 +117,7 @@ kill_port() {
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+fpath+=~/.zfunc
