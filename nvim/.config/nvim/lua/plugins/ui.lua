@@ -1,13 +1,5 @@
 return {
   {
-    "lukas-reineke/virt-column.nvim",
-    opts = {
-      char = { "┆" },
-      virtcolumn = "80",
-      highlight = { "NonText" },
-    },
-  },
-  {
     "j-hui/fidget.nvim",
     opts = {
       notification = {
