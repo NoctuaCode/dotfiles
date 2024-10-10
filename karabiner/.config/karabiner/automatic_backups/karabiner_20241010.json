@@ -223,7 +223,7 @@
                                     "key_code": "q",
                                     "modifiers": { "optional": ["caps_lock", "left_command", "left_control", "left_option", "right_command", "right_control", "right_option"] }
                                 },
-                                "to": [{ "key_code": "semicolon" }],
+                                "to": [{ "key_code": "quote" }],
                                 "type": "basic"
                             },
                             {
@@ -559,7 +559,7 @@
                                     "key_code": "z",
                                     "modifiers": { "optional": ["caps_lock", "left_command", "left_control", "left_option", "right_command", "right_control", "right_option"] }
                                 },
-                                "to": [{ "key_code": "quote" }],
+                                "to": [{ "key_code": "semicolon" }],
                                 "type": "basic"
                             },
                             {
@@ -990,7 +990,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "semicolon",
+                                        "key_code": "quote",
                                         "modifiers": ["left_shift"]
                                     }
                                 ],
@@ -1518,7 +1518,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "quote",
+                                        "key_code": "semicolon",
                                         "modifiers": ["left_shift"]
                                     }
                                 ],
@@ -2024,7 +2024,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "semicolon",
+                                        "key_code": "quote",
                                         "modifiers": ["right_shift"]
                                     }
                                 ],
@@ -2552,7 +2552,7 @@
                                 },
                                 "to": [
                                     {
-                                        "key_code": "quote",
+                                        "key_code": "semicolon",
                                         "modifiers": ["right_shift"]
                                     }
                                 ],
@@ -3170,18 +3170,9 @@
                         "vendor_id": 5824
                     },
                     "ignore": true
-                },
-                {
-                    "disable_built_in_keyboard_if_exists": true,
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 6519,
-                        "vendor_id": 12951
-                    }
                 }
             ],
             "name": "Dvorak",
-            "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "iso" }
         },
         {
@@ -3374,6 +3365,7 @@
                 }
             ],
             "name": "Qwerty",
+            "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "iso" }
         },
         {
