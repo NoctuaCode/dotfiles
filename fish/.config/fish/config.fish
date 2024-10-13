@@ -15,7 +15,7 @@ set -gx PATH .venv/bin $PATH
 set -g GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
 
-set -g theme_color_scheme terminal-dark
+set -g theme_color_scheme ayu-dark
 set -g fish_prompt_pwd_dir_length 1
 set -g theme_display_user yes
 set -g theme_hide_hostname no
@@ -27,6 +27,11 @@ alias lt "ll --tree"
 alias lta "ll --tree -a"
 
 alias g git
+alias ga "git add"
+alias gaa "git add -A"
+alias gc "git commit -m"
+alias gp "git pull --rebase"
+alias gP "git push"
 alias c clear
 
 alias bi "brew install"
@@ -56,5 +61,3 @@ end
 fzf --fish | source
 
 zoxide init fish --cmd cd | source
-
-load_nvm >/dev/stderr
