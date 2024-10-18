@@ -40,6 +40,8 @@ alias br "brew remove"
 alias bs "brew search"
 alias buu "brew update && brew upgrade"
 
+alias nix-update "darwin-rebuild switch --flake ~/.config/nix-darwin"
+
 command -qv nvim && alias vim nvim
 
 set -gx EDITOR nvim
