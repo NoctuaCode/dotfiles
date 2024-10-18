@@ -63,7 +63,7 @@ return {
 	enable_tab_bar = true,
 	window_background_opacity = 0.8,
 
-	font_size = 20,
+	font_size = 18,
 	font = wezterm.font({ family = "FiraCode Nerd Font" }),
 
 	font_rules = {
