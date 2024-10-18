@@ -1,6 +1,5 @@
 return {
   "Wansmer/treesj",
-  keys = { "<space>m", "<space>j", "<space>s" },
   dependencies = { "nvim-treesitter/nvim-treesitter" }, -- if you install parsers with `nvim-treesitter`
   config = function()
     require("treesj").setup({
@@ -10,7 +9,7 @@ return {
       "n",
       "gm",
       "<Cmd>lua require('treesj').toggle()<CR>",
-      { noremap = true, silent = true, description = "Split/Join" }
+      { noremap = true, silent = true, desc = "Split/Join" }
     )
   end,
 }

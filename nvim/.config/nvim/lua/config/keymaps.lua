@@ -20,6 +20,8 @@ keymap.del("n", "<C-Down>")
 keymap.del("n", "<C-Up>")
 keymap.del("n", "<C-Right>")
 
+keymap.set("n", "<Leader>-", "<Cmd>Oil<CR>", { silent = true, noremap = true, desc = "Oil" })
+
 keymap.set("n", "<leader>gg", "<Cmd>Neogit<CR>", { silent = true })
 
 vim.keymap.set("n", "<A-h>", require("smart-splits").resize_left)
