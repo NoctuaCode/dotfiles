@@ -48,7 +48,7 @@ if [ -f bun.lockb ]; then
 fi
 
 if [ -d .venv ]; then
-  fastapi dev app.py
+  .venv/bin/fastapi dev app/app.py
 fi
 
 BASE_NAME="$(basename "$(pwd)")"
