@@ -3,15 +3,14 @@
         {
             "complex_modifications": {
                 "parameters": {
-                    "basic.simultaneous_threshold_milliseconds": 50,
-                    "basic.to_delayed_action_delay_milliseconds": 210,
-                    "basic.to_if_alone_timeout_milliseconds": 209,
-                    "basic.to_if_held_down_threshold_milliseconds": 210
+                    "basic.to_delayed_action_delay_milliseconds": 80,
+                    "basic.to_if_alone_timeout_milliseconds": 300,
+                    "basic.to_if_held_down_threshold_milliseconds": 80
                 },
                 "rules": [
                     {
-                        "description": "Homerow mod",
-                        "manipulators":[
+                        "description": "Change space to left shift if held and space pressed alone",
+                        "manipulators": [
                             {
                                 "conditions": [
                                     {
@@ -20,116 +19,11 @@
                                     }
                                 ],
                                 "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "key_code": "right_shift" }],
-                                "to_if_alone": [{ "key_code": "h" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [{ "vendor_id": 1452 }],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "f",
+                                    "key_code": "spacebar",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "key_code": "left_shift" }],
-                                "to_if_alone": [{ "key_code": "u" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [{ "vendor_id": 1452 }],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "key_code": "right_control" }],
-                                "to_if_alone": [{ "key_code": "t" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [{ "vendor_id": 1452 }],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "d",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "key_code": "left_control" }],
-                                "to_if_alone": [{ "key_code": "e" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [{ "vendor_id": 1452 }],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "key_code": "right_option" }],
-                                "to_if_alone": [{ "key_code": "n" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [{ "vendor_id": 1452 }],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "s",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "key_code": "left_option" }],
-                                "to_if_alone": [{ "key_code": "o" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [{ "vendor_id": 1452 }],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "semicolon",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "key_code": "right_command" }],
-                                "to_if_alone": [{ "key_code": "s" }],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "identifiers": [{ "vendor_id": 1452 }],
-                                        "type": "device_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "a",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "key_code": "left_command" }],
-                                "to_if_alone": [{ "key_code": "a" }],
+                                "to_if_alone": [{ "key_code": "spacebar" }],
                                 "type": "basic"
                             }
                         ]
@@ -1577,12 +1471,12 @@
                             "to": [{ "key_code": "grave_accent_and_tilde" }]
                         },
                         {
-                            "from": { "key_code": "right_command" },
-                            "to": [{ "key_code": "right_option" }]
-                        },
-                        {
                             "from": { "key_code": "right_option" },
                             "to": [{ "key_code": "right_command" }]
+                        },
+                        {
+                            "from": { "key_code": "right_command" },
+                            "to": [{ "key_code": "right_option" }]
                         }
                     ]
                 },
@@ -1645,7 +1539,6 @@
                     "ignore": true
                 },
                 {
-                    "disable_built_in_keyboard_if_exists": true,
                     "fn_function_keys": [
                         {
                             "from": { "key_code": "f1" },
