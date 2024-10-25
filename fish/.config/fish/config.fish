@@ -1,6 +1,6 @@
 set fish_greeting = ""
 
-set -gx TERM xterm-256color
+# set -gx TERM screen-256color
 
 set -gx PATH /opt/homebrew/bin $PATH
 set -gx PATH bin $PATH
@@ -41,6 +41,8 @@ alias bs "brew search"
 alias buu "brew update && brew upgrade"
 
 alias nix-update "darwin-rebuild switch --flake ~/.config/nix-darwin"
+
+alias tmux "tmux -2"
 
 command -qv nvim && alias vim nvim
 
