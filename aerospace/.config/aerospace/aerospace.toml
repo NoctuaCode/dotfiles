@@ -75,8 +75,8 @@ alt-shift-c = 'exec-and-forget open "/Applications/Messenger.app"'
 alt-shift-v = 'exec-and-forget open "/Applications/Visual Studio Code.app"'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
-alt-ctrl-t = 'layout tiles horizontal vertical'
-alt-ctrl-a = 'layout accordion horizontal vertical'
+alt-ctrl-t = 'layout tiles vertical horizontal'
+alt-ctrl-a = 'layout accordion vertical horizontal'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 alt-ctrl-h = 'focus left'
@@ -147,11 +147,11 @@ alt-shift-l = ['join-with right', 'mode main']
 
 [[on-window-detected]]
 if.app-id = 'net.kovidgoyal.kitty'
-run = 'move-node-to-workspace 1'
+run = 'move-node-to-workspace 0'
 
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
-run = 'move-node-to-workspace 1'
+run = 'move-node-to-workspace 0'
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
@@ -174,6 +174,10 @@ if.app-id = 'com.apple.Safari'
 run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
+if.app-id = 'com.google.Chrome'
+run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
 if.app-id = 'com.facebook.archon.developerID'
 run = 'move-node-to-workspace 8'
 
@@ -187,4 +191,4 @@ run = 'move-node-to-workspace 9'
 
 [[on-window-detected]]
 if.app-id = 'com.hnc.Discord'
-run = 'move-node-to-workspace 0'
+run = 'move-node-to-workspace 7'
