@@ -8,7 +8,18 @@ fi
 export GOPATH=$HOME/go
 
 # Extend PATH
-export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.config/emacs/bin:$(go env GOPATH)/bin:"/Users/noctuacode/Library/Application Support/Herd/bin/":/opt/homebrew/opt/llvm/bin:$PATH
+# With local
+export PATH=$HOME/.local/bin:$PATH
+# With Rust
+export PATH=$HOME/.cargo/bin:$PATH
+# With emacs
+export PATH=$HOME/.config/emacs/bin:$PATH
+# With Go
+export PATH=$(go env GOPATH)/bin:$PATH
+# With Herd
+export PATH="/Users/noctuacode/Library/Application Support/Herd/bin/":$PATH
+# With LLVM
+export PATH=/opt/homebrew/opt/llvm/bin:$PATH
 
 # CONDA
 # !! Contents within this block are managed by 'conda init' !!
@@ -34,20 +45,7 @@ export HERD_PHP_74_INI_SCAN_DIR="/Users/noctuacode/Library/Application Support/H
 # Herd injected PHP 8.3 configuration.
 export HERD_PHP_83_INI_SCAN_DIR="/Users/noctuacode/Library/Application Support/Herd/config/php/83/"
 
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
-export ZSH="$HOME/.oh-my-zsh"
-ZSH_THEME="headline"
 export XDG_CONFIG_HOME=$HOME/.config
-
-# pnpm
-export PNPM_HOME="$HOME/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
-
-source $ZSH/oh-my-zsh.sh
 
 # History
 HISTSIZE=5000
@@ -75,19 +73,11 @@ alias ll="ls -al"
 alias lt="ls -T --git-ignore"
 alias lta="ls -Ta"
 
-# Brew command
-alias bu="brew update"
-alias buu="brew update && brew upgrade"
-alias bi="brew install"
-alias bic="brew install --cask"
-alias bs="brew search"
-alias br="brew remove"
-
 alias c="clear"
-alias n="nvim"
+alias vim="nvim"
 alias cat="bat"
 
-alias install="darwin-rebuild switch --flake ~/.config/nix-darwin"
+alias nix-install="darwin-rebuild switch --flake ~/.config/nix-darwin"
 
 kill_port() {
     local port="$1"
@@ -113,10 +103,7 @@ kill_port() {
     fi
 }
 
-# Set a blazingly fast keyboard repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 1
-defaults write NSGlobalDomain InitialKeyRepeat -int 15
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
+eval "$(starship init zsh)"
 
 autoload -Uz compinit
 zstyle ':completion:*' menu select
