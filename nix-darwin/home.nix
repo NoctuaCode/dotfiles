@@ -17,7 +17,10 @@
         ".config/karabiner".source = ~/dotfiles/karabiner;
         ".config/nix".source = ~/dotfiles/nix;
         ".config/nix-darwin".source = ~/dotfiles/nix-darwin;
-        ".config/nvim".source = ~/dotfiles/nvim;
+        ".config/nvim" = {
+          source = ~/dotfiles/nvim;
+          recursive = true;
+        };
         ".config/sesh".source = ~/dotfiles/sesh;
         ".config/starship".source = ~/dotfiles/starship;
         ".config/tmux".source = ~/dotfiles/tmux;
