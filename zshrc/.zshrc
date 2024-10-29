@@ -77,7 +77,7 @@ alias c="clear"
 alias vim="nvim"
 alias cat="bat"
 
-alias nix-install="darwin-rebuild switch --flake ~/.config/nix-darwin"
+alias nix-install="darwin-rebuild switch --flake ~/dotfiles/nix-darwin --impure"
 
 kill_port() {
     local port="$1"
