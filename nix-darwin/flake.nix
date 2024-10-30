@@ -88,9 +88,9 @@
           "signal"
           "sony-ps-remote-play"
           "shottr"
-          "visual-studio-code"
           "warp"
           "wezterm"
+          "zed"
         ];
         masApps = {
         };
