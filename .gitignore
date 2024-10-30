@@ -1,1 +1,7 @@
 tmux/plugins
+tmux/.config/tmux/plugins/tmux-resurrect
+tmux/.config/tmux/plugins/tmux-sensible
+tmux/.config/tmux/plugins/tmux-sessionx
+tmux/.config/tmux/plugins/tmux.nvim
+tmux/.config/tmux/plugins/tokyo-night-tmux
+tmux/.config/tmux/plugins/tpm
