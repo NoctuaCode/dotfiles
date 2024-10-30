@@ -47,6 +47,8 @@ export HERD_PHP_83_INI_SCAN_DIR="/Users/noctuacode/Library/Application Support/H
 
 export XDG_CONFIG_HOME=$HOME/.config
 
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+
 # History
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
