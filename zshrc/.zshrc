@@ -1,8 +1,18 @@
+setopt prompt_subst
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit
+compinit
+
 # Homebrew
 if [[ -f "/opt/homebrew/bin/brew" ]] then
   # If you're using macOS, you'll want this enabled
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
+
+export LANG=en_US.UTF-8
+
+export EDITOR=/opt/homebrew/bin/nvim
 
 # Go
 export GOPATH=$HOME/go
@@ -20,6 +30,10 @@ export PATH=$(go env GOPATH)/bin:$PATH
 export PATH="/Users/noctuacode/Library/Application Support/Herd/bin/":$PATH
 # With LLVM
 export PATH=/opt/homebrew/opt/llvm/bin:$PATH
+
+export PATH=/opt/homebrew/Cellar/avr-gcc@8/8.5.0_2/bin:$PATH
+export PATH=/opt/homebrew/Cellar/arm-none-eabi-gcc@8/8.5.0_2/bin:$PATH
+export PATH=/opt/homebrew/Cellar/arm-none-eabi-binutils/2.41/bin:$PATH
 
 # CONDA
 # !! Contents within this block are managed by 'conda init' !!
@@ -47,7 +61,11 @@ export HERD_PHP_83_INI_SCAN_DIR="/Users/noctuacode/Library/Application Support/H
 
 export XDG_CONFIG_HOME=$HOME/.config
 
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
+
+# export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 # History
 HISTSIZE=5000
@@ -79,7 +97,24 @@ alias c="clear"
 alias vim="nvim"
 alias cat="bat"
 
-alias nix-install="darwin-rebuild switch --flake ~/dotfiles/nix-darwin --impure"
+alias bi="brew install"
+alias bic="brew install --cask"
+alias bl="brew list"
+alias bs="brew search"
+alias br="brew remove"
+alias buu="brew update && brew upgrade"
+
+alias ga="git add -p"
+alias gb="git branch"
+alias gc="git commit -m"
+alias gdiff="git diff"
+alias glog="git log --graph --topo-order --pretty='%w(100,0,6)%C(yellow)%h%C(bold)%C(black)%d %C(cyan)%ar %C(green)%an%n%C(bold)%C(white)%s %N' --abbrev-commit"
+alias gp="git pull --rebase"
+alias gP="git push"
+alias gs="git status"
+alias gS="git switch"
+
+bindkey jj vi-cmd-mode
 
 kill_port() {
     local port="$1"
@@ -106,7 +141,3 @@ kill_port() {
 }
 
 eval "$(starship init zsh)"
-
-autoload -Uz compinit
-zstyle ':completion:*' menu select
-fpath+=~/.zfunc
