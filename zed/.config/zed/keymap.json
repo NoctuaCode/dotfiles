@@ -7,13 +7,13 @@
       "space g h r": "editor::RevertSelectedHunks",
 
       // Toggle inlay hints
-      "space t i": "editor::ToggleInlayHints",
+      "space c i": "editor::ToggleInlayHints",
 
       // Toggle soft wrap
-      "space u w": "editor::ToggleSoftWrap",
+      "space c w": "editor::ToggleSoftWrap",
 
       // Toggle zen mode
-      "space c z": "workspace::ToggleCenteredLayout",
+      "space z": "workspace::ToggleCenteredLayout",
 
       // Open markdown preview
       "space m p": "markdown::OpenPreview",
@@ -80,9 +80,11 @@
       // File finder
       "space f f": "file_finder::Toggle",
       "space space": "file_finder::Toggle",
+      "alt-f": "file_finder::Toggle",
 
       // Show project panel
-      "space e": "pane::RevealInProjectPanel"
+      "space e": "pane::RevealInProjectPanel",
+      "alt-e": "project_panel::ToggleFocus"
     }
   },
   {
@@ -120,17 +122,6 @@
       "a": "editor::ToggleCodeActions" // zed specific
     }
   },
-  // Toggle terminal
-  {
-    "context": "Workspace",
-    "bindings": {
-      "ctrl-\\": "terminal_panel::ToggleFocus"
-    }
-  },
-  {
-    "context": "Terminal",
-    "bindings": {}
-  },
   // File panel (netrw)
   {
     "context": "ProjectPanel && not_editing",
@@ -143,8 +134,7 @@
       "c": "project_panel::Copy",
       "p": "project_panel::Paste",
       // Close project panel as project file panel on the right
-      "q": "workspace::ToggleRightDock",
-      "space e": "workspace::ToggleRightDock"
+      "q": "workspace::ToggleRightDock"
     }
   },
   // Panel nagivation
@@ -161,7 +151,13 @@
     "context": "Workspace",
     "bindings": {
       // Map VSCode like keybindings
-      "cmd-b": "workspace::ToggleRightDock"
+      "alt-h": "workspace::ToggleLeftDock",
+      "alt-l": "workspace::ToggleRightDock",
+      "alt-t": "terminal_panel::ToggleFocus",
+      "alt-j": "workspace::ToggleBottomDock",
+      "alt-f": "file_finder::Toggle",
+      "alt-e": "project_panel::ToggleFocus",
+      "alt-p": "projects::OpenRecent"
     }
   }
 ]

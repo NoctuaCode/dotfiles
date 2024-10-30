@@ -4,14 +4,14 @@
 
   "theme": {
     "mode": "system",
-    "dark": "Rosé Pine",
+    "dark": "Andromeda",
     "light": "Rosé Pine Dawn"
   },
 
-  "ui_font_size": 18,
-  "ui_font_family": "BlexMono Nerd Font",
-  "buffer_font_size": 17,
-  "buffer_font_family": "BlexMono Nerd Font",
+  "ui_font_size": 16,
+  "ui_font_family": "FiraCode Nerd Font",
+  "buffer_font_size": 18,
+  "buffer_font_family": "FiraCode Nerd Font",
 
   "project_panel": {
     "button": true,

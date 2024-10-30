@@ -11,6 +11,7 @@ return {
 	webgpu_power_preference = "HighPerformance",
 
 	window_decorations = "RESIZE",
+	tab_bar_at_bottom = true,
 	window_padding = {
 		left = 10,
 		right = 10,
@@ -19,30 +20,29 @@ return {
 	},
 	window_close_confirmation = "NeverPrompt",
 
-	color_scheme = "rose-pine",
-	term = "xterm-256color",
+	color_scheme = "tokyonight",
+	-- term = "xterm-256color",
 	enable_tab_bar = false,
+	-- window_background_opacity = 0.8,
 
-	font_size = 15,
-	font = wezterm.font({ family = "BlexMono Nerd Font" }),
-	bold_brightens_ansi_colors = true,
-	adjust_window_size_when_changing_font_size = true,
+	font_size = 18,
+	font = wezterm.font({ family = "FiraCode Nerd Font" }),
 
 	font_rules = {
 		{
 			intensity = "Bold",
 			italic = true,
-			font = wezterm.font({ family = "BlexMono Nerd Font", weight = "Bold", style = "Italic" }),
+			font = wezterm.font({ family = "FiraCode Nerd Font", weight = "Bold", style = "Italic" }),
 		},
 		{
 			italic = true,
 			intensity = "Half",
-			font = wezterm.font({ family = "BlexMono Nerd Font", weight = "DemiBold", style = "Italic" }),
+			font = wezterm.font({ family = "FiraCode Nerd Font", weight = "DemiBold", style = "Italic" }),
 		},
 		{
 			italic = true,
 			intensity = "Normal",
-			font = wezterm.font({ family = "BlexMono Nerd Font", style = "Italic" }),
+			font = wezterm.font({ family = "FiraCode Nerd Font", style = "Italic" }),
 		},
 	},
 
