@@ -147,14 +147,10 @@ alt-shift-l = ['join-with right', 'mode main']
 
 [[on-window-detected]]
 if.app-id = 'net.kovidgoyal.kitty'
-run = 'move-node-to-workspace 0'
+run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
-run = 'move-node-to-workspace 0'
-
-[[on-window-detected]]
-if.app-id = 'com.microsoft.VSCode'
 run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
@@ -197,4 +193,4 @@ run = 'move-node-to-workspace 9'
 
 [[on-window-detected]]
 if.app-id = 'com.hnc.Discord'
-run = 'move-node-to-workspace 7'
+run = 'move-node-to-workspace 0'
