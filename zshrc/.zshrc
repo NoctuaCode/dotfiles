@@ -3,6 +3,13 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 autoload bashcompinit && bashcompinit
 autoload -Uz compinit
 compinit
+bindkey -e
+
+# completion using arrow keys (based on history)
+bindkey '^[[A' history-search-backward
+bindkey '^[[B' history-search-forward
+bindkey '^P' history-search-backward
+bindkey '^N' history-search-forward
 
 # Homebrew
 if [[ -f "/opt/homebrew/bin/brew" ]] then
@@ -34,6 +41,7 @@ export PATH=/opt/homebrew/opt/llvm/bin:$PATH
 export PATH=/opt/homebrew/Cellar/avr-gcc@8/8.5.0_2/bin:$PATH
 export PATH=/opt/homebrew/Cellar/arm-none-eabi-gcc@8/8.5.0_2/bin:$PATH
 export PATH=/opt/homebrew/Cellar/arm-none-eabi-binutils/2.41/bin:$PATH
+export DOTFILES_PATH=$HOME/dotfile-main
 
 # CONDA
 # !! Contents within this block are managed by 'conda init' !!
@@ -97,11 +105,8 @@ alias c="clear"
 alias vim="nvim"
 alias cat="bat"
 
-alias bi="brew install"
-alias bic="brew install --cask"
 alias bl="brew list"
 alias bs="brew search"
-alias br="brew remove"
 alias buu="brew update && brew upgrade"
 
 alias ga="git add -p"
@@ -138,6 +143,18 @@ kill_port() {
         echo "Failed to terminate process"
         return 1
     fi
+}
+
+bi() {
+    brew install "$1" && brew list --formula --full-name > "$DOTFILES_PATH/formula.txt" && brew list --cask --full-name > "$DOTFILES_PATH/cask.txt"
+}
+
+br() {
+    brew uninstall "$1" && brew list --formula --full-name > "$DOTFILES_PATH/formula.txt" && brew list --cask --full-name > "$DOTFILES_PATH/cask.txt"
+}
+
+bic() {
+    brew install --cask "$1" && brew list --formula --full-name > "$DOTFILES_PATH/formula.txt" && brew list --cask --full-name > "$DOTFILES_PATH/cask.txt"
 }
 
 eval "$(starship init zsh)"
