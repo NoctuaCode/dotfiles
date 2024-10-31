@@ -21,7 +21,7 @@ return {
 	window_close_confirmation = "NeverPrompt",
 
 	color_scheme = "tokyonight",
-	-- term = "xterm-256color",
+	term = "xterm-256color",
 	enable_tab_bar = false,
 	-- window_background_opacity = 0.8,
 
