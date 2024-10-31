@@ -22,11 +22,28 @@ install_brew() {
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 }
 
+check_dotfiles_path() {
+    local current_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+    
+    # Check if DOTFILES_PATH is in .zshrc
+    if ! grep -q "export DOTFILES_PATH=" ~/.zshrc; then
+        echo -e "${YELLOW}Adding DOTFILES_PATH to .zshrc...${NC}"
+        echo -e "\n# Dotfiles path" >> ~/.zshrc
+        echo "export DOTFILES_PATH=\"$current_dir\"" >> ~/.zshrc
+        echo -e "${GREEN}Added DOTFILES_PATH to .zshrc${NC}"
+    else
+        echo -e "${GREEN}DOTFILES_PATH already exists in .zshrc${NC}"
+    fi
+}
+
 # Main script
 check_brew
 if [ $? -eq 1 ]; then
     install_brew
 fi
+
+# Check and add DOTFILES_PATH before copying .zshrc
+check_dotfiles_path
 
 # Copy and source zshrc
 echo -e "${YELLOW}Copying .zshrc file...${NC}"
