@@ -18,6 +18,7 @@ killall Finder
 
 # Docker settings
 defaults write com.apple.dock "appswitcher-all-displays" -bool "true"
+defaults write com.apple.dock "persistent-apps" -array
 defaults write com.apple.dock "autohide" -bool "true"
 defaults write com.apple.dock "autohide-delay" 0.1
 defaults write com.apple.dock "launchanim" -bool "false"
