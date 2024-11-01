@@ -2,7 +2,7 @@ local map = vim.keymap
 
 map.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 map.set("n", "<C-c>", "<Esc>")
-map.set("n", "<leader>w", "<Cmd>w<CR>")
+map.set("n", "<leader>w", "<Cmd>w<CR>", { noremap = true, silent = true, desc = "Save" })
 map.set("n", "<leader>q", "<Cmd>q<cr>", { noremap = true, silent = true, desc = "Quit" })
 
 map.set("n", "<leader>-", "<CMD>Oil<CR>")
