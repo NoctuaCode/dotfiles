@@ -26,6 +26,7 @@ defaults write com.apple.dock "mineffect" -string "suck"
 defaults write com.apple.dock "showhidden" -bool "true"
 defaults write com.apple.dock "show-process-indicators" -bool "false"
 defaults write com.apple.dock "static-only" -bool "true"
+defaults write com.apple.dock "expose-group-apps" -bool "true"
 killall Dock
 
 # GlobalDomain settings
