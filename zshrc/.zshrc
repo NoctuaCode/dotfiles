@@ -1,23 +1,42 @@
-setopt prompt_subst
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
-autoload bashcompinit && bashcompinit
-autoload -Uz compinit
-compinit
-bindkey -e
-
-# completion using arrow keys (based on history)
-bindkey '^[[A' history-search-backward
-bindkey '^[[B' history-search-forward
-bindkey '^P' history-search-backward
-bindkey '^N' history-search-forward
-
 # Homebrew
 if [[ -f "/opt/homebrew/bin/brew" ]] then
   # If you're using macOS, you'll want this enabled
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME="agnoster"
+
+plugins=(
+    git
+    git-auto-fetch
+    brew
+    direnv
+    docker
+    docker-compose
+    fzf
+    golang
+    macos
+    npm
+    pip
+    python
+    sudo
+    tmux
+    vi-mode
+    virtualenv
+    zoxide
+)
+
+source $ZSH/oh-my-zsh.sh
+
 export LANG=en_US.UTF-8
+
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='nvim'
+else
+  export EDITOR='nvim'
+fi
 
 export EDITOR=/opt/homebrew/bin/nvim
 
@@ -145,16 +164,19 @@ kill_port() {
     fi
 }
 
-bi() {
+bis() {
     brew install "$1" && brew list --formula --full-name > "$DOTFILES_PATH/formula.txt" && brew list --cask --full-name > "$DOTFILES_PATH/cask.txt"
 }
 
-br() {
+brs() {
     brew uninstall "$1" && brew list --formula --full-name > "$DOTFILES_PATH/formula.txt" && brew list --cask --full-name > "$DOTFILES_PATH/cask.txt"
 }
 
-bic() {
+bics() {
     brew install --cask "$1" && brew list --formula --full-name > "$DOTFILES_PATH/formula.txt" && brew list --cask --full-name > "$DOTFILES_PATH/cask.txt"
 }
+
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(starship init zsh)"
