@@ -92,6 +92,8 @@ webp
 xorgproto
 xz
 zoxide
+zsh-autosuggestions
+zsh-syntax-highlighting
 zstd
 joshmedeski/sesh/sesh
 osx-cross/arm/arm-none-eabi-binutils
