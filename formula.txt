@@ -96,6 +96,8 @@ zsh-autosuggestions
 zsh-syntax-highlighting
 zstd
 joshmedeski/sesh/sesh
+koekeishiya/formulae/skhd
+koekeishiya/formulae/yabai
 osx-cross/arm/arm-none-eabi-binutils
 osx-cross/arm/arm-none-eabi-gcc@8
 osx-cross/avr/avr-binutils
