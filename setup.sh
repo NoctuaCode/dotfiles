@@ -50,4 +50,6 @@ if [ ! -f "$SUDO_LOCAL" ] && [ -f "$SUDO_TEMPLATE" ]; then
     sudo cp "$SUDO_TEMPLATE" "$SUDO_LOCAL"
 fi
 
+echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa" | sudo tee /private/etc/sudoers.d/yabai
+
 echo -e "${GREEN}Setup completed successfully!${NC}"
