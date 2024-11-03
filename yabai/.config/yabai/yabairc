@@ -27,7 +27,7 @@ yabai -m config mouse_action2 resize
 
 yabai -m rule --add app="^Terminal|iTerm|Alacritty|WezTerm|kitty$" space=1
 
-yabai -m rule --add app="^Arc|Firefox Developer Edition|Safari$" space=2
+yabai -m rule --add app="^Arc|Firefox Developer Edition|Safari|Chrome|Google Chrome$" space=2
 
 yabai -m rule --add app="^Zed|Visual Studio Code|Code|Emacs$" space=3
 
