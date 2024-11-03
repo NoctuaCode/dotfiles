@@ -20,4 +20,3 @@ signal
 sony-ps-remote-play
 wezterm
 zed
-nikitabobko/tap/aerospace
