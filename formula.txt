@@ -79,6 +79,7 @@ python-packaging
 python@3.13
 readline
 ripgrep
+sqlc
 sqlite
 starship
 stow
