@@ -60,7 +60,7 @@ export PATH=/opt/homebrew/opt/llvm/bin:$PATH
 export PATH=/opt/homebrew/Cellar/avr-gcc@8/8.5.0_2/bin:$PATH
 export PATH=/opt/homebrew/Cellar/arm-none-eabi-gcc@8/8.5.0_2/bin:$PATH
 export PATH=/opt/homebrew/Cellar/arm-none-eabi-binutils/2.41/bin:$PATH
-export DOTFILES_PATH=$HOME/dotfile-main
+export DOTFILES_PATH=$HOME/dotfiles
 
 # CONDA
 # !! Contents within this block are managed by 'conda init' !!
@@ -180,3 +180,14 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(starship init zsh)"
+
+
+# Herd injected PHP binary.
+export PATH="/Users/caulotte/Library/Application Support/Herd/bin/":$PATH
+
+
+# Herd injected PHP 8.2 configuration.
+export HERD_PHP_82_INI_SCAN_DIR="/Users/caulotte/Library/Application Support/Herd/config/php/82/"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/caulotte/.cache/lm-studio/bin"
