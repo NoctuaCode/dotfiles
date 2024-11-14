@@ -1,52 +1,52 @@
 #change window focus within space
-alt + ctrl - j : yabai -m window --focus south
-alt + ctrl - k : yabai -m window --focus north
-alt + ctrl - h : yabai -m window --focus west
-alt + ctrl - l : yabai -m window --focus east
+alt + ctrl + shift - j : yabai -m window --focus south
+alt + ctrl + shift - k : yabai -m window --focus north
+alt + ctrl + shift - h : yabai -m window --focus west
+alt + ctrl + shift - l : yabai -m window --focus east
 
 #change focus between external displays (left and right)
-alt + ctrl - p: yabai -m display --focus west
-alt + ctrl - n: yabai -m display --focus east
+alt + ctrl + shift - p: yabai -m display --focus west
+alt + ctrl + shift - n: yabai -m display --focus east
 
 # rotate layout clockwise
-alt + shift - r : yabai -m space --rotate 273
+alt + shift + ctrl + cmd - r : yabai -m space --rotate 273
 
 # flip along y-axis
-alt + shift - y : yabai -m space --mirror y-axis
+alt + shift + ctrl + cmd - y : yabai -m space --mirror y-axis
 
 # flip along x-axis
-alt + shift - x : yabai -m space --mirror x-axis
+alt + shift + ctrl + cmd - x : yabai -m space --mirror x-axis
 
 # toggle window float
-alt + shift - f : yabai -m window --toggle float --grid 4:4:1:1:2:2
+alt + shift + ctrl + cmd - f : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
 # maximize a window
-alt + shift - m : yabai -m window --toggle zoom-fullscreen
+alt + shift + ctrl + cmd - m : yabai -m window --toggle zoom-fullscreen
 
 # balance out tree of windows (resize to occupy same area)
-alt + shift - e : yabai -m space --balance
+alt + shift + ctrl + cmd - e : yabai -m space --balance
 
 # swap windows
-alt + shift - j : yabai -m window --swap south
-alt + shift - k : yabai -m window --swap north
-alt + shift - h : yabai -m window --swap west
-alt + shift - l : yabai -m window --swap east
+alt + shift + ctrl + cmd - j : yabai -m window --swap south
+alt + shift + ctrl + cmd - k : yabai -m window --swap north
+alt + shift + ctrl + cmd - h : yabai -m window --swap west
+alt + shift + ctrl + cmd - l : yabai -m window --swap east
 
 # move window to display left and right
-alt + shift - p : yabai -m window --display west; yabai -m display --focus west;
-alt + shift - n : yabai -m window --display east; yabai -m display --focus east;
+alt + shift + ctrl + cmd - p : yabai -m window --display west; yabai -m display --focus west;
+alt + shift + ctrl + cmd - n : yabai -m window --display east; yabai -m display --focus east;
 
 # move window to space #
-alt + shift - 1 : yabai -m window --space 1;
-alt + shift - 2 : yabai -m window --space 2;
-alt + shift - 3 : yabai -m window --space 3;
-alt + shift - 4 : yabai -m window --space 4;
-alt + shift - 5 : yabai -m window --space 5;
-alt + shift - 6 : yabai -m window --space 6;
-alt + shift - 7 : yabai -m window --space 7;
-alt + shift - 8 : yabai -m window --space 8;
-alt + shift - 9 : yabai -m window --space 9;
-alt + shift - 0 : yabai -m window --space 10;
+alt + shift + ctrl + cmd - 1 : yabai -m window --space 1;
+alt + shift + ctrl + cmd - 2 : yabai -m window --space 2;
+alt + shift + ctrl + cmd - 3 : yabai -m window --space 3;
+alt + shift + ctrl + cmd - 4 : yabai -m window --space 4;
+alt + shift + ctrl + cmd - 5 : yabai -m window --space 5;
+alt + shift + ctrl + cmd - 6 : yabai -m window --space 6;
+alt + shift + ctrl + cmd - 7 : yabai -m window --space 7;
+alt + shift + ctrl + cmd - 8 : yabai -m window --space 8;
+alt + shift + ctrl + cmd - 9 : yabai -m window --space 9;
+alt + shift + ctrl + cmd - 0 : yabai -m window --space 10;
 
 # stop/start/restart yabai
 ctrl + shift - q : yabai --stop-service
