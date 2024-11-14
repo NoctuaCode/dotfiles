@@ -1,57 +1,63 @@
 return {
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
-		main = "nvim-treesitter.configs", -- Sets main module to use for opts
-		opts = {
-			ensure_installed = {
-				"bash",
-				"c",
-				"diff",
-				"html",
-				"lua",
-				"luadoc",
-				"markdown",
-				"markdown_inline",
-				"query",
-				"vim",
-				"vimdoc",
-				"php",
-				"phpdoc",
-				"go",
-				"gosum",
-				"gowork",
-				"gomod",
-				"typescript",
-				"javascript",
-				"tsx",
-				"svelte",
-				"python",
-			},
-			auto_install = true,
-			highlight = {
-				enable = true,
-				additional_vim_regex_highlighting = { "ruby" },
-			},
-			indent = { enable = true, disable = { "ruby" } },
-		},
-	},
-	{
-		"nvim-treesitter/nvim-treesitter-context",
-		config = function()
-			require("treesitter-context").setup({
-				max_lines = 5,
-			})
-		end,
-	},
-	{
-		"windwp/nvim-ts-autotag",
-		dependencies = "nvim-treesitter/nvim-treesitter",
-		config = function()
-			require("nvim-ts-autotag").setup({})
-		end,
-		lazy = true,
-		event = "VeryLazy",
-	},
-	{ "nvim-treesitter/nvim-treesitter-textobjects" },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "astro",
+        "bash",
+        "c",
+        "cmake",
+        "cpp",
+        "css",
+        "diff",
+        "dockerfile",
+        "gitignore",
+        "go",
+        "gomod",
+        "gosum",
+        "gowork",
+        "html",
+        "http",
+        "javascript",
+        "jsdoc",
+        "json",
+        "json5",
+        "jsonc",
+        "lua",
+        "luadoc",
+        "luap",
+        "markdown",
+        "markdown_inline",
+        "prisma",
+        "python",
+        "query",
+        "regex",
+        "sql",
+        "toml",
+        "tsx",
+        "typescript",
+        "vim",
+        "vimdoc",
+        "yaml",
+      },
+      config = function(_, opts)
+        require("nvim-treesitter.configs").setup(opts)
+
+        -- MDX
+        vim.filetype.add({
+          extension = {
+            mdx = "mdx",
+          },
+        })
+        vim.treesitter.language.register("markdown", "mdx")
+      end,
+    },
+  },
+  {
+    "nvim-treesitter/playground",
+  },
+  {
+    "nvim-treesitter/nvim-treesitter-context",
+    enabled = false,
+  },
 }
