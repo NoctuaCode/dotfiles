@@ -64,12 +64,6 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 FORMULA_FILE="$SCRIPT_DIR/formula.txt"
 CASK_FILE="$SCRIPT_DIR/cask.txt"
 
-# Install formulas
-if [ ! -f "$FORMULA_FILE" ]; then
-    echo -e "${RED}Error: formula.txt not found in script directory${NC}"
-    exit 1
-fi
-
 echo -e "${YELLOW}Installing formulas...${NC}"
 while read -r formula || [ -n "$formula" ]; do
     [ -z "$formula" ] && continue
@@ -81,12 +75,6 @@ while read -r formula || [ -n "$formula" ]; do
     fi
 done < "$FORMULA_FILE"
 echo -e "${GREEN}Formula installation complete!${NC}"
-
-# Install casks
-if [ ! -f "$CASK_FILE" ]; then
-    echo -e "${RED}Error: cask.txt not found in script directory${NC}"
-    exit 1
-fi
 
 echo -e "${YELLOW}Installing casks...${NC}"
 while read -r cask || [ -n "$cask" ]; do
