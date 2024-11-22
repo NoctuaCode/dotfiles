@@ -45,7 +45,7 @@ export GOPATH=$HOME/go
 
 # Extend PATH
 # With local
-export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/.config/bin:$PATH
 # With Rust
 export PATH=$HOME/.cargo/bin:$PATH
 # With emacs
