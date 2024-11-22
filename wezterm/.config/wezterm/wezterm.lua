@@ -23,6 +23,8 @@ return {
 	color_scheme = "rose-pine",
 	term = "xterm-256color",
 	enable_tab_bar = false,
+	window_background_opacity = 0.9,
+	macos_window_background_blur = 50,
 
 	font_size = 18,
 	font = wezterm.font({ family = "FiraCode Nerd Font" }),
