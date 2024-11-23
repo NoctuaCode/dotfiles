@@ -41,25 +41,3 @@ keymap.set("n", "<leader><localleader>h", require("smart-splits").swap_buf_left)
 keymap.set("n", "<leader><localleader>j", require("smart-splits").swap_buf_down)
 keymap.set("n", "<leader><localleader>k", require("smart-splits").swap_buf_up)
 keymap.set("n", "<leader><localleader>l", require("smart-splits").swap_buf_right)
-
--- Gen.nvim keymaps
-keymap.set({ "n", "v" }, "<leader>aa", "<Cmd>Gen Ask<CR>", { silent = true, noremap = true, desc = "Gen Ask" })
-keymap.set({ "n", "v" }, "<leader>ac", "<Cmd>Gen Chat<CR>", { silent = true, noremap = true, desc = "Gen Chat" })
-keymap.set(
-  { "n", "v" },
-  "<leader>ae",
-  "<Cmd>Gen Enhance_Code<CR>",
-  { silent = true, noremap = true, desc = "Gen Enhance" }
-)
-keymap.set(
-  { "n", "v" },
-  "<leader>ag",
-  "<Cmd>Gen Generate<CR>",
-  { silent = true, noremap = true, desc = "Gen Generate" }
-)
-keymap.set(
-  { "n", "v" },
-  "<leader>as",
-  "<Cmd>Gen Summarize<CR>",
-  { silent = true, noremap = true, desc = "Gen Summarize" }
-)
