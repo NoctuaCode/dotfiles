@@ -1,43 +1,10 @@
-local keymap = vim.keymap
-local Util = require("lazyvim.util")
-local set_keymap = vim.api.nvim_set_keymap
-
--- Borderless terminal
-keymap.set("n", "<C-/>", function()
-  Util.terminal(nil, { border = "none" })
-end, { desc = "Terminal (borderless)" })
-
--- Borderless lazygit
-keymap.set("n", "<leader>gg", function()
-  Util.terminal({ "lazygit" }, { cwd = Util.root(), esc_esc = false, ctrl_hjkl = false, border = "none" })
-end, { desc = "Lazygit (root dir)" })
-
--- Remove unwanted keymaps
-keymap.del({ "n", "i", "v" }, "<A-j>")
-keymap.del({ "n", "i", "v" }, "<A-k>")
-keymap.del("n", "<C-Left>")
-keymap.del("n", "<C-Down>")
-keymap.del("n", "<C-Up>")
-keymap.del("n", "<C-Right>")
-
--- Map oil to Leader-, silently and remaplessly
-keymap.set("n", "<Leader>-", "<Cmd>Oil<CR>", { silent = true, noremap = true, desc = "Oil" })
-
--- Resize splits with Alt + direction keys
-keymap.set("n", "<A-h>", require("smart-splits").resize_left)
-keymap.set("n", "<A-j>", require("smart-splits").resize_down)
-keymap.set("n", "<A-k>", require("smart-splits").resize_up)
-keymap.set("n", "<A-l>", require("smart-splits").resize_right)
-
--- Move cursor between splits
-keymap.set("n", "<C-h>", require("smart-splits").move_cursor_left)
-keymap.set("n", "<C-j>", require("smart-splits").move_cursor_down)
-keymap.set("n", "<C-k>", require("smart-splits").move_cursor_up)
-keymap.set("n", "<C-l>", require("smart-splits").move_cursor_right)
-keymap.set("n", "<C-\\>", require("smart-splits").move_cursor_previous)
-
--- Swap buffers between windows
-keymap.set("n", "<leader><localleader>h", require("smart-splits").swap_buf_left)
-keymap.set("n", "<leader><localleader>j", require("smart-splits").swap_buf_down)
-keymap.set("n", "<leader><localleader>k", require("smart-splits").swap_buf_up)
-keymap.set("n", "<leader><localleader>l", require("smart-splits").swap_buf_right)
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("n", "J", "mzJ`z")
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
+vim.keymap.set("n", "Q", "<nop>")
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+vim.keymap.set("n", "<leader>gg", "<cmd>Lazygit<CR>", { silent = true, noremap = true, desc = "Lazygit (root dir)" })
