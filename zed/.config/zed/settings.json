@@ -102,7 +102,7 @@
   },
 
   "vim": {
-    "use_system_clipboard": "always",
+    "use_system_clipboard": "never",
     "use_multiline_find": true,
     "use_smartcase_find": true
   },
@@ -149,5 +149,6 @@
   "telemetry": {
     "diagnostics": false,
     "metrics": false
-  }
+  },
+  "use_autoclose": false
 }
