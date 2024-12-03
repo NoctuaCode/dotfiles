@@ -49,7 +49,11 @@
                   "key_code": "spacebar",
                   "modifiers": { "optional": ["any"] }
                 },
-                "to": [{ "key_code": "left_shift" }],
+                "to": [
+                  {
+                    "key_code": "left_shift"
+                  }
+                ],
                 "to_if_alone": [{ "key_code": "spacebar" }],
                 "type": "basic"
               }
@@ -172,6 +176,7 @@
         }
       ],
       "name": "QWERTY",
+      "selected": true,
       "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
     },
     {
@@ -197,34 +202,15 @@
             ]
           },
           {
-            "description": "Enter hyper on hold",
+            "description": "Enter right control on hold",
             "manipulators": [
               {
                 "from": {
-                  "key_code": "return_or_enter",
+                  "key_code": "enter",
                   "modifiers": { "optional": ["any"] }
                 },
-                "to": [
-                  {
-                    "key_code": "left_shift",
-                    "modifiers": ["left_control", "left_option", "left_command"]
-                  }
-                ],
-                "to_if_alone": [{ "key_code": "return_or_enter" }],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Shift on space",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "spacebar",
-                  "modifiers": { "optional": ["any"] }
-                },
-                "to": [{ "key_code": "left_shift" }],
-                "to_if_alone": [{ "key_code": "spacebar" }],
+                "to": [{ "key_code": "right_control" }],
+                "to_if_alone": [{ "key_code": "enter" }],
                 "type": "basic"
               }
             ]
@@ -441,7 +427,6 @@
         }
       ],
       "name": "DVORAK",
-      "selected": true,
       "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
     }
   ]
