@@ -13,3 +13,4 @@ zed/.config/zed/embeddings/semantic-index-db.0.mdb
 zed/.config/zed/prompts/prompts-library-db.0.mdb
 zed/.config/zed/prompts/prompts-library-db.0.mdb
 zed/.config/zed/conversations
+config/tmux/plugins/tmux-resurrect
