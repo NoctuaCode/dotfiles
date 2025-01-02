@@ -20,13 +20,13 @@ return {
 	},
 	window_close_confirmation = "NeverPrompt",
 
-	color_scheme = "rose-pine",
+	color_scheme = "tokyonight",
 	term = "xterm-256color",
 	enable_tab_bar = false,
 	window_background_opacity = 0.9,
 	macos_window_background_blur = 50,
 
-	font_size = 18,
+	font_size = 14,
 	font = wezterm.font({ family = "FiraCode Nerd Font" }),
 
 	font_rules = {
