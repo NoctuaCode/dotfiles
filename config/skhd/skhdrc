@@ -20,6 +20,12 @@ alt + shift + ctrl + cmd - x : yabai -m space --mirror x-axis
 # toggle window float
 alt + shift + ctrl + cmd - f : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
+# Activate BSP layout
+alt + shift + ctrl + cmd - b : yabai -m space --layout bsp
+
+# Activate Stack layout
+alt + shift + ctrl + cmd - s : yabai -m space --layout stack
+
 # maximize a window
 alt + shift + ctrl + cmd - m : yabai -m window --toggle zoom-fullscreen
 
