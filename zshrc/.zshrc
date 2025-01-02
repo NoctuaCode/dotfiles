@@ -38,7 +38,7 @@ else
   export EDITOR='nvim'
 fi
 
-export EDITOR=/opt/homebrew/bin/nvim
+export EDITOR=nvim
 
 # Go
 export GOPATH=$HOME/go
@@ -191,3 +191,12 @@ export HERD_PHP_82_INI_SCAN_DIR="/Users/caulotte/Library/Application Support/Her
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/caulotte/.cache/lm-studio/bin"
+
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
