@@ -10,15 +10,17 @@ font-style-bold-italic = default
 
 font-synthetic-style = bold,italic,bold-italic
 
-font-size = 14
+font-size = 16
 
-theme = tokyonight
+theme = catppuccin-mocha
 
 mouse-hide-while-typing = true
 
 window-decoration = true
 
-keybind = global:cmd+s=toggle_quick_terminal
+macos-option-as-alt = true
+
+keybind = global:cmd+/=toggle_quick_terminal
 
 keybind = alt+ctrl+v=new_split:right
 keybind = alt+ctrl+s=new_split:down
