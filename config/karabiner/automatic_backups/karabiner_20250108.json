@@ -5,26 +5,11 @@
                 "parameters": {
                     "basic.to_delayed_action_delay_milliseconds": 210,
                     "basic.to_if_alone_timeout_milliseconds": 180,
-                    "basic.to_if_held_down_threshold_milliseconds": 210
+                    "basic.to_if_held_down_threshold_milliseconds": 200
                 },
                 "rules": [
                     {
-                        "description": "Non US Backslash to MEH",
-                        "manipulators": [
-                            {
-                                "from": { "key_code": "non_us_backslash" },
-                                "to": [
-                                    {
-                                        "key_code": "left_option",
-                                        "modifiers": ["control", "shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Change caps_lock to left_control if pressed with other keys, escape if pressed alone.",
+                        "description": "Caps lock to escape on press and left control on hold",
                         "manipulators": [
                             {
                                 "from": {
@@ -38,7 +23,7 @@
                         ]
                     },
                     {
-                        "description": "Change enter to left_control if pressed with other keys, enter if pressed alone.",
+                        "description": "Enter to  left control on hold",
                         "manipulators": [
                             {
                                 "from": {
@@ -52,15 +37,38 @@
                         ]
                     },
                     {
-                        "description": "Change space to left shift if held and space pressed alone",
+                        "description": "Hyper when escape is held",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "spacebar",
+                                    "key_code": "escape",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "left_shift" }],
-                                "to_if_alone": [{ "key_code": "spacebar" }],
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "modifiers": ["left_shift", "left_option", "left_command"]
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "escape" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "MEH when on Non Us Backslash",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "non_us_backslash",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "modifiers": ["left_shift", "left_option"]
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
@@ -142,6 +150,15 @@
                         "vendor_id": 12951
                     },
                     "ignore": true
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": true,
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 24926,
+                        "vendor_id": 7504
+                    },
+                    "ignore": true
                 }
             ],
             "name": "QWERTY",
@@ -152,27 +169,12 @@
             "complex_modifications": {
                 "parameters": {
                     "basic.to_delayed_action_delay_milliseconds": 210,
-                    "basic.to_if_alone_timeout_milliseconds": 209,
-                    "basic.to_if_held_down_threshold_milliseconds": 210
+                    "basic.to_if_alone_timeout_milliseconds": 200,
+                    "basic.to_if_held_down_threshold_milliseconds": 200
                 },
                 "rules": [
                     {
-                        "description": "Non US Backslash to MEH",
-                        "manipulators": [
-                            {
-                                "from": { "key_code": "non_us_backslash" },
-                                "to": [
-                                    {
-                                        "key_code": "left_option",
-                                        "modifiers": ["control", "shift"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Change caps_lock to left_control if pressed with other keys, escape if pressed alone.",
+                        "description": "Caps lock to escape on press and left control on hold",
                         "manipulators": [
                             {
                                 "from": {
@@ -186,7 +188,7 @@
                         ]
                     },
                     {
-                        "description": "Change enter to left_control if pressed with other keys, enter if pressed alone.",
+                        "description": "Enter ctrl on hold",
                         "manipulators": [
                             {
                                 "from": {
@@ -195,6 +197,43 @@
                                 },
                                 "to": [{ "key_code": "left_control" }],
                                 "to_if_alone": [{ "key_code": "return_or_enter" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper when escape is held",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "escape",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "modifiers": ["left_shift", "left_option", "left_command"]
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "escape" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "MEH when on Non Us Backslash",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "non_us_backslash",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "modifiers": ["left_shift", "left_option"]
+                                    }
+                                ],
                                 "type": "basic"
                             }
                         ]
@@ -314,6 +353,14 @@
                             "to": [{ "key_code": "p" }]
                         },
                         {
+                            "from": { "key_code": "right_command" },
+                            "to": [{ "key_code": "left_option" }]
+                        },
+                        {
+                            "from": { "key_code": "right_option" },
+                            "to": [{ "key_code": "right_command" }]
+                        },
+                        {
                             "from": { "key_code": "s" },
                             "to": [{ "key_code": "o" }]
                         },
@@ -369,6 +416,15 @@
                         "is_keyboard": true,
                         "product_id": 4423,
                         "vendor_id": 10462
+                    },
+                    "ignore": true
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": true,
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 24926,
+                        "vendor_id": 7504
                     },
                     "ignore": true
                 }
