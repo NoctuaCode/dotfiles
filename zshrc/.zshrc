@@ -38,7 +38,7 @@ else
   export EDITOR='nvim'
 fi
 
-export EDITOR=nvim
+export EDITOR=zed
 
 # Go
 export GOPATH=$HOME/go
@@ -52,8 +52,6 @@ export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.config/emacs/bin:$PATH
 # With Go
 export PATH=$(go env GOPATH)/bin:$PATH
-# With Herd
-export PATH="/Users/noctuacode/Library/Application Support/Herd/bin/":$PATH
 # With LLVM
 export PATH=/opt/homebrew/opt/llvm/bin:$PATH
 
@@ -61,30 +59,6 @@ export PATH=/opt/homebrew/Cellar/avr-gcc@8/8.5.0_2/bin:$PATH
 export PATH=/opt/homebrew/Cellar/arm-none-eabi-gcc@8/8.5.0_2/bin:$PATH
 export PATH=/opt/homebrew/Cellar/arm-none-eabi-binutils/2.41/bin:$PATH
 export DOTFILES_PATH=$HOME/dotfiles
-
-# CONDA
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
-        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-
-# HERD
-# Herd injected PHP 8.2 configuration.
-export HERD_PHP_82_INI_SCAN_DIR="/Users/noctuacode/Library/Application Support/Herd/config/php/82/"
-
-# Herd injected PHP 7.4 configuration.
-export HERD_PHP_74_INI_SCAN_DIR="/Users/noctuacode/Library/Application Support/Herd/config/php/74/"
-
-# Herd injected PHP 8.3 configuration.
-export HERD_PHP_83_INI_SCAN_DIR="/Users/noctuacode/Library/Application Support/Herd/config/php/83/"
 
 export XDG_CONFIG_HOME=$HOME/.config
 
@@ -164,30 +138,11 @@ kill_port() {
     fi
 }
 
-bis() {
-    brew install "$1" && brew list --formula --full-name > "$DOTFILES_PATH/formula.txt" && brew list --cask --full-name > "$DOTFILES_PATH/cask.txt"
-}
-
-brs() {
-    brew uninstall "$1" && brew list --formula --full-name > "$DOTFILES_PATH/formula.txt" && brew list --cask --full-name > "$DOTFILES_PATH/cask.txt"
-}
-
-bics() {
-    brew install --cask "$1" && brew list --formula --full-name > "$DOTFILES_PATH/formula.txt" && brew list --cask --full-name > "$DOTFILES_PATH/cask.txt"
-}
-
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(starship init zsh)"
 
-
-# Herd injected PHP binary.
-export PATH="/Users/caulotte/Library/Application Support/Herd/bin/":$PATH
-
-
-# Herd injected PHP 8.2 configuration.
-export HERD_PHP_82_INI_SCAN_DIR="/Users/caulotte/Library/Application Support/Herd/config/php/82/"
 
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/caulotte/.cache/lm-studio/bin"
@@ -200,3 +155,27 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+
+
+# Herd injected PHP 8.3 configuration.
+export HERD_PHP_83_INI_SCAN_DIR="/Users/caulotte/Library/Application Support/Herd/config/php/83/"
+
+
+# Herd injected PHP binary.
+export PATH="/Users/caulotte/Library/Application Support/Herd/bin/":$PATH
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+        . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
