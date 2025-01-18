@@ -37,6 +37,8 @@ symbol = "  "
 
 [conda]
 symbol = " "
+ignore_base = false
+format = '[$symbol$environment](dimmed green) '
 
 [dart]
 symbol = " "
