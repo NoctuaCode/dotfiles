@@ -10,7 +10,7 @@ font-style-bold-italic = default
 
 font-synthetic-style = bold,italic,bold-italic
 
-font-size = 16
+font-size = 18
 
 theme = catppuccin-mocha
 
