@@ -50,7 +50,6 @@
                     "modifiers": ["left_shift", "left_option", "left_command"]
                   }
                 ],
-                "to_if_alone": [{ "key_code": "tab" }],
                 "type": "basic"
               }
             ]
@@ -69,25 +68,6 @@
                     "modifiers": ["left_shift", "left_option"]
                   }
                 ],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "MEH when backspace is hold",
-            "manipulators": [
-              {
-                "from": {
-                  "key_code": "delete_or_backspace",
-                  "modifiers": { "optional": ["any"] }
-                },
-                "to": [
-                  {
-                    "key_code": "left_control",
-                    "modifiers": ["left_shift", "left_option"]
-                  }
-                ],
-                "to_if_alone": [{ "key_code": "delete_or_backspace" }],
                 "type": "basic"
               }
             ]
@@ -672,4 +652,3 @@
     }
   ]
 }
-
