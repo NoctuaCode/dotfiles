@@ -1,7 +1,7 @@
-font-family = FiraCode Nerd Font Mono
-font-family-bold = FiraCode Nerd Font Mono Bold
-font-family-italic = FiraCode Nerd Font Mono Italic
-font-family-bold-italic = FiraCode Nerd Font Mono Bold Italic
+font-family = FiraCode Nerd Font
+font-family-bold = FiraCode Nerd Font Bold
+font-family-italic = FiraCode Nerd Font Italic
+font-family-bold-italic = FiraCode Nerd Font Bold Italic
 
 font-synthetic-style = true
 
