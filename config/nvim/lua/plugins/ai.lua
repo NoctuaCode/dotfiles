@@ -1,22 +1,34 @@
 return {
   {
-    'supermaven-inc/supermaven-nvim',
-    config = function() require('supermaven-nvim').setup {} end,
-  },
-  {
-    'olimorris/codecompanion.nvim',
+    "olimorris/codecompanion.nvim",
     dependencies = {
-      'nvim-lua/plenary.nvim',
-      'nvim-treesitter/nvim-treesitter',
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
     },
     opts = {
       adapters = {
-        qwen = function()
-          return require('codecompanion.adapters').extend('ollama', {
-            name = 'Qwen2.5 Coder 14B Instruct',
+        qwent = function()
+          return require("codecompanion.adapters").extend("ollama", {
+            name = "Qwen2.5 Coder Instruct",
             schema = {
               model = {
-                default = 'qwen2.5-coder:14b-instruct-q5_K_S',
+                default = "qwen2.5-coder:32b",
+              },
+              num_ctx = {
+                default = 16384,
+              },
+              num_predict = {
+                default = -1,
+              },
+            },
+          })
+        end,
+        deepseek_r1 = function()
+          return require("codecompanion.adapters").extend("ollama", {
+            name = "DeepSeek-R1",
+            schema = {
+              model = {
+                default = "deepseek-r1:32b",
               },
               num_ctx = {
                 default = 16384,
@@ -30,7 +42,7 @@ return {
       },
       strategies = {
         chat = {
-          adapter = 'qwen',
+          adapter = "qwent",
         },
       },
     },
