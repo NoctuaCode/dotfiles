@@ -9,39 +9,39 @@
                 },
                 "rules": [
                     {
-                        "description": "Caps lock to escape on press and left option on hold",
+                        "description": "Caps lock to escape on press and left control on hold",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "caps_lock",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "left_option" }],
+                                "to": [{ "key_code": "left_command" }],
                                 "to_if_alone": [{ "key_code": "escape" }],
                                 "type": "basic"
                             }
                         ]
                     },
                     {
-                        "description": "Enter to  left option on hold",
+                        "description": "Enter to  left control on hold",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "return_or_enter",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "left_option" }],
+                                "to": [{ "key_code": "left_control" }],
                                 "to_if_alone": [{ "key_code": "return_or_enter" }],
                                 "type": "basic"
                             }
                         ]
                     },
                     {
-                        "description": "Hyper in escape",
+                        "description": "Hyper when tab is held",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "escape",
+                                    "key_code": "tab",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [
@@ -50,16 +50,35 @@
                                         "modifiers": ["left_shift", "left_option", "left_command"]
                                     }
                                 ],
+                                "to_if_alone": [{ "key_code": "tab" }],
                                 "type": "basic"
                             }
                         ]
                     },
                     {
-                        "description": "MEH on left option",
+                        "description": "MEH when on Non Us Backslash",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "left_option",
+                                    "key_code": "non_us_backslash",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "modifiers": ["left_shift", "left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "MEH when backspace is hold",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "delete_or_backspace",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [
@@ -97,7 +116,7 @@
                                     "key_code": "open_bracket",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "hyphen" }],
+                                "to": [{ "key_code": "quote" }],
                                 "type": "basic"
                             },
                             {
@@ -106,6 +125,14 @@
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "key_code": "equal_sign" }],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "quote",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "hyphen" }],
                                 "type": "basic"
                             }
                         ]
@@ -130,14 +157,10 @@
                         },
                         {
                             "from": { "key_code": "right_command" },
-                            "to": [{ "key_code": "left_shift" }]
+                            "to": [{ "key_code": "left_option" }]
                         },
                         {
-                            "from": { "key_code": "left_shift" },
-                            "to": [{ "key_code": "left_command" }]
-                        },
-                        {
-                            "from": { "key_code": "right_shift" },
+                            "from": { "key_code": "right_option" },
                             "to": [{ "key_code": "left_command" }]
                         }
                     ]
