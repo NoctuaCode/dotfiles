@@ -1,6 +1,10 @@
 return {
   {
     "echasnovski/mini.splitjoin",
-    opts = {},
+    opts = {
+      mappings = {
+        toggle = "<localleader>S",
+      },
+    },
   },
 }
