@@ -196,3 +196,7 @@ source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
 
 export OLLAMA_FLASH_ATTENTION=true
 export OLLAMA_KV_CACHE_TYPE=f16
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
