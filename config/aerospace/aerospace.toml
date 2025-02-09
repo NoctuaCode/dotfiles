@@ -1,13 +1,8 @@
 after-login-command = []
 
-after-startup-command = ['exec-and-forget sketchybar']
+after-startup-command = []
 
-exec-on-workspace-change = [
-  '/bin/bash',
-  '-c',
-  'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
-  'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0',
-]
+exec-on-workspace-change = []
 
 start-at-login = true
 
@@ -26,38 +21,33 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 on-focus-changed = ['move-mouse window-lazy-center']
 
 [gaps]
-inner.horizontal = 20
-inner.vertical = 20
-outer.left = 20
-outer.bottom = 20
-outer.top = 20
-outer.right = 20
+inner.horizontal = 5
+inner.vertical = 5
+outer.left = 5
+outer.bottom = 5
+outer.top = 5
+outer.right = 5
 
 [mode.main.binding]
 
-alt-shift-f = 'fullscreen'
+alt-ctrl-shift-z = 'fullscreen'
 alt-ctrl-shift-f = 'layout floating'
 
-alt-ctrl-shift-l = 'join-with right'
-alt-ctrl-shift-k = 'join-with up'
-alt-ctrl-shift-j = 'join-with down'
-alt-ctrl-shift-h = 'join-with left'
+alt-ctrl-shift-t = 'layout tiles horizontal vertical'
+alt-ctrl-shift-a = 'layout accordion horizontal vertical'
 
-alt-shift-t = 'layout tiles horizontal vertical'
-alt-shift-a = 'layout accordion horizontal vertical'
+alt-ctrl-shift-h = 'focus left'
+alt-ctrl-shift-j = 'focus down'
+alt-ctrl-shift-k = 'focus up'
+alt-ctrl-shift-l = 'focus right'
 
-alt-ctrl-h = 'focus left'
-alt-ctrl-j = 'focus down'
-alt-ctrl-k = 'focus up'
-alt-ctrl-l = 'focus right'
+cmd-alt-ctrl-shift-h = 'move left'
+cmd-alt-ctrl-shift-j = 'move down'
+cmd-alt-ctrl-shift-k = 'move up'
+cmd-alt-ctrl-shift-l = 'move right'
 
-alt-shift-h = 'move left'
-alt-shift-j = 'move down'
-alt-shift-k = 'move up'
-alt-shift-l = 'move right'
-
-alt-shift-minus = 'resize smart -50'
-alt-shift-equal = 'resize smart +50'
+cmd-alt-ctrl-shift-minus = 'resize smart -50'
+cmd-alt-ctrl-shift-equal = 'resize smart +50'
 
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
@@ -70,22 +60,22 @@ alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
 alt-0 = 'workspace 0'
 
-alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
-alt-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
-alt-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
-alt-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
-alt-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
-alt-shift-6 = 'move-node-to-workspace 6 --focus-follows-window'
-alt-shift-7 = 'move-node-to-workspace 7 --focus-follows-window'
-alt-shift-8 = 'move-node-to-workspace 8 --focus-follows-window'
-alt-shift-9 = 'move-node-to-workspace 9 --focus-follows-window'
-alt-shift-0 = 'move-node-to-workspace 0 --focus-follows-window'
+cmd-alt-ctrl-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
+cmd-alt-ctrl-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
+cmd-alt-ctrl-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
+cmd-alt-ctrl-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
+cmd-alt-ctrl-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
+cmd-alt-ctrl-shift-6 = 'move-node-to-workspace 6 --focus-follows-window'
+cmd-alt-ctrl-shift-7 = 'move-node-to-workspace 7 --focus-follows-window'
+cmd-alt-ctrl-shift-8 = 'move-node-to-workspace 8 --focus-follows-window'
+cmd-alt-ctrl-shift-9 = 'move-node-to-workspace 9 --focus-follows-window'
+cmd-alt-ctrl-shift-0 = 'move-node-to-workspace 0 --focus-follows-window'
 
 alt-tab = 'workspace-back-and-forth'
 alt-ctrl-tab = 'move-workspace-to-monitor --wrap-around next'
 
-alt-shift-semicolon = 'mode service'
-alt-shift-comma = 'mode apps'
+alt-ctrl-shift-semicolon = 'mode service'
+alt-ctrl-shift-comma = 'mode apps'
 
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
@@ -94,42 +84,28 @@ f = ['layout floating tiling', 'mode main']
 backspace = ['close-all-windows-but-current', 'mode main']
 
 [mode.apps.binding]
-t = ['exec-and-forget open /Applications/Wezterm.app', 'mode main']
-b = ['exec-and-forget open /Applications/Arc.app', 'mode main']
+t = ['exec-and-forget open /Applications/Ghostty.app', 'mode main']
+b = ['exec-and-forget open "/Applications/Brave Browser.app"', 'mode main']
 s = [
   'exec-and-forget open "/System/Applications/System Settings.app"',
   'mode main',
 ]
 m = ['exec-and-forget open "/System/Applications/Mail.app"', 'mode main']
-c = ['exec-and-forget open "/Applications/Messenger.app"', 'mode main']
+c = ['exec-and-forget open "/Applications/Signal.app"', 'mode main']
 v = ['exec-and-forget open "/Applications/Visual Studio Code.app"', 'mode main']
 z = ['exec-and-forget open "/Applications/Zed.app"', 'mode main']
 
 
 [[on-window-detected]]
-if.app-id = 'com.github.wez.wezterm'
+if.app-id = 'com.nordvpn.macos'
+run = 'move-node-to-workspace 0'
+
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
 run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
-if.app-id = 'dev.zed.Zed'
-run = 'move-node-to-workspace 3'
-
-[[on-window-detected]]
-if.app-id = 'company.thebrowser.Browser'
-run = 'move-node-to-workspace 2'
-
-[[on-window-detected]]
-if.app-id = 'org.mozilla.firefox'
-run = 'move-node-to-workspace 2'
-
-[[on-window-detected]]
-if.app-id = 'org.mozilla.com.zen.browser'
-if.window-title-regex-substring = 'Picture-in-Picture'
-run = 'layout floating'
-check-further-callbacks = true
-
-[[on-window-detected]]
-if.app-id = 'org.mozilla.com.zen.browser'
+if.app-id = 'com.brave.Browser'
 run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
@@ -137,8 +113,16 @@ if.app-id = 'com.apple.Safari'
 run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
-if.app-id = 'com.facebook.archon.developerID'
-run = 'move-node-to-workspace 8'
+if.app-id = 'dev.zed.Zed'
+run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+if.app-id = 'com.tinyapp.DBngin'
+run = 'move-node-to-workspace 4'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.ActivityMonitor'
+run = 'move-node-to-workspace 7'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.MobileSMS'
@@ -153,9 +137,9 @@ if.app-id = 'com.apple.mail'
 run = 'move-node-to-workspace 9'
 
 [[on-window-detected]]
-if.app-id = 'com.hnc.Discord'
-run = 'move-node-to-workspace 0'
+if.app-name-regex-substring = 'finder'
+run = 'layout floating'
 
 [[on-window-detected]]
-if.app-name-regex-substring = 'finder'
+if.app-id = 'com.1password.1password'
 run = 'layout floating'
