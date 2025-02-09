@@ -12,6 +12,10 @@ vim.keymap.set("n", "<M-f>", function()
   Snacks.picker.files()
 end, { desc = "Find files" })
 
+vim.keymap.set("n", "<M-b>", function()
+  Snacks.picker.buffers()
+end, { desc = "Find files" })
+
 vim.keymap.set("n", "<M-e>", function()
   Snacks.explorer.open()
 end, { desc = "File explorer" })
