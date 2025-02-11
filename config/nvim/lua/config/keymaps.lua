@@ -23,3 +23,25 @@ end, { desc = "File explorer" })
 vim.keymap.set("n", "<M-S-e>", function()
   require("mini.files").open(vim.api.nvim_buf_get_name(0), true)
 end, { desc = "File explorer (Mini)" })
+
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move line Down" })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move line Up" })
+
+vim.keymap.set("n", "J", "mzJ`z", { desc = "Shrink the line below and keep cursor at the same spot" })
+vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "Move down half screen with cursor on the middle of the screen" })
+vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Move up half screen with cursor on the middle of the screen" })
+vim.keymap.set("n", "n", "nzzzv", { desc = "Go to next search occurence with cursor on middle of the screen" })
+vim.keymap.set("n", "N", "Nzzzv", { desc = "Go to previoius search occurence with cursor on middle of the screen" })
+
+vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste in selection without replacing the register" })
+vim.keymap.set({ "n", "x" }, "<leader>P", [["+p]], { desc = "Paste from system clipboard" })
+vim.keymap.set({ "n", "x" }, "x", [["_x]], { desc = "Remove caracter without adding it to the register" })
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank into the system clipboard" })
+vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Yank the rest of the line to the system clipboard" })
+
+vim.keymap.set("n", "Q", "<nop>", { desc = "Disable maccro triggering" })
+
+vim.keymap.set("n", "+", "<C-a>", { desc = "Increase" })
+vim.keymap.set("n", "-", "<C-x>", { desc = "Decrease" })
+
+vim.keymap.set("n", "<C-a>", "ggVG", { desc = "Select All" })
