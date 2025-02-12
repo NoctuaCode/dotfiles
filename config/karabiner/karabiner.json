@@ -1,4 +1,5 @@
 {
+    "global": { "enable_notification_window": false },
     "profiles": [
         {
             "complex_modifications": {
@@ -161,7 +162,6 @@
                 }
             ],
             "name": "QWERTY",
-            "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         },
         {
@@ -649,6 +649,14 @@
             ],
             "name": "Colemak-DH",
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+        },
+        {
+            "name": "Default",
+            "selected": true,
+            "virtual_hid_keyboard": {
+                "indicate_sticky_modifier_keys_state": false,
+                "keyboard_type_v2": "ansi"
+            }
         }
     ]
 }
