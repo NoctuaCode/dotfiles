@@ -8,14 +8,14 @@
 
 (defsrc
   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10   f11   f12
-  - =
+  IntlBackslash - =
   [ ]
-  caps a s d f j k l ; '
+  caps a s d f j k l ;
   fn
 )
 (defvar
   tap-time 150
-  hold-time 160
+  hold-time 190
 )
 
 (defalias
@@ -32,16 +32,16 @@
 
 (deflayer base
   brdn  brup  _    _    _    _   prev  pp  next  mute  vold  volu
-  [ ]
-  ' =
-  esc @a @s @d @f @j @k @l @; -
+  grv [ ]
+  - =
+  esc @a @s @d @f @j @k @l @;
   @fnl
 )
 
 (deflayer fn
   f1   f2   f3   f4   f5   f6   f7   f8   f9   f10   f11   f12
+  _ _ _
   _ _
-  _ _
-  esc _ _ _ _ _ _ _ _ _
+  esc _ _ _ _ _ _ _ _ 
   fn
 )
