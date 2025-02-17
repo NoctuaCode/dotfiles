@@ -5,7 +5,7 @@ font-family-bold-italic = FiraCode Nerd Font Bold Italic
 
 font-synthetic-style = true
 
-font-size = 14
+font-size = 16
 
 theme = catppuccin-mocha
 window-colorspace = display-p3
