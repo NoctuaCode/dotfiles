@@ -119,8 +119,6 @@ alias gP="git push"
 alias gs="git status"
 alias gS="git switch"
 
-bindkey jj vi-cmd-mode
-
 kill_port() {
     local port="$1"
     if [ -z "$port" ]; then
@@ -200,3 +198,5 @@ export OLLAMA_KV_CACHE_TYPE=f16
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
+
+export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
