@@ -9,35 +9,35 @@
                 },
                 "rules": [
                     {
-                        "description": "Caps lock to escape on press and left control on hold",
+                        "description": "Caps lock to escape on press and left option on hold",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "caps_lock",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "left_control" }],
+                                "to": [{ "key_code": "left_option" }],
                                 "to_if_alone": [{ "key_code": "escape" }],
                                 "type": "basic"
                             }
                         ]
                     },
                     {
-                        "description": "Enter to  left control on hold",
+                        "description": "Enter to  left option on hold",
                         "manipulators": [
                             {
                                 "from": {
                                     "key_code": "return_or_enter",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "left_control" }],
+                                "to": [{ "key_code": "left_option" }],
                                 "to_if_alone": [{ "key_code": "return_or_enter" }],
                                 "type": "basic"
                             }
                         ]
                     },
                     {
-                        "description": "Hyper when escape is held",
+                        "description": "Hyper in escape",
                         "manipulators": [
                             {
                                 "from": {
@@ -50,17 +50,16 @@
                                         "modifiers": ["left_shift", "left_option", "left_command"]
                                     }
                                 ],
-                                "to_if_alone": [{ "key_code": "escape" }],
                                 "type": "basic"
                             }
                         ]
                     },
                     {
-                        "description": "MEH when on Non Us Backslash",
+                        "description": "MEH on left option",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "non_us_backslash",
+                                    "key_code": "left_option",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [
@@ -69,6 +68,7 @@
                                         "modifiers": ["left_shift", "left_option"]
                                     }
                                 ],
+                                "to_if_alone": [{ "key_code": "delete_or_backspace" }],
                                 "type": "basic"
                             }
                         ]
@@ -94,18 +94,10 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "quote",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "key_code": "hyphen" }],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
                                     "key_code": "open_bracket",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "quote" }],
+                                "to": [{ "key_code": "hyphen" }],
                                 "type": "basic"
                             },
                             {
@@ -130,15 +122,23 @@
                         },
                         {
                             "from": { "key_code": "left_command" },
-                            "to": [{ "key_code": "left_option" }]
+                            "to": [{ "key_code": "left_shift" }]
                         },
                         {
-                            "from": { "key_code": "left_option" },
+                            "from": { "key_code": "left_shift" },
                             "to": [{ "key_code": "left_command" }]
                         },
                         {
                             "from": { "key_code": "non_us_backslash" },
                             "to": [{ "key_code": "grave_accent_and_tilde" }]
+                        },
+                        {
+                            "from": { "key_code": "right_command" },
+                            "to": [{ "key_code": "left_control" }]
+                        },
+                        {
+                            "from": { "key_code": "right_shift" },
+                            "to": [{ "key_code": "left_command" }]
                         }
                     ]
                 },
@@ -152,7 +152,6 @@
                     "ignore": true
                 },
                 {
-                    "disable_built_in_keyboard_if_exists": true,
                     "identifiers": {
                         "is_keyboard": true,
                         "product_id": 24926,
@@ -187,7 +186,7 @@
                         ]
                     },
                     {
-                        "description": "Enter ctrl on hold",
+                        "description": "Enter control on hold",
                         "manipulators": [
                             {
                                 "from": {
@@ -308,14 +307,6 @@
                             "to": [{ "key_code": "n" }]
                         },
                         {
-                            "from": { "key_code": "left_command" },
-                            "to": [{ "key_code": "left_option" }]
-                        },
-                        {
-                            "from": { "key_code": "left_option" },
-                            "to": [{ "key_code": "left_command" }]
-                        },
-                        {
                             "from": { "key_code": "n" },
                             "to": [{ "key_code": "b" }]
                         },
@@ -350,6 +341,14 @@
                         {
                             "from": { "key_code": "r" },
                             "to": [{ "key_code": "p" }]
+                        },
+                        {
+                            "from": { "key_code": "right_command" },
+                            "to": [{ "key_code": "left_option" }]
+                        },
+                        {
+                            "from": { "key_code": "right_option" },
+                            "to": [{ "key_code": "left_command" }]
                         },
                         {
                             "from": { "key_code": "s" },
@@ -423,6 +422,240 @@
             "name": "DVORAK",
             "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+        },
+        {
+            "complex_modifications": {
+                "parameters": {
+                    "basic.to_delayed_action_delay_milliseconds": 210,
+                    "basic.to_if_alone_timeout_milliseconds": 200,
+                    "basic.to_if_held_down_threshold_milliseconds": 200
+                },
+                "rules": [
+                    {
+                        "description": "Caps lock to escape on press and left control on hold",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "caps_lock",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "left_control" }],
+                                "to_if_alone": [{ "key_code": "escape" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Enter ctrl on hold",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "return_or_enter",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "left_control" }],
+                                "to_if_alone": [{ "key_code": "return_or_enter" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Hyper when escape is held",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "escape",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "modifiers": ["left_shift", "left_option", "left_command"]
+                                    }
+                                ],
+                                "to_if_alone": [{ "key_code": "escape" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "MEH when on Non Us Backslash",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "non_us_backslash",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_control",
+                                        "modifiers": ["left_shift", "left_option"]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "devices": [
+                {
+                    "identifiers": { "is_keyboard": true },
+                    "simple_modifications": [
+                        {
+                            "from": { "key_code": "b" },
+                            "to": [{ "key_code": "v" }]
+                        },
+                        {
+                            "from": { "key_code": "close_bracket" },
+                            "to": [{ "key_code": "equal_sign" }]
+                        },
+                        {
+                            "from": { "key_code": "d" },
+                            "to": [{ "key_code": "s" }]
+                        },
+                        {
+                            "from": { "key_code": "e" },
+                            "to": [{ "key_code": "f" }]
+                        },
+                        {
+                            "from": { "key_code": "equal_sign" },
+                            "to": [{ "key_code": "close_bracket" }]
+                        },
+                        {
+                            "from": { "key_code": "f" },
+                            "to": [{ "key_code": "t" }]
+                        },
+                        {
+                            "from": { "key_code": "grave_accent_and_tilde" },
+                            "to": [{ "key_code": "non_us_backslash" }]
+                        },
+                        {
+                            "from": { "key_code": "h" },
+                            "to": [{ "key_code": "m" }]
+                        },
+                        {
+                            "from": { "key_code": "hyphen" },
+                            "to": [{ "key_code": "open_bracket" }]
+                        },
+                        {
+                            "from": { "key_code": "i" },
+                            "to": [{ "key_code": "u" }]
+                        },
+                        {
+                            "from": { "key_code": "j" },
+                            "to": [{ "key_code": "n" }]
+                        },
+                        {
+                            "from": { "key_code": "k" },
+                            "to": [{ "key_code": "e" }]
+                        },
+                        {
+                            "from": { "key_code": "l" },
+                            "to": [{ "key_code": "i" }]
+                        },
+                        {
+                            "from": { "key_code": "left_command" },
+                            "to": [{ "key_code": "left_option" }]
+                        },
+                        {
+                            "from": { "key_code": "left_option" },
+                            "to": [{ "key_code": "left_command" }]
+                        },
+                        {
+                            "from": { "key_code": "m" },
+                            "to": [{ "key_code": "h" }]
+                        },
+                        {
+                            "from": { "key_code": "n" },
+                            "to": [{ "key_code": "j" }]
+                        },
+                        {
+                            "from": { "key_code": "non_us_backslash" },
+                            "to": [{ "key_code": "grave_accent_and_tilde" }]
+                        },
+                        {
+                            "from": { "key_code": "o" },
+                            "to": [{ "key_code": "y" }]
+                        },
+                        {
+                            "from": { "key_code": "open_bracket" },
+                            "to": [{ "key_code": "quote" }]
+                        },
+                        {
+                            "from": { "key_code": "p" },
+                            "to": [{ "key_code": "semicolon" }]
+                        },
+                        {
+                            "from": { "key_code": "quote" },
+                            "to": [{ "key_code": "hyphen" }]
+                        },
+                        {
+                            "from": { "key_code": "r" },
+                            "to": [{ "key_code": "p" }]
+                        },
+                        {
+                            "from": { "key_code": "s" },
+                            "to": [{ "key_code": "r" }]
+                        },
+                        {
+                            "from": { "key_code": "semicolon" },
+                            "to": [{ "key_code": "o" }]
+                        },
+                        {
+                            "from": { "key_code": "t" },
+                            "to": [{ "key_code": "b" }]
+                        },
+                        {
+                            "from": { "key_code": "u" },
+                            "to": [{ "key_code": "l" }]
+                        },
+                        {
+                            "from": { "key_code": "v" },
+                            "to": [{ "key_code": "d" }]
+                        },
+                        {
+                            "from": { "key_code": "y" },
+                            "to": [{ "key_code": "k" }]
+                        }
+                    ]
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": true,
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 6519,
+                        "vendor_id": 12951
+                    },
+                    "ignore": true
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 4423,
+                        "vendor_id": 10462
+                    },
+                    "ignore": true
+                },
+                {
+                    "disable_built_in_keyboard_if_exists": true,
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 24926,
+                        "vendor_id": 7504
+                    },
+                    "ignore": true
+                }
+            ],
+            "name": "Colemak-DH",
+            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+        },
+        {
+            "name": "Default",
+            "virtual_hid_keyboard": {
+                "indicate_sticky_modifier_keys_state": false,
+                "keyboard_type_v2": "ansi"
+            }
         }
     ]
 }
