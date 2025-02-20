@@ -7,7 +7,7 @@ font-synthetic-style = true
 
 font-size = 16
 
-theme = catppuccin-mocha
+theme = rose-pine
 window-colorspace = display-p3
 window-theme = dark
 bold-is-bright = true
