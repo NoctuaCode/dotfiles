@@ -35,6 +35,10 @@ plugins=(
     zoxide
 )
 
+case "$TERM" in
+    xterm-color|*-256color|xterm-ghostty) color_prompt=yes;;
+esac
+
 source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
