@@ -1,23 +1,23 @@
-font-family = FiraCode Nerd Font
-font-family-bold = FiraCode Nerd Font Bold
-font-family-italic = FiraCode Nerd Font Italic
-font-family-bold-italic = FiraCode Nerd Font Bold Italic
+font-family = BlexMono Nerd Font Mono
+font-family-bold = BlexMono Nerd Font Mono Bold
+font-family-italic = BlexMono Nerd Font Mono Italic
+font-family-bold-italic = BlexMono Nerd Font Mono Bold Italic
 
 font-synthetic-style = true
 
 font-size = 16
 
 theme = rose-pine
-window-colorspace = display-p3
 window-theme = dark
-bold-is-bright = true
-cursor-style-blink = false
+window-inherit-working-directory = false
+working-directory = home
 
 mouse-hide-while-typing = true
-
-window-decoration = true
+cursor-style-blink = false
 
 macos-option-as-alt = true
+macos-titlebar-style = tabs
+macos-titlebar-proxy-icon = hidden
 
 clipboard-read = allow
 clipboard-write = allow
