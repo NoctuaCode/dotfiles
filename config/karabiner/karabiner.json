@@ -160,6 +160,7 @@
                 }
             ],
             "name": "QWERTY",
+            "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         },
         {
@@ -306,6 +307,14 @@
                             "to": [{ "key_code": "n" }]
                         },
                         {
+                            "from": { "key_code": "left_command" },
+                            "to": [{ "key_code": "left_option" }]
+                        },
+                        {
+                            "from": { "key_code": "left_option" },
+                            "to": [{ "key_code": "left_command" }]
+                        },
+                        {
                             "from": { "key_code": "n" },
                             "to": [{ "key_code": "b" }]
                         },
@@ -380,14 +389,6 @@
                         {
                             "from": { "key_code": "z" },
                             "to": [{ "key_code": "quote" }]
-                        },
-                        {
-                            "from": { "key_code": "left_command" },
-                            "to": [{ "key_code": "left_option" }]
-                        },
-                        {
-                            "from": { "key_code": "left_option" },
-                            "to": [{ "key_code": "left_command" }]
                         }
                     ]
                 },
@@ -419,7 +420,6 @@
                 }
             ],
             "name": "DVORAK",
-            "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         },
         {
