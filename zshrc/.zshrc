@@ -49,7 +49,7 @@ else
   export EDITOR='nvim'
 fi
 
-export EDITOR=zed
+export EDITOR=nvim
 
 # Go
 export GOPATH=$HOME/go
@@ -59,8 +59,6 @@ export GOPATH=$HOME/go
 export PATH=$HOME/.config/bin:$PATH
 # With Rust
 export PATH=$HOME/.cargo/bin:$PATH
-# With emacs
-export PATH=$HOME/.config/emacs/bin:$PATH
 # With Go
 export PATH=$(go env GOPATH)/bin:$PATH
 # With LLVM
@@ -151,7 +149,7 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/caulotte/.cache/lm-studio/bin"
+export PATH="$PATH:/Users/noctuapps/.cache/lm-studio/bin"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -161,12 +159,6 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
-
-# Herd injected PHP 8.3 configuration.
-export HERD_PHP_83_INI_SCAN_DIR="/Users/caulotte/Library/Application Support/Herd/config/php/83/"
-
-# Herd injected PHP binary.
-export PATH="/Users/caulotte/Library/Application Support/Herd/bin/":$PATH
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -184,7 +176,7 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 # pnpm
-export PNPM_HOME="/Users/caulotte/Library/pnpm"
+export PNPM_HOME="/Users/noctuapps/Library/pnpm"
 case ":$PATH:" in
   *":$PNPM_HOME:"*) ;;
   *) export PATH="$PNPM_HOME:$PATH" ;;
@@ -204,3 +196,11 @@ export OLLAMA_KV_CACHE_TYPE=f16
 source <(ng completion script)
 
 export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
+
+
+# Herd injected PHP 8.4 configuration.
+export HERD_PHP_84_INI_SCAN_DIR="/Users/noctuapps/Library/Application Support/Herd/config/php/84/"
+
+
+# Herd injected PHP binary.
+export PATH="/Users/noctuapps/Library/Application Support/Herd/bin/":$PATH
