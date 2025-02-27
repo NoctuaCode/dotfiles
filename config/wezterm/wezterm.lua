@@ -13,37 +13,35 @@ return {
 	window_decorations = "RESIZE",
 	tab_bar_at_bottom = true,
 	window_padding = {
-		left = 10,
-		right = 10,
-		top = 10,
-		bottom = 10,
+		left = 15,
+		right = 15,
+		top = 15,
+		bottom = 15,
 	},
 	window_close_confirmation = "NeverPrompt",
 
-	color_scheme = "tokyonight",
+	color_scheme = "rose-pine",
 	term = "xterm-256color",
 	enable_tab_bar = false,
-	window_background_opacity = 0.9,
-	macos_window_background_blur = 50,
 
-	font_size = 14,
-	font = wezterm.font({ family = "FiraCode Nerd Font" }),
+	font_size = 16,
+	font = wezterm.font({ family = "Maple Mono" }),
 
 	font_rules = {
 		{
 			intensity = "Bold",
 			italic = true,
-			font = wezterm.font({ family = "FiraCode Nerd Font", weight = "Bold", style = "Italic" }),
+			font = wezterm.font({ family = "Maple Mono", weight = "Bold", style = "Italic" }),
 		},
 		{
 			italic = true,
 			intensity = "Half",
-			font = wezterm.font({ family = "FiraCode Nerd Font", weight = "DemiBold", style = "Italic" }),
+			font = wezterm.font({ family = "Maple Mono", weight = "Thin", style = "Italic" }),
 		},
 		{
 			italic = true,
 			intensity = "Normal",
-			font = wezterm.font({ family = "FiraCode Nerd Font", style = "Italic" }),
+			font = wezterm.font({ family = "Maple Mono", style = "Italic" }),
 		},
 	},
 
