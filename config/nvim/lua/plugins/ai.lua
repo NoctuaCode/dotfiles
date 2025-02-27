@@ -7,12 +7,12 @@ return {
     },
     opts = {
       adapters = {
-        qwent = function()
+        codestral = function()
           return require("codecompanion.adapters").extend("ollama", {
-            name = "Qwen2.5 Coder Instruct",
+            name = "Codestral",
             schema = {
               model = {
-                default = "qwen2.5-coder:32b",
+                default = "codestral",
               },
               num_ctx = {
                 default = 16384,
@@ -23,12 +23,28 @@ return {
             },
           })
         end,
-        deepseek_r1 = function()
+        mistral_small = function()
           return require("codecompanion.adapters").extend("ollama", {
-            name = "DeepSeek-R1",
+            name = "Mistral Small",
             schema = {
               model = {
-                default = "deepseek-r1:32b",
+                default = "mistral-small",
+              },
+              num_ctx = {
+                default = 16384,
+              },
+              num_predict = {
+                default = -1,
+              },
+            },
+          })
+        end,
+        mixtral = function()
+          return require("codecompanion.adapters").extend("ollama", {
+            name = "Mixtral",
+            schema = {
+              model = {
+                default = "mixtral:8x7b",
               },
               num_ctx = {
                 default = 16384,
@@ -42,7 +58,7 @@ return {
       },
       strategies = {
         chat = {
-          adapter = "qwent",
+          adapter = "codestral",
         },
       },
     },
