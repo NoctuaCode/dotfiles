@@ -121,6 +121,8 @@ alias gP="git push"
 alias gs="git status"
 alias gS="git switch"
 
+alias django="./manage.py"
+
 kill_port() {
     local port="$1"
     if [ -z "$port" ]; then
