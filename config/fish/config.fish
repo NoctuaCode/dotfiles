@@ -1,5 +1,4 @@
 set fish_greeting ""
-set -gx TERM xterm-ghostty
 
 set -gx EDITOR nvim
 
