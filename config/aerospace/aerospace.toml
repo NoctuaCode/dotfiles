@@ -97,19 +97,15 @@ z = ['exec-and-forget open "/Applications/Zed.app"', 'mode main']
 
 
 [[on-window-detected]]
-if.app-id = 'com.nordvpn.macos'
-run = 'move-node-to-workspace 0'
-
-[[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
 run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
-if.app-id = 'app.zen-browser.zen'
+if.app-id = 'com.brave.Browser'
 run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
-if.app-id = 'app.zen-browser.zen'
+if.app-id = 'com.brave.Browser'
 if.window-title-regex-substring = 'Picture-in-Picture'
 run = ['layout floating']
 
@@ -126,8 +122,8 @@ if.app-id = 'com.microsoft.VSCode'
 run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
-if.app-id = 'com.tinyapp.DBngin'
-run = 'move-node-to-workspace 4'
+if.app-id = 'com.todesktop.230313mzl4w4u92'
+run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.ActivityMonitor'
@@ -139,6 +135,10 @@ run = 'move-node-to-workspace 8'
 
 [[on-window-detected]]
 if.app-id = 'org.whispersystems.signal-desktop'
+run = 'move-node-to-workspace 8'
+
+[[on-window-detected]]
+if.app-id = 'net.whatsapp.WhatsApp'
 run = 'move-node-to-workspace 8'
 
 [[on-window-detected]]
