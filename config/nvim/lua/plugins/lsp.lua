@@ -1,5 +1,12 @@
 return {
 	{
+
+		"williamboman/mason.nvim",
+		config = function()
+			require("mason").setup()
+		end,
+	},
+	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			"folke/neodev.nvim",
@@ -84,7 +91,6 @@ return {
 				end
 			end, vim.tbl_keys(servers))
 
-			require("mason").setup()
 			local ensure_installed = {
 				"stylua",
 				"gofumpt",
