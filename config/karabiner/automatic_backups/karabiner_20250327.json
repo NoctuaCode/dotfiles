@@ -161,7 +161,6 @@
                 }
             ],
             "name": "QWERTY",
-            "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         },
         {
@@ -587,7 +586,7 @@
                                     "key_code": "t",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "quote" }],
+                                "to": [{ "key_code": "quote"}],
                                 "type": "basic"
                             },
                             {
@@ -1704,6 +1703,7 @@
                 }
             ],
             "name": "Enthium",
+            "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
     ]
