@@ -123,6 +123,57 @@ alias gS="git switch"
 
 alias django="./manage.py"
 
+alias ts="tmux-sessionizer"
+
+function sesh-sessions() {
+  {
+    exec </dev/tty
+    exec <&1
+    local session
+    session=$(sesh list -t | fzf --height 40% --reverse --border-label ' sesh ' --border --prompt '⚡  ')
+    zle reset-prompt > /dev/null 2>&1 || true
+    [[ -z "$session" ]] && return
+    sesh connect $session
+  }
+}
+
+function sesh-zoxide() {
+  {
+    exec </dev/tty
+    exec <&1
+    local session
+    session=$(sesh list -z | fzf --height 40% --reverse --border-label ' sesh ' --border --prompt '⚡  ')
+    zle reset-prompt > /dev/null 2>&1 || true
+    [[ -z "$session" ]] && return
+    sesh connect $session
+  }
+}
+
+function sesh-projects() {
+  {
+    exec </dev/tty
+    exec <&1
+    local session
+    session=$(sesh list -c | fzf --height 40% --reverse --border-label ' sesh ' --border --prompt '⚡  ')
+    zle reset-prompt > /dev/null 2>&1 || true
+    [[ -z "$session" ]] && return
+    sesh connect $session
+  }
+}
+
+zle     -N             sesh-sessions
+bindkey -M emacs '\et' sesh-sessions
+bindkey -M vicmd '\et' sesh-sessions
+bindkey -M viins '\et' sesh-sessions
+zle     -N            sesh-zoxide
+bindkey -M emacs '\ef' sesh-zoxide
+bindkey -M vicmd '\ef' sesh-zoxide
+bindkey -M viins '\ef' sesh-zoxide
+zle     -N            sesh-projects
+bindkey -M emacs '\ep' sesh-projects
+bindkey -M vicmd '\ep' sesh-projects
+bindkey -M viins '\ep' sesh-projects
+
 kill_port() {
     local port="$1"
     if [ -z "$port" ]; then
