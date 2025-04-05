@@ -33,8 +33,8 @@ outer.right = 10
 alt-ctrl-shift-z = 'fullscreen'
 alt-ctrl-shift-f = 'layout floating'
 
-alt-ctrl-shift-t = 'layout tiles horizontal vertical'
-alt-ctrl-shift-a = 'layout accordion horizontal vertical'
+cmd-alt-ctrl-shift-t = 'layout tiles horizontal vertical'
+cmd-alt-ctrl-shift-s = 'layout accordion horizontal vertical'
 
 alt-ctrl-shift-h = 'focus left'
 alt-ctrl-shift-j = 'focus down'
@@ -49,27 +49,23 @@ cmd-alt-ctrl-shift-l = 'move right'
 cmd-alt-ctrl-shift-minus = 'resize smart -50'
 cmd-alt-ctrl-shift-equal = 'resize smart +50'
 
-alt-1 = 'workspace 1'
-alt-2 = 'workspace 2'
-alt-3 = 'workspace 3'
-alt-4 = 'workspace 4'
-alt-5 = 'workspace 5'
-alt-6 = 'workspace 6'
-alt-7 = 'workspace 7'
-alt-8 = 'workspace 8'
-alt-9 = 'workspace 9'
-alt-0 = 'workspace 0'
+alt-ctrl-shift-b = 'workspace 1'
+alt-ctrl-shift-y = 'workspace 2'
+alt-ctrl-shift-o = 'workspace 3'
+alt-ctrl-shift-u = 'workspace 4'
+alt-ctrl-shift-c = 'workspace 5'
+alt-ctrl-shift-i = 'workspace 6'
+alt-ctrl-shift-e = 'workspace 7'
+alt-ctrl-shift-a = 'workspace 8'
 
-cmd-alt-ctrl-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
-cmd-alt-ctrl-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
-cmd-alt-ctrl-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
-cmd-alt-ctrl-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
-cmd-alt-ctrl-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
-cmd-alt-ctrl-shift-6 = 'move-node-to-workspace 6 --focus-follows-window'
-cmd-alt-ctrl-shift-7 = 'move-node-to-workspace 7 --focus-follows-window'
-cmd-alt-ctrl-shift-8 = 'move-node-to-workspace 8 --focus-follows-window'
-cmd-alt-ctrl-shift-9 = 'move-node-to-workspace 9 --focus-follows-window'
-cmd-alt-ctrl-shift-0 = 'move-node-to-workspace 0 --focus-follows-window'
+cmd-alt-ctrl-shift-b = 'move-node-to-workspace 1 --focus-follows-window'
+cmd-alt-ctrl-shift-y = 'move-node-to-workspace 2 --focus-follows-window'
+cmd-alt-ctrl-shift-o = 'move-node-to-workspace 3 --focus-follows-window'
+cmd-alt-ctrl-shift-u = 'move-node-to-workspace 4 --focus-follows-window'
+cmd-alt-ctrl-shift-c = 'move-node-to-workspace 5 --focus-follows-window'
+cmd-alt-ctrl-shift-i = 'move-node-to-workspace 6 --focus-follows-window'
+cmd-alt-ctrl-shift-e = 'move-node-to-workspace 7 --focus-follows-window'
+cmd-alt-ctrl-shift-a = 'move-node-to-workspace 8 --focus-follows-window'
 
 alt-tab = 'workspace-back-and-forth'
 alt-ctrl-tab = 'move-workspace-to-monitor --wrap-around next'
@@ -101,13 +97,8 @@ if.app-id = 'com.mitchellh.ghostty'
 run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
-if.app-id = 'com.brave.Browser'
+if.app-id = 'company.thebrowser.Browser'
 run = 'move-node-to-workspace 2'
-
-[[on-window-detected]]
-if.app-id = 'com.brave.Browser'
-if.window-title-regex-substring = 'Picture-in-Picture'
-run = ['layout floating']
 
 [[on-window-detected]]
 if.app-id = 'com.apple.Safari'
@@ -127,28 +118,28 @@ run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.ActivityMonitor'
-run = 'move-node-to-workspace 7'
+run = 'move-node-to-workspace 4'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.MobileSMS'
-run = 'move-node-to-workspace 8'
+run = 'move-node-to-workspace 7'
 
 [[on-window-detected]]
 if.app-id = 'org.whispersystems.signal-desktop'
-run = 'move-node-to-workspace 8'
+run = 'move-node-to-workspace 7'
 
 [[on-window-detected]]
 if.app-id = 'net.whatsapp.WhatsApp'
-run = 'move-node-to-workspace 8'
+run = 'move-node-to-workspace 7'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.mail'
-run = 'move-node-to-workspace 9'
+run = 'move-node-to-workspace 8'
 
 [[on-window-detected]]
 if.app-name-regex-substring = 'finder'
 run = 'layout floating'
 
 [[on-window-detected]]
-if.app-id = 'com.1password.1password'
+if.app-id = 'me.proton.pass.electron'
 run = 'layout floating'
