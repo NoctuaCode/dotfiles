@@ -59,18 +59,13 @@
             "manipulators": [
               {
                 "from": {
-                  "key_code": "backslash",
+                  "key_code": "non_us_backslash",
                   "modifiers": { "optional": ["any"] }
                 },
                 "to": [
                   {
                     "key_code": "left_control",
                     "modifiers": ["left_shift", "left_option"]
-                  }
-                ],
-                "to_if_alone": [
-                  {
-                    "key_code": "backslash"
                   }
                 ],
                 "type": "basic"
@@ -166,7 +161,6 @@
         }
       ],
       "name": "QWERTY",
-      "selected": true,
       "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
     },
     {
@@ -1039,6 +1033,7 @@
         }
       ],
       "name": "Engrammer",
+      "selected": true,
       "virtual_hid_keyboard": {
         "indicate_sticky_modifier_keys_state": false,
         "keyboard_type_v2": "ansi"
