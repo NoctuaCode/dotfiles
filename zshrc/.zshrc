@@ -63,6 +63,7 @@ export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$(go env GOPATH)/bin:$PATH
 # With LLVM
 export PATH=/opt/homebrew/opt/llvm/bin:$PATH
+export PATH=$HOME/.emacs.d/bin:$PATH
 
 export PATH=/opt/homebrew/Cellar/avr-gcc@8/8.5.0_2/bin:$PATH
 export PATH=/opt/homebrew/Cellar/arm-none-eabi-gcc@8/8.5.0_2/bin:$PATH
