@@ -70,7 +70,7 @@ export PATH=/opt/homebrew/Cellar/arm-none-eabi-gcc@8/8.5.0_2/bin:$PATH
 export PATH=/opt/homebrew/Cellar/arm-none-eabi-binutils/2.41/bin:$PATH
 export DOTFILES_PATH=$HOME/dotfiles
 
-export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CONFIG_HOME=/Users/noctuapps/.config
 
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
