@@ -1,0 +1,111 @@
+clear
+ll
+ls
+ls -la
+clear
+zed .
+zed .
+python manage.py runserver
+clear
+pgsql
+psql
+psql postgres
+psql postgres -U postgres
+clear
+python manage.py runserver
+python manage.py migarte
+python manage.py migrate
+conda activate patissaulotte
+conda init
+python -m venv venv
+ls
+source venv/bin/activate
+:wq
+c
+clear
+conda init nushell
+clear
+overlay use venv/bin/activate
+ls venv
+ls venv/bin
+python -m virtualenv
+pip3 install virutalenv
+pip3 install virtualenv
+rm -rf venv
+python -m virtualenv
+python -m virtualenv venv
+ls
+ls venv/bin
+clear
+source venv/bin/activate.nu
+which python
+clear
+curl
+clear
+go
+clear
+conda
+clear
+pip install -r requirement.tt
+pip install -r requirement.txt
+ll
+ls
+pip install -r requirements.txt
+clear
+python manage.py migrate
+python manage.py
+python manage.py makemagrations
+python manage.py makemigrations
+python manage.py inspectdb
+python manage.py migrate
+psql patissaulotte -U patissaulotte
+psql postgres -U postgres
+python manage.py migrate
+psql postgres -U postgres
+python manage.py migrate
+clear
+psql patissaulotte -U patissaulotte
+clear
+python manage.py
+python manage.py createsuperuser
+clear
+pythom manage.py runserver
+clear
+ls
+la
+clear
+ls
+clear
+ng serve --help
+ng serve --host 0.0.0.0 --port 4200
+ng serve
+ll
+l
+ll
+l
+lt
+v
+c
+v zshrc/.zshrc
+v config/ghostty/config
+a
+c
+brew uninstall emacs
+brew uninstall emacs-mac
+rm /Applications/Emacs.app
+clear
+nvim
+c
+ls 
+ll
+cd ..
+ls 
+ls | sort-by size
+ls | sort-by size --helr
+ls | sort-by size --help
+ls | sort-by size --reverse
+clear
+cd dev
+clear
+cd dotfiles/config/nushell
+nvim env.nu
