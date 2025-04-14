@@ -97,7 +97,7 @@
                                     "key_code": "open_bracket",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "quote" }],
+                                "to": [{ "key_code": "hyphen" }],
                                 "type": "basic"
                             },
                             {
@@ -113,7 +113,7 @@
                                     "key_code": "quote",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "hyphen" }],
+                                "to": [{ "key_code": "quote" }],
                                 "type": "basic"
                             }
                         ]
