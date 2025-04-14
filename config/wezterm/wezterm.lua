@@ -22,9 +22,9 @@ return {
 
 	color_scheme = "rose-pine",
 	term = "xterm-256color",
-	enable_tab_bar = false,
+	enable_tab_bar = true,
 
-	font_size = 16,
+	font_size = 14,
 	font = wezterm.font({ family = "Maple Mono" }),
 
 	font_rules = {
@@ -47,4 +47,6 @@ return {
 
 	use_dead_keys = false,
 	scrollback_lines = 10000,
+
+	default_prog = { "/opt/homebrew/bin/nu", "--config", "/Users/noctuapps/.config/nushell/config.nu" },
 }
