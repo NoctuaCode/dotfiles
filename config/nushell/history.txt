@@ -109,3 +109,10 @@ cd dev
 clear
 cd dotfiles/config/nushell
 nvim env.nu
+clear
+nvim
+clear
+nvim
+clear
+c
+ls

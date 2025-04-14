@@ -890,7 +890,7 @@ def --env cx [arg] {
     ls -l
 }
 
-alias l = ls --all
+alias l = ls -l --all
 alias c = clear
 alias ll = ls -l
 alias lt = eza --tree --level=2 --long --icons --git
@@ -932,7 +932,6 @@ alias kc = kubectx
 alias kns = kubens
 alias kl = kubectl logs -f
 alias ke = kubectl exec -it
-
 
 source ~/.config/nushell/env.nu
 source ~/.zoxide.nu
