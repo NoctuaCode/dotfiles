@@ -105,6 +105,7 @@ path add /Users/noctuapps/go/bin
 path add /Users/noctuapps/.emacs.d/bin
 path add /opt/homebrew/opt/postgresql@17/bin
 path add `/Users/noctuapps/Library/Application Support/Herd/bin/`
+path add /Library/TeX/texbin
 
 # To load from a custom file you can use:
 # source ($nu.default-config-dir | path join 'custom.nu')
