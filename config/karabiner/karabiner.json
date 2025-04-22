@@ -172,6 +172,7 @@
                 }
             ],
             "name": "QWERTY",
+            "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         },
         {
@@ -804,7 +805,7 @@
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [{ "key_code": "left_control" }],
-                                "to_if_alone": [{ "key_code": "b" }],
+                                "to_if_alone": [{ "key_code": "escape" }],
                                 "type": "basic"
                             }
                         ]
@@ -828,7 +829,7 @@
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "escape",
+                                    "key_code": "tab",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [
@@ -837,6 +838,7 @@
                                         "modifiers": ["left_shift", "left_option", "left_command"]
                                     }
                                 ],
+                                "to_if_alone": { "key_code": "tab" },
                                 "type": "basic"
                             }
                         ]
@@ -846,7 +848,7 @@
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "non_us_backslash",
+                                    "key_code": "backslash",
                                     "modifiers": { "optional": ["any"] }
                                 },
                                 "to": [
@@ -855,19 +857,7 @@
                                         "modifiers": ["left_shift", "left_option"]
                                     }
                                 ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "escape on fn",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "fn",
-                                    "modifiers": { "optional": ["any"] }
-                                },
-                                "to": [{ "key_code": "escape" }],
+                                "to_if_alone": [{ "key_code": "backslash" }],
                                 "type": "basic"
                             }
                         ]
@@ -1416,7 +1406,6 @@
                 }
             ],
             "name": "Engrammer",
-            "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         }
     ]
