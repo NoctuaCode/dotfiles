@@ -259,3 +259,10 @@ export HERD_PHP_84_INI_SCAN_DIR="/Users/noctuapps/Library/Application Support/He
 
 # Herd injected PHP binary.
 export PATH="/Users/noctuapps/Library/Application Support/Herd/bin/":$PATH
+
+# bun completions
+[ -s "/Users/noctuapps/.bun/_bun" ] && source "/Users/noctuapps/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
