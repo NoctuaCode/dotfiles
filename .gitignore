@@ -18,3 +18,4 @@ config/tmux/plugins
 config/tmux/plugins
 config/nushell/history.txt
 config/nvim/lazy-lock.json
+config/zed/prompts/prompts-library-db.0.mdb
