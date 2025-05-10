@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Homebrew
 if [[ -f "/opt/homebrew/bin/brew" ]] then
   # If you're using macOS, you'll want this enabled
@@ -42,12 +35,6 @@ esac
 source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
-
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='nvim'
-else
-  export EDITOR='nvim'
-fi
 
 export EDITOR=nvim
 
@@ -106,7 +93,7 @@ alias lt="ls -T --git-ignore"
 alias lta="ls -Ta"
 
 alias c="clear"
-alias vim="nvim"
+alias v="nvim"
 alias cat="bat"
 
 alias bl="brew list"
@@ -162,19 +149,6 @@ function sesh-projects() {
     sesh connect $session
   }
 }
-
-zle     -N             sesh-sessions
-bindkey -M emacs '\et' sesh-sessions
-bindkey -M vicmd '\et' sesh-sessions
-bindkey -M viins '\et' sesh-sessions
-zle     -N            sesh-zoxide
-bindkey -M emacs '\ef' sesh-zoxide
-bindkey -M vicmd '\ef' sesh-zoxide
-bindkey -M viins '\ef' sesh-zoxide
-zle     -N            sesh-projects
-bindkey -M emacs '\ep' sesh-projects
-bindkey -M vicmd '\ep' sesh-projects
-bindkey -M viins '\ep' sesh-projects
 
 kill_port() {
     local port="$1"
@@ -237,11 +211,6 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export OLLAMA_FLASH_ATTENTION=true
 export OLLAMA_KV_CACHE_TYPE=f16
