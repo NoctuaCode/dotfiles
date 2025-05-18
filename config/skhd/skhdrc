@@ -1,0 +1,56 @@
+#change window focus within space
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - h : yabai -m window --focus west
+alt - l : yabai -m window --focus east
+
+#change focus between external displays (left and right)
+alt - p: yabai -m display --focus west
+alt - n: yabai -m display --focus east
+
+# maximize a window
+alt + ctrl - z : yabai -m window --toggle zoom-fullscreen
+
+# toggle window float
+alt + ctrl - x : yabai -m window --toggle float --grid 4:4:1:1:2:2
+
+# Activate Stack layout
+alt + ctrl - c : yabai -m space --layout stack
+
+# Activate BSP layout
+alt + ctrl - v : yabai -m space --layout bsp
+
+# swap windows
+alt + ctrl - j : yabai -m window --swap south
+alt + ctrl - k : yabai -m window --swap north
+alt + ctrl - h : yabai -m window --swap west
+alt + ctrl - l : yabai -m window --swap east
+
+# move window to display left and right
+alt + ctrl - p : yabai -m window --display west; yabai -m display --focus west;
+alt + ctrl - n : yabai -m window --display east; yabai -m display --focus east;
+
+# move window to space #
+alt - q : yabai -m space --focus 1;
+alt - w : yabai -m space --focus 2;
+alt - e : yabai -m space --focus 3;
+alt - r : yabai -m space --focus 4;
+alt - a : yabai -m space --focus 5;
+alt - s : yabai -m space --focus 6;
+alt - d : yabai -m space --focus 7;
+alt - f : yabai -m space --focus 8;
+
+# move window to space #
+alt + ctrl - q : yabai -m window --space 1;
+alt + ctrl - w : yabai -m window --space 2;
+alt + ctrl - e : yabai -m window --space 3;
+alt + ctrl - r : yabai -m window --space 4;
+alt + ctrl - a : yabai -m window --space 5;
+alt + ctrl - s : yabai -m window --space 6;
+alt + ctrl - d : yabai -m window --space 7;
+alt + ctrl - f : yabai -m window --space 8;
+
+# stop/start/restart yabai
+ctrl + shift - q : yabai --stop-service
+ctrl + shift - s : yabai --start-service
+ctrl + shift - r : yabai --restart-service

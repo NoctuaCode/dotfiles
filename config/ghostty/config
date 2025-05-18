@@ -1,0 +1,41 @@
+font-family = Maple Mono
+
+font-synthetic-style = true
+
+font-size = 14
+
+theme = rose-pine
+window-theme = dark
+window-inherit-working-directory = false
+window-padding-x = 4
+window-padding-y = 4
+working-directory = home
+
+mouse-hide-while-typing = true
+cursor-style-blink = false
+
+macos-option-as-alt = true
+macos-titlebar-style = tabs
+macos-titlebar-proxy-icon = hidden
+
+clipboard-read = allow
+clipboard-write = allow
+copy-on-select = true
+
+keybind = global:cmd+/=toggle_quick_terminal
+
+keybind = super+shift+v=new_split:right
+keybind = super+shift+s=new_split:down
+
+keybind = super+shift+h=goto_split:left
+keybind = super+shift+l=goto_split:right
+keybind = super+shift+j=goto_split:bottom
+keybind = super+shift+k=goto_split:top
+keybind = super+shift+z=toggle_split_zoom
+
+keybind = super+shift+e=equalize_splits
+
+keybind = super+ctrl+j=resize_split:down,30
+keybind = super+ctrl+k=resize_split:up,30
+keybind = super+ctrl+h=resize_split:left,30
+keybind = super+ctrl+l=resize_split:right,30

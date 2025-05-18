@@ -1,0 +1,164 @@
+start-at-login = true
+
+after-login-command = []
+
+after-startup-command = [
+  'exec-and-forget /opt/homebrew/opt/borders/bin/borders active_color=0xffe580ff inactive_color=0xff949494 width=4.0',
+]
+
+exec-on-workspace-change = [
+  '/bin/bash',
+  '-c',
+  'sketchybar --trigger aerospace_workspace_changed FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
+]
+
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+
+on-focus-changed = [
+  'move-mouse window-lazy-center',
+  'exec-and-forget /bin/bash -c /opt/homebrew/bin/sketchybar --trigger front_app_switched',
+  'exec-and-forget sketchybar --trigger update_windows',
+]
+
+enable-normalization-flatten-containers = false
+
+enable-normalization-opposite-orientation-for-nested-containers = false
+
+accordion-padding = 30
+
+default-root-container-layout = 'tiles'
+
+default-root-container-orientation = 'auto'
+
+key-mapping.preset = 'qwerty'
+
+
+[gaps]
+inner.horizontal = 10
+inner.vertical = 10
+outer.left = 10
+outer.bottom = [{ monitor.'^built-in retina display$' = 10 }, 10]
+outer.top = [{ monitor.'^built-in retina display$' = 20 }, 82]
+outer.right = 10
+
+[exec]
+inherit-env-vars = true
+
+[exec.env-vars]
+PATH = '/opt/homebrew/bin:/opt/homebrew/sbin:${PATH}'
+
+[mode.main.binding]
+cmd-alt-ctrl-shift-z = 'fullscreen'
+cmd-alt-ctrl-shift-x = 'layout floating tiling'
+
+cmd-alt-ctrl-shift-t = 'layout tiles horizontal vertical'
+cmd-alt-ctrl-shift-y = 'layout accordion horizontal vertical'
+
+alt-ctrl-shift-h = 'focus left'
+alt-ctrl-shift-j = 'focus down'
+alt-ctrl-shift-k = 'focus up'
+alt-ctrl-shift-l = 'focus right'
+
+cmd-alt-ctrl-shift-h = 'move left'
+cmd-alt-ctrl-shift-j = 'move down'
+cmd-alt-ctrl-shift-k = 'move up'
+cmd-alt-ctrl-shift-l = 'move right'
+
+cmd-alt-ctrl-shift-minus = 'resize smart -50'
+cmd-alt-ctrl-shift-equal = 'resize smart +50'
+
+alt-ctrl-shift-q = 'workspace --auto-back-and-forth 1'
+alt-ctrl-shift-w = 'workspace --auto-back-and-forth 2'
+alt-ctrl-shift-e = 'workspace --auto-back-and-forth 3'
+alt-ctrl-shift-r = 'workspace --auto-back-and-forth 4'
+alt-ctrl-shift-a = 'workspace --auto-back-and-forth 5'
+alt-ctrl-shift-s = 'workspace --auto-back-and-forth 6'
+alt-ctrl-shift-d = 'workspace --auto-back-and-forth 7'
+alt-ctrl-shift-f = 'workspace --auto-back-and-forth 8'
+
+cmd-alt-ctrl-shift-q = 'move-node-to-workspace 1 --focus-follows-window'
+cmd-alt-ctrl-shift-w = 'move-node-to-workspace 2 --focus-follows-window'
+cmd-alt-ctrl-shift-e = 'move-node-to-workspace 3 --focus-follows-window'
+cmd-alt-ctrl-shift-r = 'move-node-to-workspace 4 --focus-follows-window'
+cmd-alt-ctrl-shift-a = 'move-node-to-workspace 5 --focus-follows-window'
+cmd-alt-ctrl-shift-s = 'move-node-to-workspace 6 --focus-follows-window'
+cmd-alt-ctrl-shift-d = 'move-node-to-workspace 7 --focus-follows-window'
+cmd-alt-ctrl-shift-f = 'move-node-to-workspace 8 --focus-follows-window'
+
+alt-ctrl-shift-t = 'exec-and-forget open -n /Applications/Ghostty.app'
+alt-ctrl-shift-b = 'exec-and-forget open -n /Applications/Brave\ Browser.app'
+
+alt-tab = 'workspace-back-and-forth'
+
+alt-ctrl-cmd-shift-n = 'move-workspace-to-monitor --wrap-around next'
+
+alt-ctrl-shift-semicolon = 'mode service'
+
+[mode.service.binding]
+esc = ['reload-config', 'mode main']
+r = ['flatten-workspace-tree', 'mode main']
+backspace = ['close-all-windows-but-current', 'mode main']
+
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+if.app-id = 'company.thebrowser.Browser'
+run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Safari'
+run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
+if.app-id = 'com.brave.Browser'
+run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
+if.app-id = 'dev.zed.Zed'
+run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.VSCode'
+run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+if.app-id = 'com.todesktop.230313mzl4w4u92'
+run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+if.app-id = 'com.exafunction.windsurf'
+run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+if.app-id = 'me.proton.pass.electron'
+run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.ActivityMonitor'
+run = 'move-node-to-workspace 6'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.MobileSMS'
+run = 'move-node-to-workspace 7'
+
+[[on-window-detected]]
+if.app-id = 'org.whispersystems.signal-desktop'
+run = 'move-node-to-workspace 7'
+
+[[on-window-detected]]
+if.app-id = 'net.whatsapp.WhatsApp'
+run = 'move-node-to-workspace 7'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.mail'
+run = 'move-node-to-workspace 8'
+
+[[on-window-detected]]
+if.app-id = 'ch.protonmail.desktop'
+run = 'move-node-to-workspace 8'
+
+[[on-window-detected]]
+if.app-name-regex-substring = 'finder'
+run = 'layout floating'

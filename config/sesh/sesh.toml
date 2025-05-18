@@ -1,0 +1,10 @@
+[[session]]
+name = "Patiss'Aulotte - Admin"
+path = "~/Developer/PatissAulotte/admin"
+startup_command = "~/.config/sesh/scripts/angular_conf"
+
+[[session]]
+name = "Patiss'Aulotte - API"
+path = "~/Developer/PatissAulotte/api-python"
+startup_command = "~/.config/sesh/scripts/patissaulotte_python_conf"
+
