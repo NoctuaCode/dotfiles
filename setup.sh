@@ -1,5 +1,27 @@
 #! /bin/bash
 
+# Install Cursor
+# Create applications directory if it doesn't exist
+if [ ! -d "$HOME/Applications" ]; then
+    mkdir -p "$HOME/Applications"
+fi
+
+if [ ! -d "$HOME/Applications/Cursor" ]; then
+    mkdir "$HOME/Applications/Cursor"
+    wget -O "$HOME/Applications/Cursor/Cursor.AppImage" "https://www.cursor.com/download/stable/linux-x64"
+    sudo chmod +x "$HOME/Applications/Cursor/Cursor.AppImage"
+    wget -O "$HOME/Applications/Cursor/cursor.png" "https://www.cursor.com/apple-touch-icon.png"
+
+    # Create desktop file
+    sudo echo "[Desktop Entry]
+    Name=Cursor
+    Exec=$HOME/Applications/Cursor/Cursor.AppImage
+    Icon=$HOME/Applications/Cursor/cursor.png
+    Type=Application
+    Categories=Development;
+    " > "/usr/share/applications/cursor.desktop"
+fi
+
 # Create symlinks for config files and directories
 for item in config/*; do
     if [ -e "$item" ]; then
@@ -14,23 +36,8 @@ for item in config/*; do
     fi
 done
 
-# Get OS type
-if [[ "$OSTYPE" == "darwin"* ]]; then
-    # MacOS
-    vscode_path="$HOME/Library/Application Support/Code/User"
-    cursor_path="$HOME/Library/Application Support/Cursor/User"
-elif [[ "$OSTYPE" == "linux-gnu"* ]]; then
-    # Linux
-    vscode_path="$HOME/.config/Code/User"
-    cursor_path="$HOME/.config/Cursor/User" 
-elif [[ "$OSTYPE" == "msys" || "$OSTYPE" == "cygwin" ]]; then
-    # Windows
-    vscode_path="$APPDATA/Code/User"
-    cursor_path="$APPDATA/Cursor/User"
-else
-    echo "Unsupported operating system"
-    exit 1
-fi
+vscode_path="$HOME/.config/Code/User"
+cursor_path="$HOME/.config/Cursor/User" 
 
 # Create directories if they don't exist
 mkdir -p "$vscode_path"
@@ -49,5 +56,5 @@ for item in vscode/*; do
     fi
 done
 
-rm -f "$HOME/.zshrc"
-ln -sf "$(pwd)/zshrc/.zshrc" "$HOME/.zshrc"
+rm -f "$HOME/.bashrc"
+ln -sf "$(pwd)/bashrc/.bashrc" "$HOME/.bashrc"
