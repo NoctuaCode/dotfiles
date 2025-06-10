@@ -13,8 +13,6 @@ plugins=(
     git-auto-fetch
     brew
     direnv
-    docker
-    docker-compose
     fzf
     golang
     macos
@@ -43,28 +41,24 @@ export GOPATH=$HOME/go
 
 # Extend PATH
 # With local
-export PATH=$HOME/.config/bin:$PATH
+export PATH=$PATH:$HOME/.config/bin
 # With Rust
-export PATH=$HOME/.cargo/bin:$PATH
+export PATH=$PATH:$HOME/.cargo/bin
 # With Go
-export PATH=$(go env GOPATH)/bin:$PATH
+export PATH=$PATH:$(go env GOPATH)/bin
 # With LLVM
-export PATH=/opt/homebrew/opt/llvm/bin:$PATH
-export PATH=$HOME/.emacs.d/bin:$PATH
-export PATH=/Library/TeX/texbin:$PATH
+export PATH=$PATH:/opt/homebrew/opt/llvm/bin
+export PATH=$PATH:$HOME/.emacs.d/bin
+export PATH=$PATH:/Library/TeX/texbin
 
-export PATH=/opt/homebrew/Cellar/avr-gcc@8/8.5.0_2/bin:$PATH
-export PATH=/opt/homebrew/Cellar/arm-none-eabi-gcc@8/8.5.0_2/bin:$PATH
-export PATH=/opt/homebrew/Cellar/arm-none-eabi-binutils/2.41/bin:$PATH
-export DOTFILES_PATH=$HOME/dotfiles
+export PATH=$PATH:/opt/homebrew/Cellar/avr-gcc@8/8.5.0_2/bin
+export PATH=$PATH:/opt/homebrew/Cellar/arm-none-eabi-gcc@8/8.5.0_2/bin
+export PATH=$PATH:/opt/homebrew/Cellar/arm-none-eabi-binutils/2.41/bin
+export PATH=$PATH:/opt/homebrew/lib/ruby/gems/3.4.0/bin
+export PATH=$PATH:/opt/homebrew/opt/ruby/bin
+export PATH=$PATH:$HOME/.local/bin
 
 export XDG_CONFIG_HOME=/Users/noctuapps/.config
-
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
-
-# export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 # History
 HISTSIZE=5000
@@ -85,6 +79,7 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(direnv hook zsh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(starship init zsh)"
 
 # use colorls instead of ls
 alias ls="eza --icons -F -H --group-directories-first --git"
@@ -96,25 +91,35 @@ alias c="clear"
 alias v="nvim"
 alias cat="bat"
 
+alias rmdir="rm -rf"
+alias cpdir="cp -rf"
+
 alias bl="brew list"
 alias bs="brew search"
 alias buu="brew update && brew upgrade"
 
+alias g="git"
+alias gaa="git add ."
 alias ga="git add -p"
 alias gb="git branch"
 alias gc="git commit -m"
+alias gca="git commit -am"
 alias gdiff="git diff"
 alias glog="git log --graph --topo-order --pretty='%w(100,0,6)%C(yellow)%h%C(bold)%C(black)%d %C(cyan)%ar %C(green)%an%n%C(bold)%C(white)%s %N' --abbrev-commit"
 alias gp="git pull --rebase"
-alias gP="git push"
+alias gP="git push origin"
 alias gs="git status"
 alias gS="git switch"
 
-alias django="./manage.py"
+alias k="kubectl"
 
 alias ts="tmux-sessionizer"
 
-function sesh-sessions() {
+function mkcd() {
+  mkdir $1 && cd $1
+}
+
+function ss() {
   {
     exec </dev/tty
     exec <&1
@@ -126,7 +131,7 @@ function sesh-sessions() {
   }
 }
 
-function sesh-zoxide() {
+function sz() {
   {
     exec </dev/tty
     exec <&1
@@ -138,7 +143,7 @@ function sesh-zoxide() {
   }
 }
 
-function sesh-projects() {
+function sp() {
   {
     exec </dev/tty
     exec <&1
@@ -180,14 +185,39 @@ source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/noctuapps/.cache/lm-studio/bin"
 
-function y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		builtin cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
+export OLLAMA_FLASH_ATTENTION=true
+export OLLAMA_KV_CACHE_TYPE=f16
+
+
+export PATH="$PATH:/opt/homebrew/opt/postgresql@17/bin"
+
+
+# Herd injected PHP 8.4 configuration.
+export HERD_PHP_84_INI_SCAN_DIR="/Users/noctuapps/Library/Application Support/Herd/config/php/84/"
+
+
+# Herd injected PHP binary.
+export PATH="$PATH:/Users/noctuapps/Library/Application Support/Herd/bin/"
+
+# bun completions
+[ -s "/Users/noctuapps/.bun/_bun" ] && source "/Users/noctuapps/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$PATH:$BUN_INSTALL/bin
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/noctuapps/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
 
 # pnpm
 export PNPM_HOME="/Users/noctuapps/Library/pnpm"
@@ -196,29 +226,3 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-export OLLAMA_FLASH_ATTENTION=true
-export OLLAMA_KV_CACHE_TYPE=f16
-
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)
-
-export PATH="/opt/homebrew/opt/postgresql@17/bin:$PATH"
-
-
-# Herd injected PHP 8.4 configuration.
-export HERD_PHP_84_INI_SCAN_DIR="/Users/noctuapps/Library/Application Support/Herd/config/php/84/"
-
-
-# Herd injected PHP binary.
-export PATH="/Users/noctuapps/Library/Application Support/Herd/bin/":$PATH
-
-# bun completions
-[ -s "/Users/noctuapps/.bun/_bun" ] && source "/Users/noctuapps/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-. "$HOME/.local/bin/env"
