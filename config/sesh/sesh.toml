@@ -8,3 +8,7 @@ name = "Patiss'Aulotte - API"
 path = "~/Developer/PatissAulotte/api-python"
 startup_command = "~/.config/sesh/scripts/patissaulotte_python_conf"
 
+[[session]]
+name = "k9s"
+path = "~"
+startup_command = "~/.config/sesh/scripts/k9s"

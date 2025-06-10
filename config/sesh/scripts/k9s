@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+tmux rename-window k9s
+tmux send-keys "k9s" Enter
