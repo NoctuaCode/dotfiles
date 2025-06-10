@@ -60,6 +60,10 @@
     "command": "workbench.action.toggleZenMode"
   },
   {
+    "key": "ctrl+s",
+    "command": "workbench.action.files.saveAll"
+  },
+  {
     "key": "ctrl+f",
     "command": "workbench.action.quickOpen"
   },
