@@ -25,19 +25,25 @@ yabai -m config mouse_action1 move
 # set modifier + right-click drag to resize window
 yabai -m config mouse_action2 resize
 
+yabai -m rule --add app="^Zed|Visual Studio Code|Code|Emacs|Cursor$" space=1
+
+yabai -m rule --add app="^Arc|Safari|Zen$" space=2
+
 yabai -m rule --add app="^Terminal|iTerm|Alacritty|WezTerm|kitty|Ghostty$" space=3
 
-yabai -m rule --add app="^Arc|Firefox Developer Edition|Safari|Chrome|Google Chrome|Zen|SigmaOS$" space=2
+yabai -m rule --add app="^DBngin|DBeaver$" space=4
 
-yabai -m rule --add app="^Zed|Visual Studio Code|Code|Emacs$" space=1
+yabai -m rule --add app="^Docker Desktop$" space=5
 
-yabai -m rule --add app="^TablePlus|DBngin$" space=4
+yabai -m rule --add app="^Bazecor$" space=6
 
-yabai -m rule --add app="^Hoppscotch$" space=4
+yabai -m rule --add app="^Messages|Messenger|WhatsApp$" space=7
 
-yabai -m rule --add app="^Messages|Messenger|Signal|WhatsApp$" space=7
+yabai -m rule --add app="^Signal|Mattermost$" space=8
 
-yabai -m rule --add app="^Mail|Proton Mail$" space=8
+yabai -m rule --add app="^Mail|Proton Mail$" space=9
+
+yabai -m rule --add app="^Proton Pass$" space=10
 
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
