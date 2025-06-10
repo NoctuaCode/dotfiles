@@ -20,7 +20,7 @@
                                 "to": [
                                     {
                                         "key_code": "left_command",
-                                        "modifiers": ["left_option", "left_control", "left_shift"]
+                                        "modifiers": ["left_option, left_control, left_shift"]
                                     }
                                 ],
                                 "type": "basic"
@@ -323,7 +323,7 @@
                                     "key_code": "g",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "hyphen" }],
+                                "to": [{ "key_code": "comma" }],
                                 "type": "basic"
                             },
                             {
@@ -421,7 +421,7 @@
                                     "key_code": "z",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "quote" }],
+                                "to": [{ "key_code": "slash" }],
                                 "type": "basic"
                             },
                             {
@@ -449,7 +449,7 @@
                                     "key_code": "c",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "comma" }],
+                                "to": [{ "key_code": "quote" }],
                                 "type": "basic"
                             },
                             {
@@ -477,7 +477,7 @@
                                     "key_code": "b",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "slash" }],
+                                "to": [{ "key_code": "hyphen" }],
                                 "type": "basic"
                             },
                             {
@@ -696,6 +696,26 @@
                         ]
                     },
                     {
+                        "description": "Enter to  left control on hold",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "identifiers": [{ "is_built_in_keyboard": true }],
+                                        "type": "device_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "return_or_enter",
+                                    "modifiers": { "optional": ["any"] }
+                                },
+                                "to": [{ "key_code": "left_control" }],
+                                "to_if_alone": [{ "key_code": "return_or_enter" }],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Remap Symbols",
                         "manipulators": [
                             {
@@ -786,6 +806,7 @@
                     "ignore": true
                 },
                 {
+                    "disable_built_in_keyboard_if_exists": true,
                     "identifiers": {
                         "is_keyboard": true,
                         "product_id": 24926,
