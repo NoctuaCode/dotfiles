@@ -16,7 +16,17 @@
   },
   {
     "key": "ctrl+t",
-    "command": "workbench.action.togglePanel"
+    "command": "workbench.action.togglePanel",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+t",
+    "command": "terminal.focus",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "projectManager.listProjects"
   },
   {
     "key": "ctrl+n",
