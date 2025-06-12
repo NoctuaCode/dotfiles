@@ -226,3 +226,4 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+export DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
