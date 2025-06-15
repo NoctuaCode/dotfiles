@@ -1,0 +1,63 @@
+function mkcd() {
+  mkdir $1 && cd $1
+}
+
+function ss() {
+  {
+    exec </dev/tty
+    exec <&1
+    local session
+    session=$(sesh list -t | fzf --height 40% --reverse --border-label ' sesh ' --border --prompt '⚡  ')
+    zle reset-prompt > /dev/null 2>&1 || true
+    [[ -z "$session" ]] && return
+    sesh connect $session
+  }
+}
+
+function sz() {
+  {
+    exec </dev/tty
+    exec <&1
+    local session
+    session=$(sesh list -z | fzf --height 40% --reverse --border-label ' sesh ' --border --prompt '⚡  ')
+    zle reset-prompt > /dev/null 2>&1 || true
+    [[ -z "$session" ]] && return
+    sesh connect $session
+  }
+}
+
+function sp() {
+  {
+    exec </dev/tty
+    exec <&1
+    local session
+    session=$(sesh list -c | fzf --height 40% --reverse --border-label ' sesh ' --border --prompt '⚡  ')
+    zle reset-prompt > /dev/null 2>&1 || true
+    [[ -z "$session" ]] && return
+    sesh connect $session
+  }
+}
+
+kill_port() {
+    local port="$1"
+    if [ -z "$port" ]; then
+        echo "Usage: kill_process_by_port <port_number>"
+        return 1
+    fi
+    
+    local pid=$(lsof -ti :"$port")
+    if [ -z "$pid" ]; then
+        echo "No process found using port $port"
+        return 1
+    fi
+    
+    echo "Killing process $pid using port $port"
+    kill -9 "$pid"
+    
+    if [ $? -eq 0 ]; then
+        echo "Process successfully terminated"
+    else
+        echo "Failed to terminate process"
+        return 1
+    fi
+}

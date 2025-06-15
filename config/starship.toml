@@ -11,7 +11,7 @@ truncation_length = 10
 truncate_to_repo = false
 
 [git_branch]
-format = '[$symbol$branch(:$remote_branch)]($style)'
+format = '[$symbol$branch(:$remote_branch)]($style) '
 
 [aws]
 format = '[$symbol(profile: "$profile" )(\(region: $region\) )]($style)'
