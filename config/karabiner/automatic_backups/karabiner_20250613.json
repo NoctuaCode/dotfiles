@@ -7,31 +7,15 @@
                         "description": "Engram",
                         "manipulators": [
                             {
-                                "from": { "key_code": "escape" },
-                                "to": [
-                                    {
-                                        "key_code": "left_control",
-                                        "modifiers": ["left_shift", "left_option", "left_command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": { "key_code": "left_control" },
-                                "to": [
-                                    {
-                                        "key_code": "left_control",
-                                        "modifiers": ["left_shift", "left_option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
                                 "from": {
                                     "key_code": "grave_accent_and_tilde",
                                     "modifiers": { "optional": ["option", "control", "command"] }
                                 },
-                                "to": [{ "key_code": "open_bracket" }],
+                                "to": [
+                                    {
+                                        "key_code": "open_bracket"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -65,7 +49,11 @@
                                     "key_code": "2",
                                     "modifiers": { "mandatory": ["shift"] }
                                 },
-                                "to": [{ "key_code": "equal_sign" }],
+                                "to": [
+                                    {
+                                        "key_code": "equal_sign"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -177,7 +165,11 @@
                                     "key_code": "hyphen",
                                     "modifiers": { "optional": ["control", "command", "option"] }
                                 },
-                                "to": [{ "key_code": "close_bracket" }],
+                                "to": [
+                                    {
+                                        "key_code": "close_bracket"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -198,7 +190,11 @@
                                     "key_code": "equal_sign",
                                     "modifiers": { "optional": ["control", "command", "option"] }
                                 },
-                                "to": [{ "key_code": "slash" }],
+                                "to": [
+                                    {
+                                        "key_code": "slash"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -206,7 +202,11 @@
                                     "key_code": "equal_sign",
                                     "modifiers": { "mandatory": ["shift"] }
                                 },
-                                "to": [{ "key_code": "backslash" }],
+                                "to": [
+                                    {
+                                        "key_code": "backslash"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -254,12 +254,7 @@
                                     "key_code": "t",
                                     "modifiers": { "mandatory": ["shift"] }
                                 },
-                                "to": [
-                                    {
-                                        "key_code": "9",
-                                        "modifiers": ["shift"]
-                                    }
-                                ],
+                                "to": [{ "key_code": "9", "modifiers": ["shift"] }],
                                 "type": "basic"
                             },
                             {
@@ -267,12 +262,7 @@
                                     "key_code": "y",
                                     "modifiers": { "optional": ["option", "control", "command"] }
                                 },
-                                "to": [
-                                    {
-                                        "key_code": "quote",
-                                        "modifiers": ["shift"]
-                                    }
-                                ],
+                                "to": [{ "key_code": "quote", "modifiers": ["shift"] }],
                                 "type": "basic"
                             },
                             {
@@ -280,12 +270,7 @@
                                     "key_code": "y",
                                     "modifiers": { "mandatory": ["shift"] }
                                 },
-                                "to": [
-                                    {
-                                        "key_code": "0",
-                                        "modifiers": ["shift"]
-                                    }
-                                ],
+                                "to": [{ "key_code": "0", "modifiers": ["shift"] }],
                                 "type": "basic"
                             },
                             {
@@ -333,12 +318,7 @@
                                     "key_code": "close_bracket",
                                     "modifiers": { "optional": ["option", "control", "command"] }
                                 },
-                                "to": [
-                                    {
-                                        "key_code": "3",
-                                        "modifiers": ["shift"]
-                                    }
-                                ],
+                                "to": [{ "key_code": "3", "modifiers": ["shift"] }],
                                 "type": "basic"
                             },
                             {
@@ -346,12 +326,7 @@
                                     "key_code": "close_bracket",
                                     "modifiers": { "mandatory": ["shift"] }
                                 },
-                                "to": [
-                                    {
-                                        "key_code": "4",
-                                        "modifiers": ["shift"]
-                                    }
-                                ],
+                                "to": [{ "key_code": "4", "modifiers": ["shift"] }],
                                 "type": "basic"
                             },
                             {
@@ -372,7 +347,11 @@
                                     "key_code": "backslash",
                                     "modifiers": { "mandatory": ["shift"] }
                                 },
-                                "to": [{ "key_code": "grave_accent_and_tilde" }],
+                                "to": [
+                                    {
+                                        "key_code": "grave_accent_and_tilde"
+                                    }
+                                ],
                                 "type": "basic"
                             },
                             {
@@ -451,12 +430,7 @@
                                     "key_code": "h",
                                     "modifiers": { "mandatory": ["shift"] }
                                 },
-                                "to": [
-                                    {
-                                        "key_code": "semicolon",
-                                        "modifiers": ["shift"]
-                                    }
-                                ],
+                                "to": [{ "key_code": "semicolon", "modifiers": ["shift"] }],
                                 "type": "basic"
                             },
                             {
@@ -544,12 +518,7 @@
                                     "key_code": "n",
                                     "modifiers": { "optional": ["command", "control", "option"] }
                                 },
-                                "to": [
-                                    {
-                                        "key_code": "slash",
-                                        "modifiers": ["shift"]
-                                    }
-                                ],
+                                "to": [{ "key_code": "slash", "modifiers": ["shift"] }],
                                 "type": "basic"
                             },
                             {
@@ -557,12 +526,7 @@
                                     "key_code": "n",
                                     "modifiers": { "mandatory": ["shift"] }
                                 },
-                                "to": [
-                                    {
-                                        "key_code": "1",
-                                        "modifiers": ["shift"]
-                                    }
-                                ],
+                                "to": [{ "key_code": "1", "modifiers": ["shift"] }],
                                 "type": "basic"
                             },
                             {
@@ -578,7 +542,7 @@
                                     "key_code": "comma",
                                     "modifiers": { "optional": ["any"] }
                                 },
-                                "to": [{ "key_code": "m" }],
+                                "to": [{ "key_code": "r" }],
                                 "type": "basic"
                             },
                             {
@@ -631,15 +595,6 @@
                         "vendor_id": 12951
                     },
                     "ignore": true
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": true,
-                        "product_id": 18,
-                        "vendor_id": 13807
-                    },
-                    "ignore": false
                 }
             ],
             "name": "Engram",
