@@ -1,6 +1,7 @@
 # use colorls instead of ls
 alias ls="eza --icons -F -H --group-directories-first --git"
-alias ll="ls -al"
+alias l="ls -al"
+alias ll="ls -l"
 alias lt="ls -T --git-ignore"
 alias lta="ls -Ta"
 
@@ -26,7 +27,7 @@ alias glog="git log --graph --topo-order --pretty='%w(100,0,6)%C(yellow)%h%C(bol
 alias gp="git push origin HEAD"
 alias gpu="git pull --rebase origin HEAD"
 alias gs="git status"
-alias gc="git checkout"
+alias gC="git checkout"
 alias gw="git worktree"
 alias gwa="git worktree add"
 

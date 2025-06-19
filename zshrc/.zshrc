@@ -31,14 +31,14 @@ setopt hist_find_no_dups
 autoload -Uz compinit
 compinit
 
-
+source $HOME/.config/zsh/aliases
+source $HOME/.config/zsh/oh-my-zsh
 source $HOME/.config/zsh/go
 source $HOME/.config/zsh/rust
 source $HOME/.config/zsh/fzf
 source $HOME/.config/zsh/zoxide
 source $HOME/.config/zsh/direnv
 source $HOME/.config/zsh/shellenv
-source $HOME/.config/zsh/aliases
 source $HOME/.config/zsh/functions
 source $HOME/.config/zsh/ollama
 source $HOME/.config/zsh/postgres
@@ -50,3 +50,14 @@ source $HOME/.config/zsh/pnpm
 source $HOME/.config/zsh/starship
 source $HOME/.config/zsh/angular
 source $HOME/.config/zsh/volta
+
+
+# Herd injected PHP 8.4 configuration.
+export HERD_PHP_84_INI_SCAN_DIR="/Users/noctuapps/Library/Application Support/Herd/config/php/84/"
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+# bun completions
+[ -s "/Users/noctuapps/.bun/_bun" ] && source "/Users/noctuapps/.bun/_bun"
