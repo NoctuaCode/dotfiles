@@ -1,8 +1,8 @@
-font-family = JetBrainsMono Nerd Font
+font-family = FiraCode Nerd Font
 
 font-synthetic-style = true
 
-font-size = 14
+font-size = 16
 
 theme = rose-pine
 window-theme = dark
