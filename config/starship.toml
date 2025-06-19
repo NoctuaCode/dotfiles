@@ -24,7 +24,7 @@ format = '[ ](bold cyan)'
 
 [kubernetes]
 symbol = '☸ '
-disabled = true
+disabled = false
 detect_files = ['Dockerfile']
 format = '[$symbol$context( \($namespace\))]($style) '
 contexts = [
