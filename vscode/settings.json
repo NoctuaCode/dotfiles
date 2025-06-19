@@ -1,9 +1,9 @@
 {
   "editor.formatOnSave": true,
   "editor.suggest.insertMode": "replace",
-  "editor.fontFamily": "'JetBrainsMono Nerd Font'",
+  "editor.fontFamily": "'FiraCode Nerd Font'",
   "editor.fontSize": 16,
-  "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font'",
+  "terminal.integrated.fontFamily": "'FiraCode Nerd Font'",
   "terminal.integrated.fontSize": 16,
   "editor.linkedEditing": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
@@ -117,5 +117,6 @@
   "cursor.cpp.disabledLanguages": ["plaintext"],
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one"
-  }
+  },
+  "window.commandCenter": true
 }
