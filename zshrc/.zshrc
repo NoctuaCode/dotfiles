@@ -8,6 +8,8 @@ fi
 # Homebrew
 source $HOME/.config/zsh/homebrew
 
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
+
 case "$TERM" in
     xterm-color|*-256color|xterm-ghostty) color_prompt=yes;;
 esac
@@ -56,4 +58,15 @@ source $HOME/.config/zsh/atuin
 source $HOME/.config/zsh/pnpm
 source $HOME/.config/zsh/starship
 source $HOME/.config/zsh/volta
+source $HOME/.config/zsh/uv
 source $HOME/.config/zsh/aliases
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/caulotte/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/caulotte/.lmstudio/bin"
+# End of LM Studio CLI section
+
