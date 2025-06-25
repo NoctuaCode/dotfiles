@@ -14,7 +14,7 @@ enable-normalization-flatten-containers = true
 
 enable-normalization-opposite-orientation-for-nested-containers = true
 
-accordion-padding = 30
+accordion-padding = 0
 
 default-root-container-layout = 'tiles'
 
@@ -24,82 +24,73 @@ key-mapping.preset = 'qwerty'
 
 
 [gaps]
-inner.horizontal = 0
-inner.vertical = 0
-outer.left = 0
-outer.bottom = 0
-outer.top = 0
-outer.right = 0
-
-[exec]
-inherit-env-vars = true
-
-[exec.env-vars]
-PATH = '/opt/homebrew/bin:/opt/homebrew/sbin:${PATH}'
+inner.horizontal = 5
+inner.vertical = 5
+outer.left = 5
+outer.bottom = 5
+outer.top = 5
+outer.right = 5
 
 [mode.main.binding]
-cmd-alt-ctrl-shift-z = 'fullscreen'
-cmd-alt-ctrl-shift-x = 'layout floating tiling'
+ctrl-shift-z = 'fullscreen'
+ctrl-shift-x = 'layout floating tiling'
 
-cmd-alt-ctrl-shift-c = 'layout tiles horizontal vertical'
-cmd-alt-ctrl-shift-v = 'layout accordion horizontal vertical'
+ctrl-shift-c = 'layout tiles horizontal vertical'
+ctrl-shift-v = 'layout accordion horizontal vertical'
 
-alt-ctrl-shift-h = 'focus left'
-alt-ctrl-shift-j = 'focus down'
-alt-ctrl-shift-k = 'focus up'
-alt-ctrl-shift-l = 'focus right'
+ctrl-shift-h = 'focus left'
+ctrl-shift-j = 'focus down'
+ctrl-shift-k = 'focus up'
+ctrl-shift-l = 'focus right'
 
-cmd-alt-ctrl-shift-h = 'move left'
-cmd-alt-ctrl-shift-j = 'move down'
-cmd-alt-ctrl-shift-k = 'move up'
-cmd-alt-ctrl-shift-l = 'move right'
+alt-ctrl-h = 'move left'
+alt-ctrl-j = 'move down'
+alt-ctrl-k = 'move up'
+alt-ctrl-l = 'move right'
 
-cmd-alt-ctrl-shift-minus = 'resize smart -50'
-cmd-alt-ctrl-shift-equal = 'resize smart +50'
+ctrl-shift-1 = 'workspace --auto-back-and-forth 1'
+ctrl-shift-2 = 'workspace --auto-back-and-forth 2'
+ctrl-shift-3 = 'workspace --auto-back-and-forth 3'
+ctrl-shift-4 = 'workspace --auto-back-and-forth 4'
+ctrl-shift-5 = 'workspace --auto-back-and-forth 5'
+ctrl-shift-6 = 'workspace --auto-back-and-forth 6'
+ctrl-shift-7 = 'workspace --auto-back-and-forth 7'
+ctrl-shift-8 = 'workspace --auto-back-and-forth 8'
+ctrl-shift-9 = 'workspace --auto-back-and-forth 9'
+ctrl-shift-0 = 'workspace --auto-back-and-forth 0'
+ctrl-shift-q = 'workspace --auto-back-and-forth q'
+ctrl-shift-w = 'workspace --auto-back-and-forth w'
+ctrl-shift-e = 'workspace --auto-back-and-forth e'
+ctrl-shift-r = 'workspace --auto-back-and-forth r'
+ctrl-shift-a = 'workspace --auto-back-and-forth a'
+ctrl-shift-s = 'workspace --auto-back-and-forth s'
+ctrl-shift-d = 'workspace --auto-back-and-forth d'
+ctrl-shift-f = 'workspace --auto-back-and-forth f'
 
-alt-ctrl-shift-1 = 'workspace --auto-back-and-forth 1'
-alt-ctrl-shift-2 = 'workspace --auto-back-and-forth 2'
-alt-ctrl-shift-3 = 'workspace --auto-back-and-forth 3'
-alt-ctrl-shift-4 = 'workspace --auto-back-and-forth 4'
-alt-ctrl-shift-5 = 'workspace --auto-back-and-forth 5'
-alt-ctrl-shift-6 = 'workspace --auto-back-and-forth 6'
-alt-ctrl-shift-7 = 'workspace --auto-back-and-forth 7'
-alt-ctrl-shift-8 = 'workspace --auto-back-and-forth 8'
-alt-ctrl-shift-9 = 'workspace --auto-back-and-forth 9'
-alt-ctrl-shift-0 = 'workspace --auto-back-and-forth 0'
-alt-ctrl-shift-q = 'workspace --auto-back-and-forth q'
-alt-ctrl-shift-w = 'workspace --auto-back-and-forth w'
-alt-ctrl-shift-e = 'workspace --auto-back-and-forth e'
-alt-ctrl-shift-r = 'workspace --auto-back-and-forth r'
-alt-ctrl-shift-a = 'workspace --auto-back-and-forth a'
-alt-ctrl-shift-s = 'workspace --auto-back-and-forth s'
-alt-ctrl-shift-d = 'workspace --auto-back-and-forth d'
-alt-ctrl-shift-f = 'workspace --auto-back-and-forth f'
-
-cmd-alt-ctrl-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
-cmd-alt-ctrl-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
-cmd-alt-ctrl-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
-cmd-alt-ctrl-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
-cmd-alt-ctrl-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
-cmd-alt-ctrl-shift-6 = 'move-node-to-workspace 6 --focus-follows-window'
-cmd-alt-ctrl-shift-7 = 'move-node-to-workspace 7 --focus-follows-window'
-cmd-alt-ctrl-shift-8 = 'move-node-to-workspace 8 --focus-follows-window'
-cmd-alt-ctrl-shift-9 = 'move-node-to-workspace 9 --focus-follows-window'
-cmd-alt-ctrl-shift-0 = 'move-node-to-workspace 0 --focus-follows-window'
-cmd-alt-ctrl-shift-q = 'move-node-to-workspace q --focus-follows-window'
-cmd-alt-ctrl-shift-w = 'move-node-to-workspace w --focus-follows-window'
-cmd-alt-ctrl-shift-e = 'move-node-to-workspace e --focus-follows-window'
-cmd-alt-ctrl-shift-r = 'move-node-to-workspace r --focus-follows-window'
-cmd-alt-ctrl-shift-a = 'move-node-to-workspace a --focus-follows-window'
-cmd-alt-ctrl-shift-s = 'move-node-to-workspace s --focus-follows-window'
-cmd-alt-ctrl-shift-d = 'move-node-to-workspace d --focus-follows-window'
-cmd-alt-ctrl-shift-f = 'move-node-to-workspace f --focus-follows-window'
+alt-ctrl-1 = 'move-node-to-workspace 1 --focus-follows-window'
+alt-ctrl-2 = 'move-node-to-workspace 2 --focus-follows-window'
+alt-ctrl-3 = 'move-node-to-workspace 3 --focus-follows-window'
+alt-ctrl-4 = 'move-node-to-workspace 4 --focus-follows-window'
+alt-ctrl-5 = 'move-node-to-workspace 5 --focus-follows-window'
+alt-ctrl-6 = 'move-node-to-workspace 6 --focus-follows-window'
+alt-ctrl-7 = 'move-node-to-workspace 7 --focus-follows-window'
+alt-ctrl-8 = 'move-node-to-workspace 8 --focus-follows-window'
+alt-ctrl-9 = 'move-node-to-workspace 9 --focus-follows-window'
+alt-ctrl-0 = 'move-node-to-workspace 0 --focus-follows-window'
+alt-ctrl-q = 'move-node-to-workspace q --focus-follows-window'
+alt-ctrl-w = 'move-node-to-workspace w --focus-follows-window'
+alt-ctrl-e = 'move-node-to-workspace e --focus-follows-window'
+alt-ctrl-r = 'move-node-to-workspace r --focus-follows-window'
+alt-ctrl-a = 'move-node-to-workspace a --focus-follows-window'
+alt-ctrl-s = 'move-node-to-workspace s --focus-follows-window'
+alt-ctrl-d = 'move-node-to-workspace d --focus-follows-window'
+alt-ctrl-f = 'move-node-to-workspace f --focus-follows-window'
 
 alt-tab = 'workspace-back-and-forth'
 
-alt-ctrl-cmd-shift-n = 'move-workspace-to-monitor --wrap-around next'
+alt-ctrl-n = 'move-workspace-to-monitor --wrap-around next'
 
-alt-ctrl-shift-semicolon = 'mode service'
+alt-ctrl-semicolon = 'mode service'
 
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
