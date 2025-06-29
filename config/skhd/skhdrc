@@ -1,24 +1,27 @@
 #change window focus within space
-alt + ctrl + shift - j : yabai -m window --focus south
-alt + ctrl + shift - k : yabai -m window --focus north
-alt + ctrl + shift - h : yabai -m window --focus west
-alt + ctrl + shift - l : yabai -m window --focus east
+ctrl + shift - j : yabai -m window --focus south
+ctrl + shift - k : yabai -m window --focus north
+ctrl + shift - h : yabai -m window --focus west
+ctrl + shift - l : yabai -m window --focus east
 
 #change focus between external displays (left and right)
-alt + ctrl + shift - p: yabai -m display --focus west
-alt + ctrl + shift - o: yabai -m display --focus east
+ctrl + shift - p: yabai -m display --focus west
+ctrl + shift - o: yabai -m display --focus east
+
+ctrl + shift - n: yabai -m window --focus stack.prev
+ctrl + shift - m: yabai -m window --focus stack.next
 
 # maximize a window
-cmd + alt + ctrl + shift - z : yabai -m window --toggle zoom-fullscreen
+ctrl + shift - z : yabai -m window --toggle zoom-fullscreen
 
 # toggle window float
-cmd + alt + ctrl + shift - x : yabai -m window --toggle float --grid 4:4:1:1:2:2
+ctrl + shift - x : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
 # Activate Stack layout
-cmd + alt + ctrl + shift - c : yabai -m space --layout stack
+ctrl + shift - c : yabai -m space --layout stack
 
 # Activate BSP layout
-cmd + alt + ctrl + shift - v : yabai -m space --layout bsp
+ctrl + shift - v : yabai -m space --layout bsp
 
 # swap windows
 alt + ctrl - j : yabai -m window --swap south
@@ -27,34 +30,34 @@ alt + ctrl - h : yabai -m window --swap west
 alt + ctrl - l : yabai -m window --swap east
 
 # move window to display left and right
-cmd + alt + ctrl + shift - p : yabai -m window --display west; yabai -m display --focus west;
-cmd + alt + ctrl + shift - o : yabai -m window --display east; yabai -m display --focus east;
+alt + ctrl - p : yabai -m window --display west; yabai -m display --focus west;
+alt + ctrl - o : yabai -m window --display east; yabai -m display --focus east;
 
 # move window to space #
-alt + ctrl + shift - q : yabai -m space --focus 1;
-alt + ctrl + shift - w : yabai -m space --focus 2;
-alt + ctrl + shift - e : yabai -m space --focus 3;
-alt + ctrl + shift - r : yabai -m space --focus 4;
-alt + ctrl + shift - t : yabai -m space --focus 5;
-alt + ctrl + shift - a : yabai -m space --focus 6;
-alt + ctrl + shift - s : yabai -m space --focus 7;
-alt + ctrl + shift - d : yabai -m space --focus 8;
-alt + ctrl + shift - f : yabai -m space --focus 9;
-alt + ctrl + shift - g : yabai -m space --focus 10;
+ctrl + shift - q : yabai -m space --focus 1;
+ctrl + shift - w : yabai -m space --focus 2;
+ctrl + shift - e : yabai -m space --focus 3;
+ctrl + shift - r : yabai -m space --focus 4;
+ctrl + shift - t : yabai -m space --focus 5;
+ctrl + shift - a : yabai -m space --focus 6;
+ctrl + shift - s : yabai -m space --focus 7;
+ctrl + shift - d : yabai -m space --focus 8;
+ctrl + shift - f : yabai -m space --focus 9;
+ctrl + shift - g : yabai -m space --focus 10;
 
 # move window to space #
-cmd + alt + ctrl + shift - q : yabai -m window --space 1;
-cmd + alt + ctrl + shift - w : yabai -m window --space 2;
-cmd + alt + ctrl + shift - e : yabai -m window --space 3;
-cmd + alt + ctrl + shift - r : yabai -m window --space 4;
-cmd + alt + ctrl + shift - t : yabai -m window --space 5;
-cmd + alt + ctrl + shift - a : yabai -m window --space 6;
-cmd + alt + ctrl + shift - s : yabai -m window --space 7;
-cmd + alt + ctrl + shift - d : yabai -m window --space 8;
-cmd + alt + ctrl + shift - f : yabai -m window --space 9;
-cmd + alt + ctrl + shift - g : yabai -m window --space 10;
+alt + ctrl - q : yabai -m window --space 1;
+alt + ctrl - w : yabai -m window --space 2;
+alt + ctrl - e : yabai -m window --space 3;
+alt + ctrl - r : yabai -m window --space 4;
+alt + ctrl - t : yabai -m window --space 5;
+alt + ctrl - a : yabai -m window --space 6;
+alt + ctrl - s : yabai -m window --space 7;
+alt + ctrl - d : yabai -m window --space 8;
+alt + ctrl - f : yabai -m window --space 9;
+alt + ctrl - g : yabai -m window --space 10;
 
 # stop/start/restart yabai
-ctrl + shift - q : yabai --stop-service
-ctrl + shift - s : yabai --start-service
-ctrl + shift - r : yabai --restart-service
+alt + shift - q : yabai --stop-service
+alt + shift - s : yabai --start-service
+alt + shift - r : yabai --restart-service
