@@ -59,6 +59,8 @@ source $HOME/.config/zsh/pnpm
 source $HOME/.config/zsh/starship
 source $HOME/.config/zsh/volta
 source $HOME/.config/zsh/uv
+source $HOME/.config/zsh/helm
+source $HOME/.config/zsh/kube
 source $HOME/.config/zsh/aliases
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/caulotte/.docker/completions $fpath)
@@ -70,3 +72,4 @@ compinit
 export PATH="$PATH:/Users/caulotte/.lmstudio/bin"
 # End of LM Studio CLI section
 
+alias new_ticket="git checkout dev && git fetch origin && git pull origin dev && git checkout -b "
