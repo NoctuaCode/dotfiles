@@ -43,3 +43,4 @@ alias kd="kubectl describe"
 alias kl="kubectl logs"
 
 alias ts="tmux-sessionizer"
+alias tm="tmuxinator start"
