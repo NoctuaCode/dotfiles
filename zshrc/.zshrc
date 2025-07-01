@@ -42,6 +42,7 @@ compinit
 
 source $HOME/.config/zsh/powerlevel10k
 source $HOME/.config/zsh/oh-my-zsh
+source $HOME/.config/zsh/carapace
 source $HOME/.config/zsh/go
 source $HOME/.config/zsh/rust
 source $HOME/.config/zsh/fzf
