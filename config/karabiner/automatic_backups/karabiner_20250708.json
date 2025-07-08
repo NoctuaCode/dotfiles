@@ -613,9 +613,19 @@
                         "vendor_id": 12951
                     },
                     "ignore": true
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "is_pointing_device": true,
+                        "product_id": 18,
+                        "vendor_id": 13807
+                    },
+                    "ignore": false
                 }
             ],
             "name": "Engram",
+            "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         },
         {
@@ -795,7 +805,6 @@
                 }
             ],
             "name": "QWERTY",
-            "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
         },
         {
