@@ -24,67 +24,67 @@ key-mapping.preset = 'qwerty'
 
 
 [gaps]
-inner.horizontal = 5
-inner.vertical = 5
-outer.left = 5
-outer.bottom = 5
-outer.top = 5
-outer.right = 5
+inner.horizontal = 0
+inner.vertical = 0
+outer.left = 0
+outer.bottom = 0
+outer.top = 0
+outer.right = 0
 
 [mode.main.binding]
-ctrl-shift-z = 'fullscreen'
-ctrl-shift-x = 'layout floating tiling'
+ctrl-alt-z = 'fullscreen'
+ctrl-alt-x = 'layout floating tiling'
 
-ctrl-shift-c = 'layout tiles horizontal vertical'
-ctrl-shift-v = 'layout accordion horizontal vertical'
+ctrl-alt-c = 'layout tiles horizontal vertical'
+ctrl-alt-v = 'layout accordion horizontal vertical'
 
-ctrl-shift-h = 'focus left'
-ctrl-shift-j = 'focus down'
-ctrl-shift-k = 'focus up'
-ctrl-shift-l = 'focus right'
+ctrl-alt-h = 'focus left'
+ctrl-alt-j = 'focus down'
+ctrl-alt-k = 'focus up'
+ctrl-alt-l = 'focus right'
 
-alt-ctrl-h = 'move left'
-alt-ctrl-j = 'move down'
-alt-ctrl-k = 'move up'
-alt-ctrl-l = 'move right'
+alt-shift-h = 'move left'
+alt-shift-j = 'move down'
+alt-shift-k = 'move up'
+alt-shift-l = 'move right'
 
-ctrl-shift-1 = 'workspace --auto-back-and-forth 1'
-ctrl-shift-2 = 'workspace --auto-back-and-forth 2'
-ctrl-shift-3 = 'workspace --auto-back-and-forth 3'
-ctrl-shift-4 = 'workspace --auto-back-and-forth 4'
-ctrl-shift-5 = 'workspace --auto-back-and-forth 5'
-ctrl-shift-6 = 'workspace --auto-back-and-forth 6'
-ctrl-shift-7 = 'workspace --auto-back-and-forth 7'
-ctrl-shift-8 = 'workspace --auto-back-and-forth 8'
-ctrl-shift-9 = 'workspace --auto-back-and-forth 9'
-ctrl-shift-0 = 'workspace --auto-back-and-forth 0'
-ctrl-shift-q = 'workspace --auto-back-and-forth q'
-ctrl-shift-w = 'workspace --auto-back-and-forth w'
-ctrl-shift-e = 'workspace --auto-back-and-forth e'
-ctrl-shift-r = 'workspace --auto-back-and-forth r'
-ctrl-shift-a = 'workspace --auto-back-and-forth a'
-ctrl-shift-s = 'workspace --auto-back-and-forth s'
-ctrl-shift-d = 'workspace --auto-back-and-forth d'
-ctrl-shift-f = 'workspace --auto-back-and-forth f'
+ctrl-alt-1 = 'workspace --auto-back-and-forth 1'
+ctrl-alt-2 = 'workspace --auto-back-and-forth 2'
+ctrl-alt-3 = 'workspace --auto-back-and-forth 3'
+ctrl-alt-4 = 'workspace --auto-back-and-forth 4'
+ctrl-alt-5 = 'workspace --auto-back-and-forth 5'
+ctrl-alt-6 = 'workspace --auto-back-and-forth 6'
+ctrl-alt-7 = 'workspace --auto-back-and-forth 7'
+ctrl-alt-8 = 'workspace --auto-back-and-forth 8'
+ctrl-alt-9 = 'workspace --auto-back-and-forth 9'
+ctrl-alt-0 = 'workspace --auto-back-and-forth 0'
+ctrl-alt-q = 'workspace --auto-back-and-forth q'
+ctrl-alt-w = 'workspace --auto-back-and-forth w'
+ctrl-alt-e = 'workspace --auto-back-and-forth e'
+ctrl-alt-r = 'workspace --auto-back-and-forth r'
+ctrl-alt-a = 'workspace --auto-back-and-forth a'
+ctrl-alt-s = 'workspace --auto-back-and-forth s'
+ctrl-alt-d = 'workspace --auto-back-and-forth d'
+ctrl-alt-f = 'workspace --auto-back-and-forth f'
 
-alt-ctrl-1 = 'move-node-to-workspace 1 --focus-follows-window'
-alt-ctrl-2 = 'move-node-to-workspace 2 --focus-follows-window'
-alt-ctrl-3 = 'move-node-to-workspace 3 --focus-follows-window'
-alt-ctrl-4 = 'move-node-to-workspace 4 --focus-follows-window'
-alt-ctrl-5 = 'move-node-to-workspace 5 --focus-follows-window'
-alt-ctrl-6 = 'move-node-to-workspace 6 --focus-follows-window'
-alt-ctrl-7 = 'move-node-to-workspace 7 --focus-follows-window'
-alt-ctrl-8 = 'move-node-to-workspace 8 --focus-follows-window'
-alt-ctrl-9 = 'move-node-to-workspace 9 --focus-follows-window'
-alt-ctrl-0 = 'move-node-to-workspace 0 --focus-follows-window'
-alt-ctrl-q = 'move-node-to-workspace q --focus-follows-window'
-alt-ctrl-w = 'move-node-to-workspace w --focus-follows-window'
-alt-ctrl-e = 'move-node-to-workspace e --focus-follows-window'
-alt-ctrl-r = 'move-node-to-workspace r --focus-follows-window'
-alt-ctrl-a = 'move-node-to-workspace a --focus-follows-window'
-alt-ctrl-s = 'move-node-to-workspace s --focus-follows-window'
-alt-ctrl-d = 'move-node-to-workspace d --focus-follows-window'
-alt-ctrl-f = 'move-node-to-workspace f --focus-follows-window'
+alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
+alt-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
+alt-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
+alt-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
+alt-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
+alt-shift-6 = 'move-node-to-workspace 6 --focus-follows-window'
+alt-shift-7 = 'move-node-to-workspace 7 --focus-follows-window'
+alt-shift-8 = 'move-node-to-workspace 8 --focus-follows-window'
+alt-shift-9 = 'move-node-to-workspace 9 --focus-follows-window'
+alt-shift-0 = 'move-node-to-workspace 0 --focus-follows-window'
+alt-shift-q = 'move-node-to-workspace q --focus-follows-window'
+alt-shift-w = 'move-node-to-workspace w --focus-follows-window'
+alt-shift-e = 'move-node-to-workspace e --focus-follows-window'
+alt-shift-r = 'move-node-to-workspace r --focus-follows-window'
+alt-shift-a = 'move-node-to-workspace a --focus-follows-window'
+alt-shift-s = 'move-node-to-workspace s --focus-follows-window'
+alt-shift-d = 'move-node-to-workspace d --focus-follows-window'
+alt-shift-f = 'move-node-to-workspace f --focus-follows-window'
 
 alt-tab = 'workspace-back-and-forth'
 
@@ -128,7 +128,7 @@ if.app-id = 'com.mitchellh.ghostty'
 run = 'move-node-to-workspace e'
 
 [[on-window-detected]]
-if.app-id = 'com.electron.dockerdesktop'
+if.app-id = 'dev.kdrag0n.MacVirt'
 run = 'move-node-to-workspace r'
 
 [[on-window-detected]]
