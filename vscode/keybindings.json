@@ -25,7 +25,7 @@
     "when": "!terminalFocus"
   },
   {
-    "key": "ctrl+p",
+    "key": "alt+p",
     "command": "projectManager.listProjects"
   },
   {
@@ -84,6 +84,14 @@
   {
     "key": "ctrl+g",
     "command": "workbench.scm.focus"
+  },
+  {
+    "key": "alt+g",
+    "command": "gitlens.gitCommands.worktree.open"
+  },
+  {
+    "key": "alt+cmd+g",
+    "command": "gitlens.gitCommands.worktree.create"
   },
   {
     "key": "cmd+i",
