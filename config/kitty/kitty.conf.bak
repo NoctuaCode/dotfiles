@@ -1,0 +1,22 @@
+include ~/.config/kitty/themes/tokyonight_night.conf
+
+# BEGIN_KITTY_FONTS
+font_family      family="CaskaydiaCove Nerd Font Mono"
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+font_size        12
+# END_KITTY_FONTS
+
+enable_audio_bell no
+
+window_padding_width 5
+hide_window_decorations titlebar-and-corners
+tab_bar top
+
+background_opacity 0.8
+background_blur 20
+
+macos_option_as_alt both
+
+
