@@ -172,5 +172,6 @@
     "repositories": true,
     "searchAndCompare": false,
     "launchpad": false
-  }
+  },
+  "git.openRepositoryInParentFolders": "always"
 }
