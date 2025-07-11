@@ -11,6 +11,10 @@ window-padding-x = 4
 window-padding-y = 4
 working-directory = home
 
+
+background-opacity = 0.8
+background-blur = true
+
 mouse-hide-while-typing = true
 cursor-style-blink = false
 
