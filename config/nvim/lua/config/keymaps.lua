@@ -19,6 +19,8 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "<leader>h", "<cmd>cnext<CR>zz", { desc = "Next quickfix" })
 vim.keymap.set("n", "<leader>l", "<cmd>cprev<CR>zz", { desc = "Previous quickfix" })
+vim.keymap.set("n", "<leader>j", ":cdo ", { desc = "Do in quickfix" })
+vim.keymap.set("n", "<leader>k", "<cmd>copen<CR>", { desc = "Open quickfix" })
 
 vim.keymap.set(
 	"n",
