@@ -17,10 +17,10 @@ return {
 				end
 
 				map("<leader>cr", vim.lsp.buf.rename, "Rename")
-				map("<leader>ca", vim.lsp.buf.code_action, "Code Action", { "n", "x" })
-				map("<leader>cr", require("telescope.builtin").lsp_references, "References")
-				map("<leader>ci", require("telescope.builtin").lsp_implementations, "Implementations")
-				map("<leader>cd", require("telescope.builtin").lsp_definitions, "Definitions")
+				map("ga", vim.lsp.buf.code_action, "Code Action", { "n", "x" })
+				map("gr", require("telescope.builtin").lsp_references, "References")
+				map("gI", require("telescope.builtin").lsp_implementations, "Implementations")
+				map("gd", require("telescope.builtin").lsp_definitions, "Definitions")
 				map("gD", vim.lsp.buf.declaration, "Goto Declaration")
 				map("<leader>cs", require("telescope.builtin").lsp_document_symbols, "Open Document Symbols")
 				map("<leader>cS", require("telescope.builtin").lsp_dynamic_workspace_symbols, "Open Workspace Symbols")

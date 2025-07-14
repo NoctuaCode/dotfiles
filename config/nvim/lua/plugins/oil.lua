@@ -5,6 +5,6 @@ return {
 	},
 	config = function()
 		require("oil").setup()
-		vim.keymap.set("n", "<leader>e", require("oil").open, { desc = "Open Oil" })
+		vim.keymap.set("n", "<C-e>", require("oil").open, { desc = "Open Oil" })
 	end,
 }
