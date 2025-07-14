@@ -40,8 +40,9 @@ return {
 		-- Document existing key chains
 		spec = {
 			{ "<leader>c", group = "Code" },
+			{ "<leader>d", group = "Debug" },
 			{ "<leader>f", group = "Find" },
-			{ "<leader>t", group = "Toggle" },
+			{ "<leader>t", group = "Trouble" },
 			{ "<leader>g", group = "Git" },
 		},
 	},

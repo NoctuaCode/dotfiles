@@ -1,3 +1,6 @@
+vim.keymap.set("i", "<C-c>", "<Esc>", { desc = "Exit insert mode" })
+vim.keymap.set("n", "<Esc>", "<cmd>noh<CR>", { desc = "Clear search highlight" })
+
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
@@ -12,6 +15,7 @@ vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste without losing clipbo
 
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Copy to system clipboard" })
 vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Copy to system clipboard" })
+vim.keymap.set({ "n", "v" }, "<leader>P", [["+p]], { desc = "Paste from system clipboard" })
 
 vim.keymap.set("v", "<leader>d", '"_d', { desc = "Delete without losing clipboard" })
 
@@ -32,3 +36,5 @@ vim.keymap.set("n", "<leader>X", "<cmd>!chmod +x %<CR>", { silent = true, desc =
 
 vim.keymap.set("n", "<leader>q", "<cmd>q<CR>", { desc = "Quit" })
 vim.keymap.set("n", "<leader>w", "<cmd>w<CR>", { desc = "Save" })
+vim.keymap.set("i", "<C-s>", "<Esc><cmd>w<CR>", { desc = "Save" })
+vim.keymap.set("n", "<C-s>", "<cmd>w<CR>", { desc = "Save" })
