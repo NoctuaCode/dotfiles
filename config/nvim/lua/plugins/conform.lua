@@ -28,6 +28,7 @@ return { -- Autoformat
 			lua = { "stylua" },
 			javascript = { "biome" },
 			typescript = { "biome" },
+			python = { "ruff" },
 		},
 	},
 }
