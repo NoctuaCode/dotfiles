@@ -13,7 +13,7 @@ vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste without losing clipbo
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Copy to system clipboard" })
 vim.keymap.set("n", "<leader>Y", [["+Y]], { desc = "Copy to system clipboard" })
 
-vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without losing clipboard" })
+vim.keymap.set("v", "<leader>d", '"_d', { desc = "Delete without losing clipboard" })
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
 
