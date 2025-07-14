@@ -2,9 +2,9 @@ font-family = CaskaydiaCove Nerd Font
 
 font-synthetic-style = true
 
-font-size = 14
+font-size = 16
 
-theme = rose-pine
+theme = tokyonight
 window-theme = dark
 window-inherit-working-directory = false
 window-padding-x = 4
