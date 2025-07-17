@@ -5,6 +5,7 @@
   "editor.fontSize": 14,
   "terminal.integrated.fontFamily": "'FiraCode Nerd Font'",
   "terminal.integrated.fontSize": 14,
+  "terminal.integrated.scrollback": 10000,
   "editor.linkedEditing": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "launch": {},
@@ -173,5 +174,6 @@
     "searchAndCompare": false,
     "launchpad": false
   },
-  "git.openRepositoryInParentFolders": "always"
+  "git.openRepositoryInParentFolders": "always",
+  "hediet.vscode-drawio.resizeImages": null
 }
