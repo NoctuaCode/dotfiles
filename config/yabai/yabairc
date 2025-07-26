@@ -27,7 +27,7 @@ yabai -m config mouse_action2 resize
 
 yabai -m rule --add app="^Zed|Visual Studio Code|Code|Emacs|Cursor$" space=1
 
-yabai -m rule --add app="^Arc|Safari|Zen$" space=2
+yabai -m rule --add app="^Arc|Safari|Zen|Dia|Twilight$" space=2
 
 yabai -m rule --add app="^Terminal|iTerm|Alacritty|WezTerm|kitty|Ghostty$" space=3
 
