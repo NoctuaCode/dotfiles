@@ -21,8 +21,9 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "CaskaydiaCove Nerd Font" :size 14)
-      doom-variable-pitch-font (font-spec :family "CaskaydiaCove Nerd Font" :size 15))
+(setq doom-font (font-spec :family "GeistMono Nerd Font" :size 14)
+      doom-variable-pitch-font (font-spec :family "Alegreya" :size 16)
+      doom-big-font (font-spec :family "GeistMono Nerd Font" :size 22))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -45,54 +46,34 @@
 (setq org-directory "~/Developer/org")
 
 
-;; Whenever you reconfigure a package, make sure to wrap your config in an
-;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
-;;
-;;   (after! PACKAGE
-;;     (setq x y))
-;;
-;; The exceptions to this rule:
-;;
-;;   - Setting file/directory variables (like `org-directory')
-;;   - Setting variables which explicitly tell you to set them before their
-;;     package is loaded (see 'C-h v VARIABLE' to look up their documentation).
-;;   - Setting doom variables (which start with 'doom-' or '+').
-;;
-;; Here are some additional functions/macros that will help you configure Doom.
-;;
-;; - `load!' for loading external *.el files relative to this one
-;; - `use-package!' for configuring packages
-;; - `after!' for running code after a package has loaded
-;; - `add-load-path!' for adding directories to the `load-path', relative to
-;;   this file. Emacs searches the `load-path' when you load packages with
-;;   `require' or `use-package'.
-;; - `map!' for binding new keys
-;;
-;; To get information about any of these functions/macros, move the cursor over
-;; the highlighted symbol at press 'K' (non-evil users must press 'C-c c k').
-;; This will open documentation for it, including demos of how they are used.
-;; Alternatively, use `C-h o' to look up a symbol (functions, variables, faces,
-;; etc).
-;;
-;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
-;; they are implemented.
-(after! lsp-mode
-  (setq lsp-go-use-gofumpt t)
-  )
-(add-hook 'go-mode-hook #'lsp-deferred)
+(setq doom-modeline-icon t)
+(setq doom-modeline-major-mode-icon t)
+(setq doom-modeline-lsp-icon t)
+(setq doom-modeline-major-mode-color-icon t)
 
-(defun lsp-go-install-save-hooks ()
-  (add-hook 'before-save-hook #'lsp-organize-imports t t))
-(add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
+(set-frame-parameter (selected-frame) 'alpha '(96 . 97))
+(add-to-list 'default-frame-alist '(alpha . (96 . 97)))
 
-(after! lsp-mode
-  (setq lsp-go-analyses '((fieldalignment . t)
-                          (nilness . t)
-                          (shadow . t)
-                          (unusedparams . t)
-                          (unusedwrite . t)
-                          (useany . t)
-                          (unusedvariable . t)))
-  )
+(global-visual-line-mode t)
+
+(setq auto-save-default t)
+
+(setq gc-cons-threshold (* 256 1024 1024))
+(setq read-process-output-max (* 4 1024 1024))
+(setq comp-deferred-compilation t)
+(setq comp-async-jobs-number 8)
+
+;; Garbage collector optimization
+(setq gcmh-idle-delay 5)
+(setq gcmh-high-cons-threshold (* 1024 1024 1024))
+
+;; Version control optimization
+(setq vc-handled-backends '(Git))
+
+(setq browse-url-browser-function 'browse-url-generic)
+(setq browse-url-generic-program "twilight")
+
+(setq which-key-idle-delay 0.2)
+
 (require 'pbcopy)
 (turn-on-pbcopy)

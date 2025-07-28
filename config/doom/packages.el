@@ -55,3 +55,4 @@
 ;; Theme
 (package! catppuccin-theme)
 (package! pbcopy)
+(package! lsp-tailwindcss :recipe (:host github :repo "merrickluo/lsp-tailwindcss"))
