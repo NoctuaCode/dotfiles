@@ -894,7 +894,7 @@ alias l = ls --all
 alias c = cursor
 alias ll = ls -l
 alias lt = eza --tree --level=2 --long --icons --git
-alias v = nvim
+alias n = nvim
 alias as = aerospace
 
 def ff [] {
@@ -903,8 +903,7 @@ def ff [] {
 
 
 # Git
-alias gc = git commit -m
-alias gca = git commit -a -m
+alias gc = git commit
 alias gp = git push origin HEAD
 alias gpu = git pull origin
 alias gst = git status
@@ -934,6 +933,9 @@ alias kc = kubectx
 alias kns = kubens
 alias kl = kubectl logs -f
 alias ke = kubectl exec -it
+
+# Helm
+alias h = helm
 
 source ~/.config/nushell/env.nu
 source ~/.zoxide.nu
