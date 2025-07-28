@@ -110,6 +110,10 @@ if.app-id = 'com.todesktop.230313mzl4w4u92'
 run = 'move-node-to-workspace q'
 
 [[on-window-detected]]
+if.app-id = 'org.gnu.Emacs'
+run = 'move-node-to-workspace q'
+
+[[on-window-detected]]
 if.app-id = 'app.zen-browser.zen'
 if.window-title-regex-substring = 'Picture-in-Picture'
 run = ['layout floating']
@@ -149,6 +153,10 @@ run = 'move-node-to-workspace d'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.mail'
+run = 'move-node-to-workspace f'
+
+[[on-window-detected]]
+if.app-id = 'org.mozilla.thunderbird'
 run = 'move-node-to-workspace f'
 
 [[on-window-detected]]
