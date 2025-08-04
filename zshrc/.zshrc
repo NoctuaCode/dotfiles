@@ -33,30 +33,24 @@ compinit
 
 source $HOME/.config/zsh/oh-my-zsh
 source $HOME/.config/zsh/carapace
-source $HOME/.config/zsh/go
-source $HOME/.config/zsh/rust
 source $HOME/.config/zsh/fzf
 source $HOME/.config/zsh/zoxide
-source $HOME/.config/zsh/direnv
 source $HOME/.config/zsh/shellenv
 source $HOME/.config/zsh/functions
 source $HOME/.config/zsh/ollama
 source $HOME/.config/zsh/postgres
-source $HOME/.config/zsh/herd
 source $HOME/.config/zsh/bun
 source $HOME/.config/zsh/docker
 source $HOME/.config/zsh/atuin
-source $HOME/.config/zsh/pnpm
 source $HOME/.config/zsh/starship
-source $HOME/.config/zsh/volta
 source $HOME/.config/zsh/uv
 source $HOME/.config/zsh/helm
 source $HOME/.config/zsh/kube
 source $HOME/.config/zsh/aliases
+source $HOME/.config/zsh/mise
+
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/caulotte/.docker/completions $fpath)
-autoload -Uz compinit
-compinit
 # End of Docker CLI completions
 
 # Added by LM Studio CLI (lms)
