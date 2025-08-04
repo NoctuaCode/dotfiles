@@ -4,7 +4,7 @@ font-synthetic-style = true
 
 font-size = 14
 
-theme = catppuccin-mocha
+theme = tokyonight
 window-theme = dark
 window-inherit-working-directory = false
 window-padding-x = 4
