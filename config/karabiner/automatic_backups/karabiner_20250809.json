@@ -194,6 +194,7 @@
         }
       ],
       "name": "QWERTY",
+      "selected": true,
       "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
     },
     {
@@ -630,7 +631,7 @@
                   "key_code": "close_bracket",
                   "modifiers": { "optional": ["any"] }
                 },
-                "to": [{ "key_code": "left_option" }],
+                "to": [{ "key_code": "equal_sign" }],
                 "type": "basic"
               },
               {
@@ -638,7 +639,7 @@
                   "key_code": "backslash",
                   "modifiers": { "optional": ["any"] }
                 },
-                "to": [{ "key_code": "backslash" }],
+                "to": [{ "key_code": "r" }],
                 "type": "basic"
               },
               {
@@ -823,48 +824,12 @@
                 },
                 "to": [{ "key_code": "v" }],
                 "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "right_command",
-                  "modifiers": { "optional": ["any"] }
-                },
-                "to": [{ "key_code": "r" }],
-                "type": "basic"
               }
             ]
           }
         ]
       },
-      "devices": [
-        {
-          "identifiers": { "is_keyboard": true },
-          "simple_modifications": [
-            {
-              "from": { "key_code": "grave_accent_and_tilde" },
-              "to": [{ "key_code": "non_us_backslash" }]
-            },
-            {
-              "from": { "key_code": "left_command" },
-              "to": [{ "key_code": "left_option" }]
-            },
-            {
-              "from": { "key_code": "left_option" },
-              "to": [{ "key_code": "left_command" }]
-            },
-            {
-              "from": { "key_code": "non_us_backslash" },
-              "to": [{ "key_code": "grave_accent_and_tilde" }]
-            },
-            {
-              "from": { "key_code": "right_option" },
-              "to": [{ "key_code": "right_command" }]
-            }
-          ]
-        }
-      ],
       "name": "Enthium",
-      "selected": true,
       "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
     },
     {
