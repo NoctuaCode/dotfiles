@@ -1,0 +1,48 @@
+alias ls="eza --icons -F -H --group-directories-first --git"
+alias l="ls -al"
+alias ll="ls -l"
+alias lt="ls -T --git-ignore"
+alias lta="ls -Ta"
+
+alias c="cursor"
+alias n="nvim"
+alias cat="bat"
+
+alias rmdir="rm -rf"
+alias cpdir="cp -rf"
+
+alias bl="brew list"
+alias bs="brew search"
+alias buu="brew update && brew upgrade"
+
+alias g="git"
+alias ga="git add ."
+alias gap="git add -p"
+alias gb="git branch"
+alias gc="git commit -m"
+alias gca="git commit -am"
+alias gdiff="git diff"
+alias glog="git log --graph --topo-order --pretty='%w(100,0,6)%C(yellow)%h%C(bold)%C(black)%d %C(cyan)%ar %C(green)%an%n%C(bold)%C(white)%s %N' --abbrev-commit"
+alias gp="git push origin HEAD"
+alias gpu="git pull --rebase origin HEAD"
+alias gs="git status"
+alias gC="git checkout"
+alias gw="git worktree"
+alias gwa="git worktree add"
+alias glabc="git config user.name 'Christopher Aulotte' && git config user.email 'caulotte@isi.nc'"
+alias ghubc="git config user.name 'NoctuaCode' && git config user.email 'noctuaapps@gmail.com'"
+
+alias d="docker"
+alias dc="docker compose"
+alias dcu="docker compose up"
+alias dcd="docker compose down"
+
+alias k="kubectl"
+alias kg="kubectl get"
+alias kd="kubectl describe"
+alias kl="kubectl logs"
+
+alias h="helm"
+
+alias ts="tmux-sessionizer"
+alias tm="tmuxinator start"
