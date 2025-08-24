@@ -7,25 +7,72 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "icon_theme": "Material Icon Theme",
-  "assistant": {
+  "agent": {
+    "model_parameters": [],
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-thinking-latest"
+      "provider": "openai",
+      "model": "gpt-5"
     },
     "version": "2"
   },
+  "edit_predictions": {
+    "disabled_globs": [
+      "ops/",
+      "helm/",
+      ".dockerignore",
+      ".gitignore",
+      "__pycache__/",
+      "*.py[cod]",
+      "*.so",
+      ".venv/",
+      "env/",
+      "venv/",
+      "build/",
+      "dist/",
+      "*.egg-info/",
+      ".env",
+      "*.env",
+      ".envrc",
+      "*.ini",
+      "*.cfg",
+      ".ipynb_checkpoints/",
+      ".vscode/",
+      ".idea/",
+      "*.swp",
+      "*~",
+      "*.log",
+      "coverage/",
+      "htmlcov/",
+      "*.cover",
+      "*.py,cover",
+      ".cache/",
+      ".tox/",
+      ".junit/",
+      "datasets/",
+      "data/"
+    ],
+    "mode": "eager",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null
+    },
+    "enabled_in_text_threads": false
+  },
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": false
+  },
+  "icon_theme": "Material Icon Theme",
   "base_keymap": "VSCode",
   "vim_mode": true,
   "theme": {
     "mode": "system",
     "light": "Catppuccin Frappé",
-    "dark": "Catppuccin Macchiato"
+    "dark": "Catppuccin Mocha"
   },
   "cursor_blink": false,
-  "cursor_shape": "block",
-  "buffer_font_family": "Maple Mono",
-  "ui_font_family": "Maple Mono NF",
+  "buffer_font_family": "FiraCode Nerd Font",
+  "ui_font_family": "FiraCode Nerd Font",
   "ui_font_size": 14,
   "buffer_font_size": 14,
   "features": {
@@ -36,7 +83,7 @@
     "alternate_scroll": "off",
     "blinking": "off",
     "copy_on_select": true,
-    "font_family": "Maple Mono NF",
+    "font_family": "FiraCode Nerd Font",
     "font_features": {
       "liga": true
     },
@@ -56,5 +103,10 @@
     "use_smartcase_find": true
   },
   "relative_line_numbers": true,
-  "vertical_scroll_margin": 10
+  "vertical_scroll_margin": 10,
+  "languages": {
+    "Python": {
+      "language_servers": ["pyright", "ruff"]
+    }
+  }
 }

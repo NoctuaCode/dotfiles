@@ -10,10 +10,9 @@
   "agent": {
     "model_parameters": [],
     "default_model": {
-      "provider": "openai",
-      "model": "gpt-3.5-turbo"
+      "provider": "mistral",
+      "model": "codestral-latest"
     },
-    "version": "2"
   },
   "edit_predictions": {
     "disabled_globs": [
