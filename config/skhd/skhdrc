@@ -38,28 +38,28 @@ alt + shift - o : yabai -m window --display north; yabai -m display --focus nort
 alt + shift - p : yabai -m window --display south; yabai -m display --focus south;
 
 # move window to space #
-alt + ctrl - q : yabai -m space --focus 1;
-alt + ctrl - w : yabai -m space --focus 2;
-alt + ctrl - e : yabai -m space --focus 3;
-alt + ctrl - r : yabai -m space --focus 4;
-alt + ctrl - t : yabai -m space --focus 5;
-alt + ctrl - a : yabai -m space --focus 6;
-alt + ctrl - s : yabai -m space --focus 7;
-alt + ctrl - d : yabai -m space --focus 8;
-alt + ctrl - f : yabai -m space --focus 9;
-alt + ctrl - g : yabai -m space --focus 10;
+alt + ctrl - 1 : yabai -m space --focus 1;
+alt + ctrl - 2 : yabai -m space --focus 2;
+alt + ctrl - 3 : yabai -m space --focus 3;
+alt + ctrl - 4 : yabai -m space --focus 4;
+alt + ctrl - 5 : yabai -m space --focus 5;
+alt + ctrl - 6 : yabai -m space --focus 6;
+alt + ctrl - 7 : yabai -m space --focus 7;
+alt + ctrl - 8 : yabai -m space --focus 8;
+alt + ctrl - 9 : yabai -m space --focus 9;
+alt + ctrl - 0 : yabai -m space --focus 10;
 
 # move window to space #
-alt + shift - q : yabai -m window --space 1;
-alt + shift - w : yabai -m window --space 2;
-alt + shift - e : yabai -m window --space 3;
-alt + shift - r : yabai -m window --space 4;
-alt + shift - t : yabai -m window --space 5;
-alt + shift - a : yabai -m window --space 6;
-alt + shift - s : yabai -m window --space 7;
-alt + shift - d : yabai -m window --space 8;
-alt + shift - f : yabai -m window --space 9;
-alt + shift - g : yabai -m window --space 10;
+alt + shift - 1 : yabai -m window --space 1;
+alt + shift - 2 : yabai -m window --space 2;
+alt + shift - 3 : yabai -m window --space 3;
+alt + shift - 4 : yabai -m window --space 4;
+alt + shift - 5 : yabai -m window --space 5;
+alt + shift - 6 : yabai -m window --space 6;
+alt + shift - 7 : yabai -m window --space 7;
+alt + shift - 8 : yabai -m window --space 8;
+alt + shift - 9 : yabai -m window --space 9;
+alt + shift - 0 : yabai -m window --space 10;
 
 # stop/start/restart yabai
 ctrl + shift - q : yabai --stop-service
