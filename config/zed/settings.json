@@ -10,8 +10,8 @@
   "agent": {
     "model_parameters": [],
     "default_model": {
-      "provider": "mistral",
-      "model": "codestral-latest"
+      "provider": "zed.dev",
+      "model": "claude-sonnet-4"
     },
   },
   "edit_predictions": {

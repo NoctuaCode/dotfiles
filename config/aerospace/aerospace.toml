@@ -111,6 +111,10 @@ if.app-id = 'com.apple.Safari'
 run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
+if.app-id = 'ai.perplexity.comet'
+run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
 if.app-id = 'company.thebrowser.dia'
 run = 'move-node-to-workspace 2'
 
