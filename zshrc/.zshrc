@@ -9,8 +9,6 @@ export LANG=en_US.UTF-8
 
 export EDITOR=nvim
 
-export XDG_CONFIG_HOME=$HOME/.config
-
 export PATH=$PATH:$HOME/.config/bin
 export PATH=$PATH:$HOME/.config/emacs/bin
 export PATH=$PATH:$HOME/.local/bin
@@ -31,7 +29,6 @@ setopt hist_find_no_dups
 autoload -Uz compinit
 compinit
 
-source $HOME/.config/zsh/oh-my-zsh
 source $HOME/.config/zsh/carapace
 source $HOME/.config/zsh/fzf
 source $HOME/.config/zsh/zoxide
@@ -39,9 +36,7 @@ source $HOME/.config/zsh/shellenv
 source $HOME/.config/zsh/functions
 source $HOME/.config/zsh/ollama
 source $HOME/.config/zsh/postgres
-source $HOME/.config/zsh/bun
 source $HOME/.config/zsh/docker
-source $HOME/.config/zsh/atuin
 source $HOME/.config/zsh/starship
 source $HOME/.config/zsh/uv
 source $HOME/.config/zsh/helm
@@ -56,5 +51,3 @@ fpath=(/Users/caulotte/.docker/completions $fpath)
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/caulotte/.lmstudio/bin"
 # End of LM Studio CLI section
-
-fastfetch

@@ -8,9 +8,6 @@ if status is-interactive
     # Homebrew
     /opt/homebrew/bin/brew shellenv | source
 
-    # Atuin
-    atuin init fish | source
-
     # Bun
     set -x BUN_INSTALL $HOME/.bun
     set PATH $PATH $BUN_INSTALL/bin
@@ -42,7 +39,6 @@ end
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH /Users/caulotte/.lmstudio/bin
 # End of LM Studio CLI section
-
 
 # Added by OrbStack: command-line tools and integration
 # This won't be added again if you remove it.
