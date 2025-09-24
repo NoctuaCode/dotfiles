@@ -20,6 +20,8 @@ default-root-container-layout = 'tiles'
 
 default-root-container-orientation = 'auto'
 
+automatically-unhide-macos-hidden-apps = false
+
 key-mapping.preset = 'qwerty'
 
 
@@ -32,31 +34,31 @@ outer.top = 10
 outer.right = 10
 
 [mode.main.binding]
-alt-ctrl-z = 'fullscreen'
-alt-ctrl-x = 'layout floating tiling'
-alt-ctrl-c = 'layout tiles horizontal vertical'
-alt-ctrl-v = 'layout accordion horizontal vertical'
+alt-shift-z = 'fullscreen'
+alt-shift-x = 'layout floating tiling'
+alt-shift-c = 'layout tiles horizontal vertical'
+alt-shift-v = 'layout accordion horizontal vertical'
 
-alt-ctrl-h = 'focus left'
-alt-ctrl-j = 'focus down'
-alt-ctrl-k = 'focus up'
-alt-ctrl-l = 'focus right'
+alt-h = 'focus left'
+alt-j = 'focus down'
+alt-k = 'focus up'
+alt-l = 'focus right'
 
 alt-shift-h = 'move left'
 alt-shift-j = 'move down'
 alt-shift-k = 'move up'
 alt-shift-l = 'move right'
 
-alt-ctrl-1 = 'workspace --auto-back-and-forth 1'
-alt-ctrl-2 = 'workspace --auto-back-and-forth 2'
-alt-ctrl-3 = 'workspace --auto-back-and-forth 3'
-alt-ctrl-4 = 'workspace --auto-back-and-forth 4'
-alt-ctrl-5 = 'workspace --auto-back-and-forth 5'
-alt-ctrl-6 = 'workspace --auto-back-and-forth 6'
-alt-ctrl-7 = 'workspace --auto-back-and-forth 7'
-alt-ctrl-8 = 'workspace --auto-back-and-forth 8'
-alt-ctrl-9 = 'workspace --auto-back-and-forth 9'
-alt-ctrl-0 = 'workspace --auto-back-and-forth 0'
+alt-1 = 'workspace --auto-back-and-forth 1'
+alt-2 = 'workspace --auto-back-and-forth 2'
+alt-3 = 'workspace --auto-back-and-forth 3'
+alt-4 = 'workspace --auto-back-and-forth 4'
+alt-5 = 'workspace --auto-back-and-forth 5'
+alt-6 = 'workspace --auto-back-and-forth 6'
+alt-7 = 'workspace --auto-back-and-forth 7'
+alt-8 = 'workspace --auto-back-and-forth 8'
+alt-9 = 'workspace --auto-back-and-forth 9'
+alt-0 = 'workspace --auto-back-and-forth 0'
 
 alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
 alt-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
@@ -71,9 +73,9 @@ alt-shift-0 = 'move-node-to-workspace 0 --focus-follows-window'
 
 alt-tab = 'workspace-back-and-forth'
 
-alt-ctrl-n = 'move-workspace-to-monitor --wrap-around next'
+alt-shift-n = 'move-workspace-to-monitor --wrap-around next'
 
-alt-ctrl-semicolon = 'mode service'
+alt-shift-semicolon = 'mode service'
 
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
@@ -82,19 +84,19 @@ backspace = ['close-all-windows-but-current', 'mode main']
 
 [[on-window-detected]]
 if.app-id = 'dev.zed.Zed'
-run = 'move-node-to-workspace 1'
+run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
-run = 'move-node-to-workspace 1'
+run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
 if.app-id = 'com.todesktop.230313mzl4w4u92'
-run = 'move-node-to-workspace 1'
+run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
 if.app-id = 'org.gnu.Emacs'
-run = 'move-node-to-workspace 1'
+run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
 if.app-id = 'app.zen-browser.zen'
@@ -104,26 +106,30 @@ check-further-callbacks = true
 
 [[on-window-detected]]
 if.app-id = 'app.zen-browser.zen'
-run = 'move-node-to-workspace 2'
+run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.Safari'
-run = 'move-node-to-workspace 2'
+run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
 if.app-id = 'ai.perplexity.comet'
-run = 'move-node-to-workspace 2'
+run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
 if.app-id = 'company.thebrowser.dia'
-run = 'move-node-to-workspace 2'
+run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
 if.app-id = 'com.vivaldi.Vivaldi'
-run = 'move-node-to-workspace 2'
+run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
+run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+if.app-id = 'com.github.wez.wezterm'
 run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
@@ -140,6 +146,10 @@ run = 'move-node-to-workspace 9'
 
 [[on-window-detected]]
 if.app-id = 'ch.protonmail.desktop'
+run = 'move-node-to-workspace 9'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.mail'
 run = 'move-node-to-workspace 9'
 
 [[on-window-detected]]
