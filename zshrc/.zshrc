@@ -42,7 +42,6 @@ source $HOME/.config/zsh/uv
 source $HOME/.config/zsh/helm
 source $HOME/.config/zsh/kube
 source $HOME/.config/zsh/aliases
-source $HOME/.config/zsh/mise
 
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/caulotte/.docker/completions $fpath)
