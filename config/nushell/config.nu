@@ -939,6 +939,5 @@ alias h = helm
 
 source ~/.config/nushell/env.nu
 source ~/.zoxide.nu
-source ~/.local/share/atuin/init.nu
 use ~/.config/nushell/git-completion.nu *
 use ~/.config/nushell/npm-completion.nu *

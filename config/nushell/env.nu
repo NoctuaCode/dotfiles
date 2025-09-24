@@ -96,24 +96,21 @@ use std/util "path add"
 # path add ($env.HOME | path join ".local" "bin")
 # $env.PATH = ($env.PATH | uniq)
 $env.GOPATH = "/Users/noctuapps/go"
-$env.VOLTA_HOME = "/Users/noctuapps/.volta"
 path add /opt/homebrew/bin
 path add /Users/noctuapps/.local/bin
 path add /Users/noctuapps/.config/bin
 path add /Users/noctuapps/.cargo/bin
-path add /Users/noctuapps/.atuin/bin
 path add ($env.GOPATH | path join "bin")
-path add ($env.VOLTA_HOME | path join "bin")
 
 # To load from a custom file you can use:
 # source ($nu.default-config-dir | path join 'custom.nu')
 
 zoxide init nushell | save -f ~/.zoxide.nu
 
-# pnpm
-$env.PNPM_HOME = "/Users/noctuapps/Library/pnpm"
-$env.PATH = ($env.PATH | split row (char esep) | prepend $env.PNPM_HOME )
-# pnpm end
-
-
 $env.DOCKER_CONFIG = "/Users/noctuapps/.docker"
+$env.config.buffer_editor = "nvim"
+
+let mise_path = $nu.default-config-dir | path join mise.nu
+^mise activate nu | str replace "export-env {" "" | prepend "export-env {" | save $mise_path --force
+
+$env.TMUX_PLUGIN_MANAGER_PATH = '~/.tmux/plugins/tpm/tpm'
