@@ -22,7 +22,8 @@
       "space s w": "pane::DeploySearch",
 
       // Go to file
-      "g f": "editor::OpenExcerpts"
+      "g f": "editor::OpenExcerpts",
+      "ctrl-t": "terminal_panel::ToggleFocus"
     }
   },
   {
@@ -147,13 +148,8 @@
     "context": "Workspace",
     "bindings": {
       // Map VSCode like keybindings
-      "cmd-ctrl-h": "workspace::ToggleLeftDock",
-      "cmd-ctrl-l": "workspace::ToggleRightDock",
-      "cmd-ctrl-t": "terminal_panel::ToggleFocus",
-      "cmd-ctrl-j": "workspace::ToggleBottomDock",
-      "cmd-ctrl-f": "file_finder::Toggle",
-      "cmd-ctrl-e": "project_panel::ToggleFocus",
-      "cmd-ctrl-p": "projects::OpenRecent"
+      "ctrl-t": "terminal_panel::ToggleFocus",
+      "ctrl-e": "project_panel::ToggleFocus"
     }
   }
 ]
