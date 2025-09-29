@@ -1,2 +1,0 @@
-export PATH=$PATH:$(brew --prefix rustup)/bin
-export PATH=$PATH:$HOME/.cargo/bin

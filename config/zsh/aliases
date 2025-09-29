@@ -45,4 +45,3 @@ alias kl="kubectl logs"
 alias h="helm"
 
 alias ts="tmux-sessionizer"
-alias tm="tmuxinator start"

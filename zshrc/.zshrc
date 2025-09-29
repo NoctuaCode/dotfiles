@@ -32,15 +32,13 @@ compinit
 source $HOME/.config/zsh/carapace
 source $HOME/.config/zsh/fzf
 source $HOME/.config/zsh/zoxide
-source $HOME/.config/zsh/shellenv
-source $HOME/.config/zsh/functions
-source $HOME/.config/zsh/ollama
 source $HOME/.config/zsh/postgres
 source $HOME/.config/zsh/docker
 source $HOME/.config/zsh/starship
 source $HOME/.config/zsh/uv
 source $HOME/.config/zsh/helm
 source $HOME/.config/zsh/kube
+source $HOME/.config/zsh/mise
 source $HOME/.config/zsh/aliases
 
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
