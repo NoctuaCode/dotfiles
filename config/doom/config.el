@@ -21,9 +21,9 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "GeistMono Nerd Font" :size 14)
-      doom-variable-pitch-font (font-spec :family "Alegreya" :size 16)
-      doom-big-font (font-spec :family "GeistMono Nerd Font" :size 22))
+(setq doom-font (font-spec :family "CaskaydiaMono Nerd Font Mono" :size 16)
+      doom-variable-pitch-font (font-spec :family "CaskaydiaMono Nerd Font Propo" :size 16)
+      doom-big-font (font-spec :family "CaskaydiaMono Nerd Font Propo" :size 22))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -48,9 +48,6 @@
 (setq doom-modeline-major-mode-icon t)
 (setq doom-modeline-lsp-icon t)
 (setq doom-modeline-major-mode-color-icon t)
-
-(set-frame-parameter (selected-frame) 'alpha '(96 . 97))
-(add-to-list 'default-frame-alist '(alpha . (96 . 97)))
 
 (global-visual-line-mode t)
 
