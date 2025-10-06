@@ -3,7 +3,7 @@ if status is-interactive
     source "$HOME/.config/fish/config/tokyonight.fish"
 
     # Mise
-    ~/.local/bin/mise activate fish | source
+    /opt/homebrew/bin/mise activate fish | source
 
     # Homebrew
     /opt/homebrew/bin/brew shellenv | source
@@ -43,3 +43,5 @@ set -gx PATH $PATH /Users/caulotte/.lmstudio/bin
 # Added by OrbStack: command-line tools and integration
 # This won't be added again if you remove it.
 source ~/.orbstack/shell/init2.fish 2>/dev/null || :
+
+string match -q "$TERM_PROGRAM" kiro and . (kiro --locate-shell-integration-path fish)
