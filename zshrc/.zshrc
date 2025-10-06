@@ -48,3 +48,5 @@ fpath=(/Users/caulotte/.docker/completions $fpath)
 # Added by LM Studio CLI (lms)
 export PATH="$PATH:/Users/caulotte/.lmstudio/bin"
 # End of LM Studio CLI section
+
+[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"
