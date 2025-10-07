@@ -96,7 +96,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "quote"
+                    "key_code": "hyphen"
                   }
                 ],
                 "type": "basic"
@@ -112,7 +112,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "hyphen"
+                    "key_code": "quote"
                   }
                 ],
                 "type": "basic"
@@ -354,7 +354,6 @@
         }
       ],
       "name": "QWERTY",
-      "selected": true,
       "virtual_hid_keyboard": {
         "keyboard_type_v2": "ansi"
       }
@@ -1690,6 +1689,7 @@
         }
       ],
       "name": "Enthium",
+      "selected": true,
       "virtual_hid_keyboard": {
         "keyboard_type_v2": "ansi"
       }
