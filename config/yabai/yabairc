@@ -37,11 +37,11 @@ yabai -m rule --add app="^Bazecor$" space=5
 
 yabai -m rule --add app="^Hoppsctoch$" space=6
 
-yabai -m rule --add app="^Mattermost$" space=8
+yabai -m rule --add app="^Signal|Messages|Messenger|WhatsApp$" space=8
 
 yabai -m rule --add app="^Mail|Proton Mail$" space=9
 
-yabai -m rule --add app="^Signal|Messages|Messenger|WhatsApp$" space=10
+yabai -m rule --add app="^Proton Pass$" space=8
 
 yabai -m rule --add app="^System Settings$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
