@@ -114,3 +114,5 @@ let mise_path = $nu.default-config-dir | path join mise.nu
 ^mise activate nu | str replace "export-env {" "" | prepend "export-env {" | save $mise_path --force
 
 $env.TMUX_PLUGIN_MANAGER_PATH = '~/.tmux/plugins/tpm/tpm'
+
+$env.config.show_banner = false
