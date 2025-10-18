@@ -106,7 +106,6 @@
   {
     "context": "Editor && vim_operator == c",
     "bindings": {
-      "c": "vim::CurrentLine",
       "r": "editor::Rename" // zed specific
     }
   },
@@ -141,7 +140,8 @@
       "ctrl-w h": "workspace::ActivatePaneLeft",
       "ctrl-w l": "workspace::ActivatePaneRight",
       "ctrl-w k": "workspace::ActivatePaneUp",
-      "ctrl-w j": "workspace::ActivatePaneDown"
+      "ctrl-w j": "workspace::ActivatePaneDown",
+      "ctrl-t": "workspace::ToggleBottomDock"
     }
   },
   {
@@ -149,7 +149,14 @@
     "bindings": {
       // Map VSCode like keybindings
       "ctrl-t": "terminal_panel::ToggleFocus",
-      "ctrl-e": "project_panel::ToggleFocus"
+      "ctrl-e": "project_panel::ToggleFocus",
+      "ctrl-l": "agent::OpenClaudeCodeOnboardingModal"
+    }
+  },
+  {
+    "context": "Agent",
+    "bindings": {
+      "ctrl-l": "workspace::ToggleRightDock"
     }
   }
 ]
