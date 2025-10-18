@@ -166,6 +166,26 @@
             },
             {
               "from": {
+                "key_code": "left_command"
+              },
+              "to": [
+                {
+                  "key_code": "left_option"
+                }
+              ]
+            },
+            {
+              "from": {
+                "key_code": "left_option"
+              },
+              "to": [
+                {
+                  "key_code": "left_command"
+                }
+              ]
+            },
+            {
+              "from": {
                 "key_code": "non_us_backslash"
               },
               "to": [
@@ -347,18 +367,12 @@
             "manipulators": [
               {
                 "from": {
-                  "key_code": "non_us_backslash"
-                },
-                "to": [
-                  {
-                    "key_code": "grave_accent_and_tilde"
+                  "key_code": "hyphen",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
                   }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "hyphen"
                 },
                 "to": [
                   {
@@ -369,7 +383,12 @@
               },
               {
                 "from": {
-                  "key_code": "equal_sign"
+                  "key_code": "equal_sign",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
                 },
                 "to": [
                   {
@@ -389,7 +408,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "semicolon"
+                    "key_code": "quote"
                   }
                 ],
                 "type": "basic"
@@ -578,7 +597,12 @@
               },
               {
                 "from": {
-                  "key_code": "caps_lock"
+                  "key_code": "caps_lock",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
                 },
                 "to": [
                   {
@@ -770,7 +794,12 @@
               },
               {
                 "from": {
-                  "key_code": "return_or_enter"
+                  "key_code": "return_or_enter",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
                 },
                 "to": [
                   {
@@ -795,7 +824,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "quote"
+                    "key_code": "semicolon"
                   }
                 ],
                 "type": "basic"
@@ -948,38 +977,61 @@
           }
         ]
       },
+      "devices": [
+        {
+          "identifiers": {
+            "is_keyboard": true
+          },
+          "simple_modifications": [
+            {
+              "from": {
+                "key_code": "non_us_backslash"
+              },
+              "to": [
+                {
+                  "key_code": "grave_accent_and_tilde"
+                }
+              ]
+            }
+          ]
+        }
+      ],
       "name": "DVORAK",
       "virtual_hid_keyboard": {
         "keyboard_type_v2": "ansi"
       }
     },
     {
+      "devices": [
+        {
+          "identifiers": {
+            "is_keyboard": true
+          },
+          "simple_modifications": [
+            {
+              "from": {
+                "key_code": "caps_lock"
+              },
+              "to": [
+                {
+                  "key_code": "left_control"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "Game",
+      "virtual_hid_keyboard": {
+        "keyboard_type_v2": "ansi"
+      }
+    },
+    {
       "complex_modifications": {
-        "parameters": {
-          "basic.to_delayed_action_delay_milliseconds": 210,
-          "basic.to_if_alone_timeout_milliseconds": 180,
-          "basic.to_if_held_down_threshold_milliseconds": 200
-        },
         "rules": [
           {
-            "description": "Remap keys to use Engram",
+            "description": "Enthium",
             "manipulators": [
-              {
-                "from": {
-                  "key_code": "non_us_backslash",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "grave_accent_and_tilde"
-                  }
-                ],
-                "type": "basic"
-              },
               {
                 "from": {
                   "key_code": "hyphen",
@@ -1023,7 +1075,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "b"
+                    "key_code": "z"
                   }
                 ],
                 "type": "basic"
@@ -1055,7 +1107,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "o"
+                    "key_code": "u"
                   }
                 ],
                 "type": "basic"
@@ -1071,7 +1123,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "u"
+                    "key_code": "o"
                   }
                 ],
                 "type": "basic"
@@ -1103,7 +1155,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "quote"
+                    "key_code": "q"
                   }
                 ],
                 "type": "basic"
@@ -1151,7 +1203,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "w"
+                    "key_code": "p"
                   }
                 ],
                 "type": "basic"
@@ -1167,7 +1219,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "v"
+                    "key_code": "x"
                   }
                 ],
                 "type": "basic"
@@ -1183,7 +1235,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "z"
+                    "key_code": "escape"
                   }
                 ],
                 "type": "basic"
@@ -1199,23 +1251,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "equal_sign"
-                  }
-                ],
-                "type": "basic"
-              },
-              {
-                "from": {
-                  "key_code": "backslash",
-                  "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "key_code": "backslash"
+                    "key_code": "left_option"
                   }
                 ],
                 "type": "basic"
@@ -1236,7 +1272,7 @@
                 ],
                 "to_if_alone": [
                   {
-                    "key_code": "escape"
+                    "key_code": "w"
                   }
                 ],
                 "type": "basic"
@@ -1332,7 +1368,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "period"
+                    "key_code": "k"
                   }
                 ],
                 "type": "basic"
@@ -1412,14 +1448,19 @@
                 },
                 "to": [
                   {
-                    "key_code": "q"
+                    "key_code": "f"
                   }
                 ],
                 "type": "basic"
               },
               {
                 "from": {
-                  "key_code": "return_or_enter"
+                  "key_code": "return_or_enter",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
                 },
                 "to": [
                   {
@@ -1444,7 +1485,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "g"
+                    "key_code": "quote"
                   }
                 ],
                 "type": "basic"
@@ -1460,7 +1501,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "x"
+                    "key_code": "hyphen"
                   }
                 ],
                 "type": "basic"
@@ -1476,7 +1517,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "j"
+                    "key_code": "equal_sign"
                   }
                 ],
                 "type": "basic"
@@ -1492,7 +1533,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "k"
+                    "key_code": "period"
                   }
                 ],
                 "type": "basic"
@@ -1508,7 +1549,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "hyphen"
+                    "key_code": "slash"
                   }
                 ],
                 "type": "basic"
@@ -1524,7 +1565,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "slash"
+                    "key_code": "j"
                   }
                 ],
                 "type": "basic"
@@ -1540,7 +1581,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "r"
+                    "key_code": "m"
                   }
                 ],
                 "type": "basic"
@@ -1556,7 +1597,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "m"
+                    "key_code": "g"
                   }
                 ],
                 "type": "basic"
@@ -1572,7 +1613,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "f"
+                    "key_code": "b"
                   }
                 ],
                 "type": "basic"
@@ -1588,7 +1629,39 @@
                 },
                 "to": [
                   {
-                    "key_code": "p"
+                    "key_code": "v"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "right_command",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "r"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "right_option",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "right_command"
                   }
                 ],
                 "type": "basic"
@@ -1597,7 +1670,440 @@
           }
         ]
       },
-      "name": "ENGRAM",
+      "devices": [
+        {
+          "identifiers": {
+            "is_keyboard": true
+          },
+          "simple_modifications": [
+            {
+              "from": {
+                "key_code": "non_us_backslash"
+              },
+              "to": [
+                {
+                  "key_code": "grave_accent_and_tilde"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "name": "Enthium",
+      "virtual_hid_keyboard": {
+        "keyboard_type_v2": "ansi"
+      }
+    },
+    {
+      "complex_modifications": {
+        "parameters": {
+          "basic.to_delayed_action_delay_milliseconds": 210,
+          "basic.to_if_alone_timeout_milliseconds": 180,
+          "basic.to_if_held_down_threshold_milliseconds": 200
+        },
+        "rules": [
+          {
+            "description": "Colemak DH layout (letters and punctuation)",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "e",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "r",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "p"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "t",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "b"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "y",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "j"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "u",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "l"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "i",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "u"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "o",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "y"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "p",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "semicolon"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "s",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "r"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "d",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "s"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "f",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "t"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "m"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "n"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "e"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "i"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "semicolon",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "o"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "v",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "d"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "b",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "v"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "n",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "k"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "m",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "h"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "caps_lock",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_control"
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "escape"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "return_or_enter",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "left_control"
+                  }
+                ],
+                "to_if_alone": [
+                  {
+                    "key_code": "return_or_enter"
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          }
+        ]
+      },
+      "name": "Colemak DH",
+      "simple_modifications": [
+        {
+          "from": {
+            "key_code": "left_command"
+          },
+          "to": [
+            {
+              "key_code": "left_option"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "left_option"
+          },
+          "to": [
+            {
+              "key_code": "left_command"
+            }
+          ]
+        },
+        {
+          "from": {
+            "key_code": "non_us_backslash"
+          },
+          "to": [
+            {
+              "key_code": "grave_accent_and_tilde"
+            }
+          ]
+        }
+      ],
       "virtual_hid_keyboard": {
         "keyboard_type_v2": "ansi"
       }
