@@ -21,9 +21,9 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "CaskaydiaMono Nerd Font Mono" :size 14)
-      doom-variable-pitch-font (font-spec :family "CaskaydiaMono Nerd Font Propo" :size 14)
-      doom-big-font (font-spec :family "CaskaydiaMono Nerd Font Propo" :size 20))
+(setq doom-font (font-spec :family "Terminess Nerd Font Mono" :size 16)
+      doom-variable-pitch-font (font-spec :family "Terminess Nerd Font Propo" :size 16)
+      doom-big-font (font-spec :family "Terminess Nerd Font Propo" :size 20))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
 ;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
@@ -69,6 +69,27 @@
 (setq browse-url-generic-program "twilight")
 
 (setq which-key-idle-delay 0.2)
+
+(after! lsp-mode
+  (setq  lsp-go-use-gofumpt t)
+  )
+;; automatically organize imports
+(add-hook 'go-mode-hook #'lsp-deferred)
+;; Make sure you don't have other goimports hooks enabled.
+(defun lsp-go-install-save-hooks ()
+  (add-hook 'before-save-hook #'lsp-organize-imports t t))
+(add-hook 'go-mode-hook #'lsp-go-install-save-hooks)
+
+;; enable all analyzers; not done by default
+(after! lsp-mode
+  (setq  lsp-go-analyses '((fieldalignment . t)
+                           (nilness . t)
+                           (shadow . t)
+                           (unusedparams . t)
+                           (unusedwrite . t)
+                           (useany . t)
+                           (unusedvariable . t)))
+  )
 
 (require 'pbcopy)
 (turn-on-pbcopy)
