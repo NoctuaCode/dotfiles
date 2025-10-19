@@ -116,3 +116,6 @@ let mise_path = $nu.default-config-dir | path join mise.nu
 $env.TMUX_PLUGIN_MANAGER_PATH = '~/.tmux/plugins/tpm/tpm'
 
 $env.config.show_banner = false
+
+# ${UserConfigDir}/nushell/config.nu
+source $"($nu.cache-dir)/carapace.nu"
