@@ -4,7 +4,7 @@ font-synthetic-style = true
 
 font-size = 14
 
-theme = Nord Wave
+theme = Catppuccin Mocha
 window-theme = dark
 window-inherit-working-directory = false
 window-padding-x = 4
