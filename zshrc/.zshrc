@@ -1,5 +1,8 @@
 # Homebrew
 source $HOME/.config/zsh/homebrew
+source /opt/homebrew/opt/zsh-autocomplete/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source /opt/homebrew/opt/zsh-syntax-highlighting/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /opt/homebrew/opt/zsh-autosuggestions/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 case "$TERM" in
     xterm-color|*-256color|xterm-ghostty) color_prompt=yes;;
@@ -26,27 +29,18 @@ setopt hist_ignore_all_dups
 setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
-autoload -Uz compinit
-compinit
 
+source $HOME/.config/zsh/mise
+source $HOME/.config/zsh/bun
 source $HOME/.config/zsh/carapace
-source $HOME/.config/zsh/fzf
-source $HOME/.config/zsh/zoxide
-source $HOME/.config/zsh/postgres
 source $HOME/.config/zsh/docker
-source $HOME/.config/zsh/starship
-source $HOME/.config/zsh/uv
+source $HOME/.config/zsh/fzf
+source $HOME/.config/zsh/go
 source $HOME/.config/zsh/helm
 source $HOME/.config/zsh/kube
-source $HOME/.config/zsh/mise
+source $HOME/.config/zsh/postgres
+source $HOME/.config/zsh/starship
+source $HOME/.config/zsh/uv
+source $HOME/.config/zsh/zoxide
+source $HOME/.config/zsh/oh-my-zsh
 source $HOME/.config/zsh/aliases
-
-# The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/caulotte/.docker/completions $fpath)
-# End of Docker CLI completions
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/caulotte/.lmstudio/bin"
-# End of LM Studio CLI section
-
-[[ "$TERM_PROGRAM" == "kiro" ]] && . "$(kiro --locate-shell-integration-path zsh)"

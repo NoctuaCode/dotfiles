@@ -2,4 +2,4 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # bun completions
-[ -s "/Users/noctuapps/.bun/_bun" ] && source "/Users/noctuapps/.bun/_bun"
+[ -s "$HOME/.bun/_bun" ] && source "$HOME/.bun/_bun"

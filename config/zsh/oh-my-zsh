@@ -1,0 +1,62 @@
+export ZSH="$HOME/.oh-my-zsh"
+
+ZSH_THEME="amuse"
+ENABLE_CORRECTION="true"
+COMPLETION_WAITING_DOTS="true"
+
+zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' frequency 1
+
+bgnotify_bell=false   ## disable terminal bell
+bgnotify_threshold=4  ## set your own notification threshold
+
+function bgnotify_formatted {
+  ## $1=exit_status, $2=command, $3=elapsed_time
+
+  # Humanly readable elapsed time
+  local elapsed="$(( $3 % 60 ))s"
+  (( $3 < 60 ))   || elapsed="$((( $3 % 3600) / 60 ))m $elapsed"
+  (( $3 < 3600 )) || elapsed="$((  $3 / 3600 ))h $elapsed"
+
+  [ $1 -eq 0 ] && title="Holy Smokes Batman" || title="Holy Graf Zeppelin"
+  [ $1 -eq 0 ] && icon="$HOME/icons/success.png" || icon="$HOME/icons/fail.png"
+  bgnotify "$title - took ${elapsed}" "$2" "$icon"
+}
+
+zstyle ':omz:plugins:eza' 'dirs-first' yes
+zstyle ':omz:plugins:eza' 'git-status' yes
+zstyle ':omz:plugins:eza' 'header' yes
+zstyle ':omz:plugins:eza' 'icons' yes
+zstyle ':omz:plugins:eza' 'color-scale' all
+zstyle ':omz:plugins:eza' 'hyperlink' yes
+
+plugins=(
+  aliases
+  bgnotify
+  brew
+  bun
+  chucknorris
+  common-aliases
+  cp
+  docker
+  docker-compose
+  eza
+  fzf
+  gh
+  git
+  git-auto-fetch
+  git-commit
+  golang
+  helm
+  httpie
+  keychain
+  kubectl
+  macos
+  mise
+  ssh
+  sudo
+  tmux
+  zoxide
+)
+
+source $ZSH/oh-my-zsh.sh
