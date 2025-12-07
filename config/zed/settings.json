@@ -1,7 +1,6 @@
 {
   "context_servers": {
     "browser-tools-context-server": {
-      "source": "extension",
       "enabled": true,
       "settings": {}
     }
@@ -9,8 +8,8 @@
   "agent": {
     "notify_when_agent_waiting": "all_screens",
     "inline_assistant_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4.1"
+      "provider": "anthropic",
+      "model": "claude-sonnet-4"
     }
   },
   "icon_theme": "Material Icon Theme",
@@ -44,7 +43,7 @@
     "use_system_clipboard": "always",
     "use_smartcase_find": true
   },
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   "vertical_scroll_margin": 10,
   "languages": {
     "Python": {

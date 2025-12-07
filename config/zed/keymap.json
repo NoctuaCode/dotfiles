@@ -23,7 +23,7 @@
 
       // Go to file
       "g f": "editor::OpenExcerpts",
-      "ctrl-t": "terminal_panel::ToggleFocus"
+      "ctrl-/": "terminal_panel::ToggleFocus"
     }
   },
   {
@@ -141,14 +141,14 @@
       "ctrl-w l": "workspace::ActivatePaneRight",
       "ctrl-w k": "workspace::ActivatePaneUp",
       "ctrl-w j": "workspace::ActivatePaneDown",
-      "ctrl-t": "workspace::ToggleBottomDock"
+      "ctrl-/": "workspace::ToggleBottomDock"
     }
   },
   {
     "context": "Workspace",
     "bindings": {
       // Map VSCode like keybindings
-      "ctrl-t": "terminal_panel::ToggleFocus",
+      "ctrl-/": "terminal_panel::ToggleFocus",
       "ctrl-e": "project_panel::ToggleFocus",
       "ctrl-l": "agent::OpenClaudeCodeOnboardingModal"
     }
