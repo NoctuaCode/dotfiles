@@ -7,6 +7,7 @@ rust = "latest"
 go = "latest"
 ruby = "latest"
 usage = "latest"
+bun = "latest"
 
 [settings]
 experimental = true

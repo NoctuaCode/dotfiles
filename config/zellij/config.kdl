@@ -133,7 +133,6 @@ keybinds clear-defaults=true {
         }
     }
     shared_among "normal" "locked" {
-        bind "Alt +" { Resize "Increase"; }
         bind "Alt -" { Resize "Decrease"; }
         bind "Alt =" { Resize "Increase"; }
         bind "Alt [" { PreviousSwapLayout; }
@@ -141,12 +140,14 @@ keybinds clear-defaults=true {
         bind "Alt f" { ToggleFloatingPanes; }
         bind "Alt i" { MoveTab "left"; }
         bind "Alt o" { MoveTab "right"; }
-        bind "Shift Alt h" { MoveFocusOrTab "left"; }
-        bind "Shift Alt j" { MoveFocus "down"; }
-        bind "Shift Alt k" { MoveFocus "up"; }
-        bind "Shift Alt l" { MoveFocusOrTab "right"; }
+        bind "Alt h" { MoveFocusOrTab "left"; }
+        bind "Alt j" { MoveFocus "down"; }
+        bind "Alt k" { MoveFocus "up"; }
+        bind "Alt l" { MoveFocusOrTab "right"; }
         bind "Alt n" { NewPane; }
+        bind "Alt c" { NewTab; }
         bind "Alt x" { CloseFocus; }
+        bind "Alt d" { Detach; }
     }
     shared_except "locked" "renametab" "renamepane" {
         bind "Ctrl g" { SwitchToMode "locked"; }
