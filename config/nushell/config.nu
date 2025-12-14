@@ -896,6 +896,7 @@ alias ll = ls -l
 alias lt = eza --tree --level=2 --long --icons --git
 alias n = nvim
 alias as = aerospace
+alias cat = bat
 
 def ff [] {
     aerospace list-windows --all | fzf --bind 'enter:execute(bash -c "aerospace focus --window-id {1}")+abort'
@@ -946,3 +947,34 @@ use ~/.config/nushell/npm-completion.nu *
 $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
 mkdir $"($nu.cache-dir)"
 carapace _carapace nushell | save --force $"($nu.cache-dir)/carapace.nu"
+
+# Additional tool completions to match zsh setup
+# Command to regenerate completions (run manually when tools are installed/updated)
+def regenerate-completions [] {
+    let dir = ($nu.cache-dir | path join "completions")
+    mkdir $dir
+
+    if (which kubectl | is-not-empty) {
+        print "Generating kubectl completions..."
+        kubectl completion nushell | save --force ($dir | path join "kubectl.nu")
+    }
+
+    if (which uv | is-not-empty) {
+        print "Generating uv completions..."
+        uv generate-shell-completion nushell | save --force ($dir | path join "uv.nu")
+    }
+
+    if (which helm | is-not-empty) {
+        print "Generating helm completions..."
+        helm completion nushell | save --force ($dir | path join "helm.nu")
+    }
+
+    print "Done! Restart your shell to load the new completions."
+}
+
+# Source completions (files must exist - run `regenerate-completions` first)
+source ~/.cache/nushell/completions/kubectl.nu
+source ~/.cache/nushell/completions/uv.nu
+source ~/.cache/nushell/completions/helm.nu
+
+use ($nu.default-config-dir | path join mise.nu)

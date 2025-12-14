@@ -1,24 +1,39 @@
 {
   "context_servers": {
-    "browser-tools-context-server": {
+    "mcp-server-puppeteer": {
       "enabled": true,
       "settings": {}
     }
   },
   "agent": {
+    "use_modifier_to_send": true,
     "notify_when_agent_waiting": "all_screens",
-    "inline_assistant_model": {
+    "default_model": {
       "provider": "anthropic",
-      "model": "claude-sonnet-4"
-    }
+      "model": "claude-4-5-sonnet"
+    },
+    "inline_assistant_model": {
+      "provider": "mistral",
+      "model": "codestral-latest"
+    },
+    "inline_alternatives": [
+      {
+        "provider": "openai",
+        "model": "gpt-5"
+      }
+    ]
   },
-  "icon_theme": "Material Icon Theme",
+  "icon_theme": {
+    "mode": "system",
+    "light": "Zed (Default)",
+    "dark": "Zed (Default)"
+  },
   "base_keymap": "Cursor",
   "vim_mode": true,
   "theme": {
     "mode": "system",
-    "light": "Rosé Pine Dawn",
-    "dark": "Rosé Pine"
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Mocha"
   },
   "cursor_blink": false,
   "buffer_font_family": "JetBrainsMono Nerd Font",
@@ -47,7 +62,10 @@
   "vertical_scroll_margin": 10,
   "languages": {
     "Python": {
-      "language_servers": ["pyright", "ruff"]
+      "language_servers": [
+        "pyright",
+        "ruff"
+      ]
     }
   }
 }

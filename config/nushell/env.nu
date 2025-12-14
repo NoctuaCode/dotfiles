@@ -73,6 +73,10 @@ $env.ENV_CONVERSIONS = {
     }
 }
 
+# Additional environment variables to match zsh
+$env.LANG = "en_US.UTF-8"
+$env.EDITOR = "nvim"
+
 # Directories to search for scripts when calling source or use
 # The default for this is $nu.default-config-dir/scripts
 $env.NU_LIB_DIRS = [
@@ -95,23 +99,39 @@ use std/util "path add"
 # path add /some/path
 # path add ($env.HOME | path join ".local" "bin")
 # $env.PATH = ($env.PATH | uniq)
-$env.GOPATH = "/Users/noctuapps/go"
-path add /opt/homebrew/bin
-path add /Users/noctuapps/.local/bin
-path add /Users/noctuapps/.config/bin
-path add /Users/noctuapps/.cargo/bin
+
+# Bun installation path
+$env.BUN_INSTALL = ($nu.home-path | path join ".bun")
+
+$env.GOPATH = ($nu.home-path | path join "go")
+
+# Homebrew environment (equivalent to brew shellenv)
+if ("/opt/homebrew/bin/brew" | path exists) {
+    $env.HOMEBREW_PREFIX = "/opt/homebrew"
+    $env.HOMEBREW_CELLAR = "/opt/homebrew/Cellar"
+    $env.HOMEBREW_REPOSITORY = "/opt/homebrew"
+    path add ($env.HOMEBREW_PREFIX | path join "bin")
+    path add ($env.HOMEBREW_PREFIX | path join "sbin")
+}
+
+path add ($nu.home-path | path join ".local" "bin")
+path add ($nu.home-path | path join ".config" "bin")
+path add ($nu.home-path | path join ".cargo" "bin")
 path add ($env.GOPATH | path join "bin")
+
+# Additional PATH entries to match zsh
+path add ($nu.home-path | path join ".config" "emacs" "bin")  # Emacs binaries
+path add ($env.BUN_INSTALL | path join "bin")                 # Bun JavaScript runtime
+path add "/opt/homebrew/opt/postgresql@17/bin"                # PostgreSQL 17
+path add ($nu.home-path | path join ".krew" "bin")            # kubectl plugin manager
 
 # To load from a custom file you can use:
 # source ($nu.default-config-dir | path join 'custom.nu')
 
 zoxide init nushell | save -f ~/.zoxide.nu
 
-$env.DOCKER_CONFIG = "/Users/noctuapps/.docker"
+$env.DOCKER_CONFIG = ($nu.home-path | path join ".docker")
 $env.config.buffer_editor = "nvim"
-
-let mise_path = $nu.default-config-dir | path join mise.nu
-^mise activate nu | str replace "export-env {" "" | prepend "export-env {" | save $mise_path --force
 
 $env.TMUX_PLUGIN_MANAGER_PATH = '~/.tmux/plugins/tpm/tpm'
 
@@ -119,3 +139,61 @@ $env.config.show_banner = false
 
 # ${UserConfigDir}/nushell/config.nu
 source $"($nu.cache-dir)/carapace.nu"
+def "parse vars" [] {
+  $in | from csv --noheaders --no-infer | rename 'op' 'name' 'value'
+}
+
+def --env "update-env" [] {
+  for $var in $in {
+    if $var.op == "set" {
+      if ($var.name | str upcase) == 'PATH' {
+        $env.PATH = ($var.value | split row (char esep))
+      } else {
+        load-env {($var.name): $var.value}
+      }
+    } else if $var.op == "hide" and $var.name in $env {
+      hide-env $var.name
+    }
+  }
+}
+export-env {
+  
+  "" | parse vars | update-env
+  $env.MISE_SHELL = "nu"
+  let mise_hook = {
+    condition: { "MISE_SHELL" in $env }
+    code: { mise_hook }
+  }
+  add-hook hooks.pre_prompt $mise_hook
+  add-hook hooks.env_change.PWD $mise_hook
+}
+
+def --env add-hook [field: cell-path new_hook: any] {
+  let field = $field | split cell-path | update optional true | into cell-path
+  let old_config = $env.config? | default {}
+  let old_hooks = $old_config | get $field | default []
+  $env.config = ($old_config | upsert $field ($old_hooks ++ [$new_hook]))
+}
+
+export def --env --wrapped main [command?: string, --help, ...rest: string] {
+  let commands = ["deactivate", "shell", "sh"]
+
+  if ($command == null) {
+    ^"/opt/homebrew/bin/mise"
+  } else if ($command == "activate") {
+    $env.MISE_SHELL = "nu"
+  } else if ($command in $commands) {
+    ^"/opt/homebrew/bin/mise" $command ...$rest
+    | parse vars
+    | update-env
+  } else {
+    ^"/opt/homebrew/bin/mise" $command ...$rest
+  }
+}
+
+def --env mise_hook [] {
+  ^"/opt/homebrew/bin/mise" hook-env -s nu
+    | parse vars
+    | update-env
+}
+
