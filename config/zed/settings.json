@@ -6,6 +6,7 @@
     }
   },
   "agent": {
+    "play_sound_when_agent_done": true,
     "use_modifier_to_send": true,
     "notify_when_agent_waiting": "all_screens",
     "default_model": {
@@ -45,6 +46,9 @@
   },
   "show_whitespaces": "all",
   "terminal": {
+    "shell": {
+      "program": "nu"
+    },
     "copy_on_select": true,
     "font_family": "JetBrainsMono Nerd Font",
     "font_features": {
@@ -62,10 +66,7 @@
   "vertical_scroll_margin": 10,
   "languages": {
     "Python": {
-      "language_servers": [
-        "pyright",
-        "ruff"
-      ]
+      "language_servers": ["pyright", "ruff"]
     }
   }
 }
