@@ -22,7 +22,6 @@ export PATH=$PATH:$HOME/.config/bin
 export PATH=$PATH:$HOME/.config/emacs/bin
 export PATH=$PATH:$HOME/.local/bin
 
-
 # History
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
@@ -36,10 +35,15 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
+autoload -Uz zmv
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^x^e' edit-command-line
+bindkey ' ' magic-space
+
 source $HOME/.config/zsh/mise
 source $HOME/.config/zsh/bun
 source $HOME/.config/zsh/carapace
-source $HOME/.config/zsh/docker
 source $HOME/.config/zsh/fzf
 source $HOME/.config/zsh/go
 source $HOME/.config/zsh/helm

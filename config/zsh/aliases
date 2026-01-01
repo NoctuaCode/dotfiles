@@ -2,6 +2,12 @@ alias c="cursor"
 alias n="nvim"
 alias cat="bat"
 
+alias ls="eza --icons -F -H --group-directories-first --git"
+alias l="ls -al"
+alias ll="ls -l"
+alias lt="ls -T --git-ignore"
+alias lta="ls -Ta"
+
 alias g="git"
 alias ga="git add ."
 alias gap="git add -p"
@@ -25,3 +31,21 @@ alias kl="kubectl logs"
 alias h="helm"
 
 alias ts="tmux-sessionizer"
+
+alias -s md="bat"
+alias -s md="bat -l yaml"
+alias -s mov="open"
+alias -s png="open"
+alias -s mp4="open"
+alias -s go="$EDITOR"
+alias -s js="$EDITOR"
+alias -s ts="$EDITOR"
+alias -s py="$EDITOR"
+alias -s json="jless"
+
+alias -g NE='2>/dev/null'
+alias -g ND='>/dev/null'
+alias -g NUL='>/dev/null 2>1'
+alias -g JQ='| jq'
+alias -g C='| pbcopy'
+alias -g KSD='-oyaml | ksd'

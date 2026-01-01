@@ -31,26 +31,13 @@ zstyle ':omz:plugins:eza' 'color-scale' all
 zstyle ':omz:plugins:eza' 'hyperlink' yes
 
 plugins=(
-  aliases
-  bgnotify
   brew
-  bun
-  chucknorris
-  common-aliases
-  cp
-  docker
-  docker-compose
-  eza
   fzf
-  gh
   git
   git-auto-fetch
   git-commit
-  golang
-  helm
   httpie
   keychain
-  kubectl
   macos
   mise
   ssh
