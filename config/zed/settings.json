@@ -46,9 +46,7 @@
   },
   "show_whitespaces": "all",
   "terminal": {
-    "shell": {
-      "program": "nu"
-    },
+    "shell": "system",
     "copy_on_select": true,
     "font_family": "JetBrainsMono Nerd Font",
     "font_features": {
