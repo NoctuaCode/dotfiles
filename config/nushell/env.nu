@@ -133,7 +133,7 @@ zoxide init nushell | save -f ~/.zoxide.nu
 $env.DOCKER_CONFIG = ($nu.home-path | path join ".docker")
 $env.config.buffer_editor = "nvim"
 
-$env.TMUX_PLUGIN_MANAGER_PATH = '~/.tmux/plugins/tpm/tpm'
+$env.TMUX_PLUGIN_MANAGER_PATH = ($env.HOME | path join ".config/tmux/plugins")
 
 $env.config.show_banner = false
 
