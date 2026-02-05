@@ -7,8 +7,8 @@ font-size = 14
 theme = Catppuccin Mocha
 window-theme = dark
 window-inherit-working-directory = false
-window-padding-x = 4
-window-padding-y = 4
+window-padding-x = 10
+window-padding-y = 10
 working-directory = home
 
 mouse-hide-while-typing = true
