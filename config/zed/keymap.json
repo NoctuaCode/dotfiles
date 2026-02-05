@@ -23,8 +23,8 @@
 
       // Go to file
       "g f": "editor::OpenExcerpts",
-      "ctrl-/": "terminal_panel::ToggleFocus"
-    }
+      "ctrl-/": "terminal_panel::ToggleFocus",
+    },
   },
   {
     "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
@@ -80,8 +80,8 @@
 
       // Show project panel
       "space e": "pane::RevealInProjectPanel",
-      "alt-e": "project_panel::ToggleFocus"
-    }
+      "alt-e": "project_panel::ToggleFocus",
+    },
   },
   {
     "context": "EmptyPane || SharedScreen",
@@ -91,31 +91,31 @@
       // Open recent project
       "space f p": "projects::OpenRecent",
       // Open project panel
-      "space e": "workspace::ToggleRightDock"
-    }
+      "space e": "workspace::ToggleRightDock",
+    },
   },
   // Comment code
   {
     "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
     "bindings": {
       // visual, visual line & visual block modes
-      "g c": "editor::ToggleComments"
-    }
+      "g c": "editor::ToggleComments",
+    },
   },
   // Rename
   {
     "context": "Editor && vim_operator == c",
     "bindings": {
-      "r": "editor::Rename" // zed specific
-    }
+      "r": "editor::Rename", // zed specific
+    },
   },
   // Code Action
   {
     "context": "Editor && vim_operator == c",
     "bindings": {
       "c": "vim::CurrentLine",
-      "a": "editor::ToggleCodeActions" // zed specific
-    }
+      "a": "editor::ToggleCodeActions", // zed specific
+    },
   },
   // File panel (netrw)
   {
@@ -130,8 +130,8 @@
       "p": "project_panel::Paste",
       // Close project panel as project file panel on the right
       "q": "workspace::ToggleLeftDock",
-      "alt-e": "workspace::ToggleLeftDock"
-    }
+      "alt-e": "workspace::ToggleLeftDock",
+    },
   },
   // Panel nagivation
   {
@@ -141,8 +141,8 @@
       "ctrl-w l": "workspace::ActivatePaneRight",
       "ctrl-w k": "workspace::ActivatePaneUp",
       "ctrl-w j": "workspace::ActivatePaneDown",
-      "ctrl-/": "workspace::ToggleBottomDock"
-    }
+      "ctrl-/": "workspace::ToggleBottomDock",
+    },
   },
   {
     "context": "Workspace",
@@ -150,13 +150,13 @@
       // Map VSCode like keybindings
       "ctrl-/": "terminal_panel::ToggleFocus",
       "ctrl-e": "project_panel::ToggleFocus",
-      "ctrl-l": "agent::OpenClaudeCodeOnboardingModal"
-    }
+      "ctrl-l": "agent::OpenClaudeCodeOnboardingModal",
+    },
   },
   {
     "context": "Agent",
     "bindings": {
-      "ctrl-l": "workspace::ToggleRightDock"
-    }
-  }
+      "ctrl-l": "workspace::ToggleRightDock",
+    },
+  },
 ]
