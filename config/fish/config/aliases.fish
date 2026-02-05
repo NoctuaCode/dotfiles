@@ -1,4 +1,4 @@
-alias ls="eza --icons -F -H --group-directories-first --git"
+alias ls="lsd"
 alias l="ls -al"
 alias ll="ls -l"
 alias lt="ls -T --git-ignore"
